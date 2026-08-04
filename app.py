@@ -3,6 +3,9 @@ import subprocess
 import json
 import os
 
+# Ensure rclone in local bin is visible in PATH
+os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
+
 st.set_page_config(
     page_title="Digital Library Stream",
     page_icon="📚",
