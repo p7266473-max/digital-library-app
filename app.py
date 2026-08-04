@@ -1,14 +1,14 @@
 import streamlit as st
 import subprocess
-import json
+import pandas as pd
 import os
 
 # Ensure rclone in local bin is visible in PATH
 os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
 
 st.set_page_config(
-    page_title="Digital Library Stream",
-    page_icon="📚",
+    page_title="Digital Library Portal",
+    page_icon="🌌",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -20,129 +20,178 @@ st.markdown("""
         background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         color: #f8fafc;
     }
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 24px;
-        background-color: rgba(255,255,255,0.05);
-        padding: 10px 20px;
-        border-radius: 12px;
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 10px 0;
     }
-    .stTabs [data-baseweb="tab"] {
-        color: #94a3b8;
-        font-weight: 600;
-        font-size: 16px;
-    }
-    .stTabs [data-baseweb="tab"]:hover {
-        color: #38bdf8;
-    }
-    .stTabs [aria-selected="true"] {
-        color: #38bdf8 !important;
-        border-bottom-color: #38bdf8 !important;
-    }
-    .card {
-        background-color: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+    .media-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
-        padding: 24px;
-        margin-bottom: 20px;
-        transition: all 0.3s ease;
+        padding: 20px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 180px;
+        backdrop-filter: blur(10px);
     }
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+    .media-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15);
         border-color: #38bdf8;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .media-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #f8fafc;
+        margin-bottom: 8px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .media-meta {
+        font-size: 13px;
+        color: #94a3b8;
+        margin-bottom: 12px;
+    }
+    .action-btn {
+        background: #38bdf8;
+        color: #0f172a !important;
+        font-weight: bold;
+        text-align: center;
+        padding: 8px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.2s;
+        font-size: 14px;
+    }
+    .action-btn:hover {
+        background: #0ea5e9;
+    }
+    .icon {
+        font-size: 24px;
+        margin-bottom: 8px;
     }
 </style>
 """, unsafe_allow_html=True)
 
 st.title("🌌 Cosmic Digital Library")
-st.write("Dynamic live streaming and downloading of your personal media library.")
+st.write("Lightweight metadata catalog with direct high-speed Google Drive access.")
 
-@st.cache_data(ttl=300)
-def list_library_folders():
+LOCAL_CSV = "/tmp/Digital_Library_Catalog.csv"
+
+def fetch_catalog_from_drive():
     try:
-        cmd = ["rclone", "lsjson", "stories_drive:Digital Library"]
+        cmd = ["rclone", "copyto", "stories_drive:Digital Library/Digital_Library_Catalog.csv", LOCAL_CSV]
         res = subprocess.run(cmd, capture_output=True, text=True)
-        if res.returncode == 0:
-            items = json.loads(res.stdout)
-            return [i["Name"] for i in items if i["IsDir"]]
-    except Exception as e:
-        st.error(f"Error listing library folders: {e}")
-    return []
+        return res.returncode == 0
+    except Exception:
+        return False
 
 @st.cache_data(ttl=60)
-def list_files_in_folder(folder_name):
-    try:
-        cmd = ["rclone", "lsjson", f"stories_drive:Digital Library/{folder_name}"]
-        res = subprocess.run(cmd, capture_output=True, text=True)
-        if res.returncode == 0:
-            return json.loads(res.stdout)
-    except Exception as e:
-        st.error(f"Error listing files in {folder_name}: {e}")
-    return []
-
-@st.cache_data(ttl=3600)
-def get_stream_link(folder_name, file_name):
-    try:
-        cmd = ["rclone", "link", f"stories_drive:Digital Library/{folder_name}/{file_name}"]
-        res = subprocess.run(cmd, capture_output=True, text=True)
-        if res.returncode == 0:
-            link = res.stdout.strip()
-            # Convert drive.google.com/open?id=... to a direct streamable link
-            if "drive.google.com/open?id=" in link:
-                file_id = link.split("id=")[-1]
-                return f"https://docs.google.com/uc?export=download&id={file_id}"
-            return link
-    except Exception as e:
-        pass
+def load_catalog():
+    # If file doesn't exist, try fetching it
+    if not os.path.exists(LOCAL_CSV):
+        fetch_catalog_from_drive()
+    
+    if os.path.exists(LOCAL_CSV):
+        try:
+            return pd.read_csv(LOCAL_CSV)
+        except Exception as e:
+            st.error(f"Error reading catalog CSV: {e}")
     return None
 
-folders = list_library_folders()
+# Sidebar controls
+with st.sidebar:
+    st.header("⚙️ Library Tools")
+    if st.button("🔄 Sync Catalog from Drive", use_container_width=True):
+        st.write("Downloading fresh catalog...")
+        if fetch_catalog_from_drive():
+            st.cache_data.clear()
+            st.success("Catalog synced successfully!")
+        else:
+            st.error("Failed to sync catalog. Make sure the Colab generator has completed.")
 
-if not folders:
-    st.info("Loading folders or configuring Google Drive connection...")
+catalog = load_catalog()
+
+if catalog is None or catalog.empty:
+    st.info("Digital Library Catalog not found on Google Drive yet. Make sure your Colab generator completes and creates the catalog file.")
 else:
-    tabs = st.tabs([f"📁 {f.replace('_', ' ')}" for f in folders])
+    # Clean and formatted category mapping
+    categories = sorted(catalog['Category'].unique())
     
-    for idx, (tab, folder) in enumerate(zip(tabs, folders)):
-        with tab:
-            files = list_files_in_folder(folder)
-            if not files:
-                st.write("No files found in this category yet. Populating dynamically...")
-            else:
-                col1, col2 = st.columns([1, 2])
+    # Global search
+    search_query = st.text_input("🔍 Search books, audio, and video files:", "").strip().lower()
+    
+    if search_query:
+        filtered_df = catalog[catalog['Name'].str.lower().str.contains(search_query)]
+        st.subheader(f"🔍 Search Results ({len(filtered_df)} matches)")
+        
+        # Render search result grid
+        html_grid = '<div class="card-grid">'
+        for idx, row in filtered_df.iterrows():
+            name = row['Name']
+            url = row['URL']
+            size = row['Size_MB']
+            cat = row['Category']
+            
+            icon = "📚"
+            if "audio" in cat.lower():
+                icon = "🎧"
+            elif "video" in cat.lower():
+                icon = "🎬"
                 
-                with col1:
-                    st.subheader("📚 Available Items")
-                    selected_file = st.radio(
-                        "Select an item to view / play:",
-                        [f["Name"] for f in files if not f["IsDir"]],
-                        key=f"radio_{folder}_{idx}"
-                    )
+            html_grid += f"""
+            <div class="media-card">
+                <div>
+                    <div class="icon">{icon}</div>
+                    <div class="media-title">{name}</div>
+                </div>
+                <div>
+                    <div class="media-meta">📦 {size} MB | 📁 {cat.replace('_', ' ')}</div>
+                    <a href="{url}" target="_blank" class="action-btn">🔗 View / Download</a>
+                </div>
+            </div>
+            """
+        html_grid += '</div>'
+        st.markdown(html_grid, unsafe_allow_html=True)
+    else:
+        # Categorized Tab Layout
+        tabs = st.tabs([f"📁 {c.replace('_', ' ')}" for c in categories])
+        
+        for tab, cat in zip(tabs, categories):
+            with tab:
+                cat_df = catalog[catalog['Category'] == cat]
                 
-                with col2:
-                    if selected_file:
-                        st.subheader(f"✨ Viewing: {selected_file}")
-                        link = get_stream_link(folder, selected_file)
+                html_grid = '<div class="card-grid">'
+                for idx, row in cat_df.iterrows():
+                    name = row['Name']
+                    url = row['URL']
+                    size = row['Size_MB']
+                    
+                    icon = "📚"
+                    if "audio" in cat.lower():
+                        icon = "🎧"
+                    elif "video" in cat.lower():
+                        icon = "🎬"
                         
-                        ext = os.path.splitext(selected_file)[-1].lower()
-                        
-                        if ext in ['.mp4', '.mkv', '.mov', '.avi']:
-                            if link:
-                                st.video(link)
-                            else:
-                                st.warning("Unable to generate direct video stream link. Try downloading below.")
-                                
-                        elif ext in ['.mp3', '.wav', '.ogg', '.m4a']:
-                            if link:
-                                st.audio(link)
-                            else:
-                                st.warning("Unable to generate direct audio stream link.")
-                                
-                        elif ext in ['.pdf', '.txt', '.html', '.epub']:
-                            st.info("Readable document format. You can download it directly below.")
-                            
-                        # Download link
-                        if link:
-                            st.markdown(f'<a href="{link}" target="_blank"><button style="background-color:#38bdf8; border:none; color:white; padding:10px 20px; text-align:center; text-decoration:none; display:inline-block; font-size:16px; border-radius:8px; cursor:pointer;">📥 Download / Open in Browser</button></a>', unsafe_allow_html=True)
-                        else:
-                            st.error("Could not retrieve link from Google Drive.")
+                    html_grid += f"""
+                    <div class="media-card">
+                        <div>
+                            <div class="icon">{icon}</div>
+                            <div class="media-title">{name}</div>
+                        </div>
+                        <div>
+                            <div class="media-meta">📦 {size} MB</div>
+                            <a href="{url}" target="_blank" class="action-btn">🔗 View / Download</a>
+                        </div>
+                    </div>
+                    """
+                html_grid += '</div>'
+                st.markdown(html_grid, unsafe_allow_html=True)
