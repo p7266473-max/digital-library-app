@@ -103,7 +103,7 @@ if not folders:
 else:
     tabs = st.tabs([f"📁 {f.replace('_', ' ')}" for f in folders])
     
-    for tab, folder in zip(tabs, folders):
+    for idx, (tab, folder) in enumerate(zip(tabs, folders)):
         with tab:
             files = list_files_in_folder(folder)
             if not files:
@@ -116,7 +116,7 @@ else:
                     selected_file = st.radio(
                         "Select an item to view / play:",
                         [f["Name"] for f in files if not f["IsDir"]],
-                        key=f"radio_{folder}"
+                        key=f"radio_{folder}_{idx}"
                     )
                 
                 with col2:
