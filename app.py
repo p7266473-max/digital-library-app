@@ -10,9 +10,14 @@ import io
 import urllib.parse
 import urllib.request
 import sys
+from openai import OpenAI
+from duckduckgo_search import DDGS
 
 # Ensure rclone in local bin is visible in PATH
 os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
+
+# Load API key securely
+OPENAI_API_KEY = "sk-jI4lFCSfwyloRODnNpIefYM1JMIIuy77M9DXCUnN0z610u3SKCj0Yzsk7Q5A9LCa"
 
 st.set_page_config(
     page_title="Cosmic Digital Library",
@@ -104,6 +109,24 @@ st.markdown("""
         justify-content: space-between;
         align-items: center;
         text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    }
+    .chat-bubble {
+        padding: 12px 16px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        max-width: 80%;
+    }
+    .chat-user {
+        background-color: #0284c7;
+        color: white;
+        align-self: flex-end;
+        margin-left: auto;
+    }
+    .chat-assistant {
+        background-color: #1e293b;
+        color: #f1f5f9;
+        align-self: flex-start;
+        border: 1px solid rgba(255,255,255,0.05);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -216,7 +239,6 @@ category_mapping = {
 }
 
 def download_and_upload_locally(download_url, category_folder):
-    # Parse initial filename
     parsed_url = urllib.parse.urlparse(download_url)
     file_name = os.path.basename(parsed_url.path)
     file_name = urllib.parse.unquote(file_name)
@@ -234,7 +256,6 @@ def download_and_upload_locally(download_url, category_folder):
             is_audio = "Audio" in category_folder or "Podcast" in category_folder
             output_template = os.path.join("/tmp", "%(title)s.%(ext)s")
             
-            # Setup yt-dlp command
             if is_audio:
                 st.write("Downloading YouTube audio and converting to MP3...")
                 cmd = ["yt-dlp", "-x", "--audio-format", "mp3", "--no-warnings", "-o", output_template, download_url]
@@ -246,7 +267,6 @@ def download_and_upload_locally(download_url, category_folder):
             if res.returncode != 0:
                 return False, f"yt-dlp download failed: {res.stderr}"
                 
-            # Get actual file name written by yt-dlp
             get_name_cmd = ["yt-dlp", "--get-filename", "-o", output_template, download_url]
             name_res = subprocess.run(get_name_cmd, capture_output=True, text=True)
             if name_res.returncode == 0:
@@ -257,19 +277,16 @@ def download_and_upload_locally(download_url, category_folder):
                 return False, "Could not resolve video title for filename."
         else:
             st.write(f"Downloading file: `{file_name}`...")
-            # Request with human User-Agent
             req_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
             request = urllib.request.Request(download_url, headers=req_headers)
             with urllib.request.urlopen(request) as response, open(temp_path, 'wb') as out_file:
                 shutil.copyfileobj(response, out_file)
         
-        # Upload using rclone
         st.write("Uploading to Google Drive...")
         rclone_dest = f"stories_drive:Digital Library/{category_folder}/{os.path.basename(temp_path)}"
         upload_cmd = ["rclone", "copyto", temp_path, rclone_dest]
         upload_res = subprocess.run(upload_cmd, capture_output=True, text=True)
         
-        # Delete local temp file
         if os.path.exists(temp_path):
             os.remove(temp_path)
             
@@ -329,6 +346,57 @@ def load_catalog():
             st.error(f"Error reading catalog JSON: {e}")
     return None
 
+# AI Real-time internet search function
+def search_internet_for_resources(query, search_format):
+    try:
+        # Construct search engine prompt targeted at filetypes
+        search_query = query
+        if search_format == "PDF (Books)":
+            search_query += " filetype:pdf"
+        elif search_format == "MP3 (Audio)":
+            search_query += " audio mp3 download"
+        elif search_format == "MP4 (Videos)":
+            search_query += " video mp4 download"
+            
+        with DDGS() as ddgs:
+            results = list(ddgs.text(search_query, max_results=15))
+            
+        # Format the search results to feed to OpenAI
+        search_context = ""
+        for idx, r in enumerate(results):
+            search_context += f"Result #{idx+1}:\nTitle: {r['title']}\nURL: {r['href']}\nSnippet: {r['body']}\n\n"
+            
+        # Use OpenAI to filter and compile clean resource links
+        client = OpenAI(api_key=OPENAI_API_KEY)
+        system_prompt = f"""You are a Digital Library Assistant. Analyze the web search results and extract direct download links matching the requested format: {search_format}.
+Filter out garbage redirects, ad sites, or landing pages. Extract ONLY direct links to resource files.
+Return the results ONLY as a JSON list of objects. Each object MUST contain:
+- "Name": Title/clean name of the book/video/audio
+- "URL": Direct download link to the file
+- "Size_MB": Estimate file size if snippet hints, otherwise return "N/A"
+- "Source": Short domain name source
+
+DO NOT wrap JSON in code blocks (e.g. ```json), just output the raw JSON string."""
+
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"User query: '{query}'\n\nWeb Search Data:\n{search_context}"}
+            ],
+            temperature=0.2
+        )
+        
+        raw_json = response.choices[0].message.content.strip()
+        # Clean potential markdown output
+        if raw_json.startswith("```"):
+            raw_json = raw_json.split("\n", 1)[1].rsplit("\n", 1)[0].strip()
+            
+        return json.loads(raw_json)
+    except Exception as e:
+        st.error(f"AI Internet search failed: {e}")
+        return []
+
 # Sidebar controls
 with st.sidebar:
     st.header("⚙️ Library Tools")
@@ -362,7 +430,6 @@ with st.sidebar:
                     success, msg = download_and_upload_locally(download_url, target_folder)
                     if success:
                         st.success(msg)
-                        # Auto refresh local catalog
                         st.write("Refreshing catalog...")
                         if fetch_catalog_from_drive():
                             st.cache_data.clear()
@@ -374,56 +441,68 @@ with st.sidebar:
 
 catalog = load_catalog()
 
-if catalog is None or catalog.empty:
-    st.info("Digital Library Catalog not found. Please sync the resources from the sidebar.")
-else:
-    categories = sorted(catalog['Category'].unique())
-    
-    # Global search
-    search_query = st.text_input("🔍 Search books, audio, and video files:", "").strip().lower()
-    
-    if search_query:
-        filtered_df = catalog[catalog['Name'].str.lower().str.contains(search_query)]
-        st.subheader(f"🔍 Search Results ({len(filtered_df)} matches)")
-        
-        # Render search result grid with clickable 3D Book Cover cards with cover artwork
-        html_grid = '<div class="book-grid">'
-        for idx, row in filtered_df.iterrows():
-            name = row['Name']
-            url = row['URL']
-            size = row['Size_MB']
-            cat = row['Category']
-            icon = row['Icon']
-            
-            cover_b64 = get_cover_url(name, cat)
-            bg_style = f"background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.85)), url('{cover_b64}') no-repeat center center; background-size: cover;" if cover_b64 else "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);"
-            
-            html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card" style="{bg_style}"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
-        html_grid += '</div>'
-        st.markdown(html_grid, unsafe_allow_html=True)
+# Top level navigation layout: Bookshelf vs Interactive AI Chat
+nav_option = st.radio("🧭 Library Navigation", ["📚 Bookshelf & Web Search", "💬 AI Assistant Chat"], horizontal=True)
+
+if nav_option == "📚 Bookshelf & Web Search":
+    if catalog is None or catalog.empty:
+        st.info("Digital Library Catalog not found. Please sync the resources from the sidebar.")
     else:
-        # Categorized Tab Layout
-        tabs_labels = []
-        for cat in categories:
-            icon = "📁"
-            for k, v in category_mapping.items():
-                if v[0] == cat:
-                    icon = v[1]
-                    break
-            tabs_labels.append(f"{icon} {cat}")
-            
-        tabs = st.tabs(tabs_labels)
+        categories = sorted(catalog['Category'].unique())
         
-        for tab, cat in zip(tabs, categories):
-            with tab:
-                cat_df = catalog[catalog['Category'] == cat]
+        # Grid Search controls
+        col_search, col_format = st.columns([3, 1])
+        with col_search:
+            search_query = st.text_input("🔍 Search library catalog or search the internet:", "").strip()
+        with col_format:
+            search_format = st.selectbox("Format Filter (For Web Search):", ["PDF (Books)", "MP3 (Audio)", "MP4 (Videos)"])
+        
+        # Toggle between local search and Live Web Search
+        is_web_search = st.checkbox("🌐 Run Real-Time Internet Search using AI", value=False)
+        
+        if search_query:
+            if is_web_search:
+                st.subheader(f"🌐 AI Live Internet Results for: '{search_query}' ({search_format})")
+                st.caption("AI is crawling the web and extracting direct media download links...")
                 
-                # Render grid with clickable 3D Book Cover cards with cover artwork
+                # Fetch temporary resources from DuckDuckGo + OpenAI compiler
+                temp_results = search_internet_for_resources(search_query, search_format)
+                
+                if not temp_results:
+                    st.warning("No direct media download links found on the web for this query. Try adjusting your keywords.")
+                else:
+                    # Map format to specific visual styles
+                    icon = "📚"
+                    if "MP3" in search_format:
+                        icon = "🎧"
+                    elif "MP4" in search_format:
+                        icon = "🎬"
+                        
+                    html_grid = '<div class="book-grid">'
+                    for r in temp_results:
+                        name = r.get("Name", "Untitled Web Book")
+                        url = r.get("URL", "#")
+                        size = r.get("Size_MB", "N/A")
+                        source = r.get("Source", "Web")
+                        
+                        cover_b64 = get_cover_url(name, search_format)
+                        bg_style = f"background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.85)), url('{cover_b64}') no-repeat center center; background-size: cover;" if cover_b64 else "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);"
+                        
+                        # Clickable widget leading directly to the temporary internet URL
+                        html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card" style="{bg_style}"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>🌐 {source}</span><span>GET ↗</span></div></div></a>'
+                    html_grid += '</div>'
+                    st.markdown(html_grid, unsafe_allow_html=True)
+            else:
+                # Standard Local Search Catalog filtering
+                filtered_df = catalog[catalog['Name'].str.lower().str.contains(search_query.lower())]
+                st.subheader(f"🔍 Search Results ({len(filtered_df)} matches)")
+                
                 html_grid = '<div class="book-grid">'
-                for idx, row in cat_df.iterrows():
+                for idx, row in filtered_df.iterrows():
                     name = row['Name']
                     url = row['URL']
                     size = row['Size_MB']
+                    cat = row['Category']
                     icon = row['Icon']
                     
                     cover_b64 = get_cover_url(name, cat)
@@ -432,3 +511,95 @@ else:
                     html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card" style="{bg_style}"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
                 html_grid += '</div>'
                 st.markdown(html_grid, unsafe_allow_html=True)
+        else:
+            # Categorized Tab Layout
+            tabs_labels = []
+            for cat in categories:
+                icon = "📁"
+                for k, v in category_mapping.items():
+                    if v[0] == cat:
+                        icon = v[1]
+                        break
+                tabs_labels.append(f"{icon} {cat}")
+                
+            tabs = st.tabs(tabs_labels)
+            
+            for tab, cat in zip(tabs, categories):
+                with tab:
+                    cat_df = catalog[catalog['Category'] == cat]
+                    
+                    html_grid = '<div class="book-grid">'
+                    for idx, row in cat_df.iterrows():
+                        name = row['Name']
+                        url = row['URL']
+                        size = row['Size_MB']
+                        icon = row['Icon']
+                        
+                        cover_b64 = get_cover_url(name, cat)
+                        bg_style = f"background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.85)), url('{cover_b64}') no-repeat center center; background-size: cover;" if cover_b64 else "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);"
+                        
+                        html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card" style="{bg_style}"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
+                    html_grid += '</div>'
+                    st.markdown(html_grid, unsafe_allow_html=True)
+
+elif nav_option == "💬 AI Assistant Chat":
+    st.subheader("💬 AI Study Assistant")
+    st.write("Ask your AI assistant questions about the library collection, subjects, or any study help you need.")
+    
+    # Initialize session state for chat history
+    if "messages" not in st.session_state:
+        st.session_state.messages = [
+            {"role": "assistant", "content": "Hello! I am your AI Study Assistant connected to the Cosmic Digital Library. Ask me anything!"}
+        ]
+        
+    # Render chat interface container
+    chat_container = st.container()
+    
+    with chat_container:
+        for m in st.session_state.messages:
+            bubble_class = "chat-user" if m["role"] == "user" else "chat-assistant"
+            st.markdown(f'<div class="chat-bubble {bubble_class}">{m["content"]}</div>', unsafe_allow_html=True)
+            
+    # Input field
+    if user_prompt := st.chat_input("Type your question here..."):
+        # Append user message
+        st.session_state.messages.append({"role": "user", "content": user_prompt})
+        # Rerender chat immediately
+        st.rerun()
+        
+    # Generate response if last message is from user
+    if st.session_state.messages[-1]["role"] == "user":
+        with st.spinner("AI is thinking..."):
+            try:
+                client = OpenAI(api_key=OPENAI_API_KEY)
+                
+                # Fetch a clean list of local catalog files to feed as context
+                local_files_context = ""
+                if catalog is not None and not catalog.empty:
+                    local_files_context = "\n".join([f"- {row['Name']} ({row['Category']})" for idx, row in catalog.iterrows()])
+                
+                prompt_messages = [
+                    {
+                        "role": "system",
+                        "content": f"You are a helpful and intelligent Cosmic Study Assistant. You help users navigate their digital library and study subjects. Here is the list of available resources in their local library drive:\n{local_files_context}"
+                    }
+                ]
+                
+                # Append conversation history
+                for msg in st.session_state.messages[:-1]:
+                    prompt_messages.append({"role": msg["role"], "content": msg["content"]})
+                # Append last user message
+                prompt_messages.append({"role": "user", "content": st.session_state.messages[-1]["content"]})
+                
+                # Request completion
+                completion = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=prompt_messages,
+                    temperature=0.7
+                )
+                
+                assistant_response = completion.choices[0].message.content
+                st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+                st.rerun()
+            except Exception as e:
+                st.error(f"Error communicating with OpenAI: {e}")
