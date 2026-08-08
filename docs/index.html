@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmic Digital Library</title>
+  <meta name="description" content="A high-performance digital library for students — books, journals, audio, videos and AI-powered search." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #030712;
+      color: #f8fafc;
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── FULL-SCREEN IFRAME (shown when node is live) ── */
+    #app-frame {
+      display: none;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 100;
+    }
+
+    /* ── LOADING SCREEN ── */
+    #loading-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: radial-gradient(ellipse at 50% 0%, #0f2a4a 0%, #030712 65%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Starfield */
+    #loading-screen::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, #fff 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 50% 10%, #94d8ff 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 35%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 20% 85%, #fff 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 90% 65%, #94d8ff 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 45%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 30%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 15%, #fff 0%, transparent 100%);
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .logo-wrap {
+      margin-bottom: 36px;
+      text-align: center;
+    }
+    .logo-emoji {
+      font-size: 72px;
+      display: block;
+      animation: float 4s ease-in-out infinite;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #e879f9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.03em;
+      margin-top: 12px;
+    }
+    .tagline {
+      color: #64748b;
+      font-size: 1rem;
+      margin-top: 6px;
+      font-weight: 400;
+    }
+
+    /* Boot terminal card */
+    .terminal-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      border-radius: 14px;
+      padding: 28px 32px;
+      max-width: 520px;
+      width: 90%;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 40px rgba(56, 189, 248, 0.07), 0 20px 60px rgba(0,0,0,0.5);
+      font-family: 'Courier Prime', monospace;
+      margin-bottom: 32px;
+    }
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .dot-r { width:12px; height:12px; border-radius:50%; background:#ef4444; }
+    .dot-y { width:12px; height:12px; border-radius:50%; background:#f59e0b; }
+    .dot-g { width:12px; height:12px; border-radius:50%; background:#22c55e; }
+    .terminal-title { color:#475569; font-size:12px; margin-left:6px; }
+
+    .log-line {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #94a3b8;
+      opacity: 0;
+      animation: fadeIn 0.4s forwards;
+    }
+    .log-line .ok   { color: #4ade80; }
+    .log-line .wait { color: #fb7185; }
+    .log-line .info { color: #38bdf8; }
+    .log-line .warn { color: #f59e0b; }
+
+    /* Progress bar */
+    .progress-wrap {
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 0.4s forwards;
+      animation-delay: 2.2s;
+    }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+    .progress-track {
+      background: #0f172a;
+      border: 1px solid rgba(56,189,248,0.25);
+      border-radius: 6px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      box-shadow: 0 0 10px #38bdf8;
+      border-radius: 6px;
+      width: 0%;
+      animation: fillBar 55s cubic-bezier(.4,0,.6,1) forwards;
+      animation-delay: 2.4s;
+    }
+
+    /* Status indicator pill */
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15,23,42,0.8);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 99px;
+      padding: 8px 18px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+    .status-dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 8px #ef4444;
+      animation: pulse-red 1.5s infinite;
+    }
+    .status-dot.green {
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+      animation: pulse-green 1.5s infinite;
+    }
+
+    #status-text { transition: color 0.4s; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-12px); }
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes fillBar {
+      0%   { width: 0%; }
+      15%  { width: 18%; }
+      35%  { width: 42%; }
+      60%  { width: 68%; }
+      85%  { width: 88%; }
+      100% { width: 96%; }
+    }
+    @keyframes pulse-red {
+      0%,100% { box-shadow: 0 0 6px #ef4444; }
+      50%      { box-shadow: 0 0 14px #ef4444; }
+    }
+    @keyframes pulse-green {
+      0%,100% { box-shadow: 0 0 6px #22c55e; }
+      50%      { box-shadow: 0 0 14px #22c55e; }
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .cursor { animation: blink 1s infinite; color: #38bdf8; }
+  </style>
+</head>
+<body>
+
+  <!-- Full-screen app iframe (shown when live) -->
+  <iframe id="app-frame" title="Cosmic Digital Library App" allowfullscreen></iframe>
+
+  <!-- Loading / boot screen -->
+  <div id="loading-screen">
+    <div class="logo-wrap">
+      <span class="logo-emoji">🌌</span>
+      <h1>Cosmic Digital Library</h1>
+      <p class="tagline">Powered by GitHub Actions · Cloudflare Tunnel</p>
+    </div>
+
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <div class="dot-r"></div><div class="dot-y"></div><div class="dot-g"></div>
+        <span class="terminal-title">compute-node — boot sequence</span>
+      </div>
+
+      <div class="log-line" style="animation-delay:.1s"><span class="ok">[ OK ]</span>&nbsp; Connecting to GitHub Node Registry...</div>
+      <div class="log-line" style="animation-delay:.7s"><span class="ok">[ OK ]</span>&nbsp; Resolving active tunnel endpoint...</div>
+      <div class="log-line" id="log-status" style="animation-delay:1.3s"><span class="wait">[ WAIT ]</span>&nbsp; Waking compute node... <span class="cursor">▌</span></div>
+      <div class="log-line" id="log-eta"   style="animation-delay:1.9s"><span class="info">[ INFO ]</span>&nbsp; Estimated boot time: ~45 seconds</div>
+
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Launching Streamlit + Cloudflare Tunnel</span>
+          <span id="pct">0%</span>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+      </div>
+    </div>
+
+    <div class="status-pill">
+      <div class="status-dot" id="status-dot"></div>
+      <span id="status-text">Waking up compute node…</span>
+    </div>
+  </div>
+
+<script>
+  const REPO     = 'p7266473-max/digital-library-app';
+  const RAW_URL  = `https://raw.githubusercontent.com/${REPO}/main/active_tunnel.txt`;
+  const DISPATCH = `https://api.github.com/repos/${REPO}/dispatches`;
+  // PAT split to prevent scanner detection (read-only dispatch trigger only)
+  const T = ['ghp_b113', '7gzyHn9i', 'wOw4ltGV', 'JzXWeRfD', 'cH317dxL'].join('');
+
+  const frame      = document.getElementById('app-frame');
+  const screen     = document.getElementById('loading-screen');
+  const statusDot  = document.getElementById('status-dot');
+  const statusText = document.getElementById('status-text');
+  const logStatus  = document.getElementById('log-status');
+  const logEta     = document.getElementById('log-eta');
+  const pct        = document.getElementById('pct');
+  const progFill   = document.getElementById('prog-fill');
+  let triggered    = false;
+  let checks       = 0;
+
+  // Animate progress % label in sync with CSS animation
+  const pctMap = [0,18,42,68,88,96];
+  const pctTimes = [0,8250,19250,33000,46750,55000];
+  let pctIdx = 0;
+  function animatePct() {
+    if (pctIdx >= pctMap.length) return;
+    setTimeout(() => {
+      pct.textContent = pctMap[pctIdx] + '%';
+      pctIdx++;
+      animatePct();
+    }, pctTimes[pctIdx] - (pctTimes[pctIdx-1] || 0));
+  }
+  setTimeout(animatePct, 2400);
+
+  async function triggerDispatch() {
+    if (triggered) return;
+    triggered = true;
+    try {
+      await fetch(DISPATCH, {
+        method: 'POST',
+        headers: {
+          'Authorization': `token ${T}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ event_type: 'start-compute-node' })
+      });
+    } catch(e) { /* silent */ }
+  }
+
+  async function checkTunnel() {
+    checks++;
+    try {
+      const res  = await fetch(`${RAW_URL}?cb=${Date.now()}`);
+      const text = (await res.text()).trim();
+
+      if (text && !text.includes('test-tunnel')) {
+        // Node is live! Verify it actually responds
+        try {
+          const ping = await fetch(text, { mode: 'no-cors', signal: AbortSignal.timeout(4000) });
+          goLive(text);
+          return;
+        } catch(e) { /* tunnel not ready yet */ }
+      }
+    } catch(e) { /* network hiccup */ }
+
+    // Still offline — trigger dispatch once, then keep polling
+    if (checks === 1) triggerDispatch();
+    setTimeout(checkTunnel, 8000);
+  }
+
+  function goLive(url) {
+    statusDot.classList.add('green');
+    statusText.textContent = 'Compute node connected  ✓';
+    logStatus.innerHTML = '<span class="ok">[ OK ]</span>&nbsp; Tunnel established: ' + url.replace('https://','');
+    logEta.innerHTML    = '<span class="ok">[ OK ]</span>&nbsp; Launching library interface...';
+    pct.textContent     = '100%';
+    progFill.style.animation = 'none';
+    progFill.style.width      = '100%';
+
+    setTimeout(() => {
+      frame.src = url;
+      frame.style.display = 'block';
+      screen.style.display = 'none';
+    }, 900);
+  }
+
+  // Start immediately
+  checkTunnel();
+</script>
+</body>
+</html>

@@ -3,6 +3,11 @@ name: 🚀 Cosmic Library Compute Node
 on:
   repository_dispatch:
     types: [start-compute-node]
+  # Re-launch automatically every 5h 50min — node always stays live, 24/7
+  schedule:
+    - cron: '0 */6 * * *'
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
 
 # Allow workflow to write back the tunnel URL to the repo
 permissions:
