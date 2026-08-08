@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 venv/
 .env
+openai_key.txt
+colab_tunnel.txt
+*.txt
+*.json
+!Digital_Library_Catalog.json
+

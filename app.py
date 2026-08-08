@@ -16,9 +16,6 @@ from duckduckgo_search import DDGS
 # Ensure rclone in local bin is visible in PATH
 os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
 
-# Load API key securely
-OPENAI_API_KEY = "sk-jI4lFCSfwyloRODnNpIefYM1JMIIuy77M9DXCUnN0z610u3SKCj0Yzsk7Q5A9LCa"
-
 st.set_page_config(
     page_title="Cosmic Digital Library",
     page_icon="🌌",
@@ -137,6 +134,29 @@ st.write("Lightweight metadata catalog with direct high-speed Google Drive acces
 LOCAL_JSON = "Digital_Library_Catalog.json"
 LOCAL_EXCEL = "/tmp/Digital_Library_Catalog.xlsx"
 DRIVE_TARGET_EXCEL = "stories_drive:Digital Library/Digital_Library_Catalog.xlsx"
+KEY_CONFIG = "openai_key.txt"
+
+# Secure API Key loader checking both local gitignored file and Streamlit Cloud Secrets
+def get_openai_api_key():
+    # 1. Check Streamlit Secrets (Recommended for Streamlit Cloud Hosting)
+    if "OPENAI_API_KEY" in st.secrets:
+        return st.secrets["OPENAI_API_KEY"]
+        
+    # 2. Check local gitignored config file (For localhost execution)
+    if os.path.exists(KEY_CONFIG):
+        try:
+            with open(KEY_CONFIG, "r") as f:
+                return f.read().strip()
+        except:
+            pass
+    return ""
+
+def save_openai_key(key):
+    try:
+        with open(KEY_CONFIG, "w") as f:
+            f.write(key.strip())
+    except:
+        pass
 
 # Convert local images to Base64 with resizing to optimize speed and payload size
 @st.cache_data
@@ -357,8 +377,12 @@ def load_catalog():
 
 # AI Real-time internet search function
 def search_internet_for_resources(query, search_format):
+    api_key = get_openai_api_key()
+    if not api_key:
+        st.warning("⚠️ OpenAI API Key is missing. Please set it in the sidebar settings expander.")
+        return []
+        
     try:
-        # Construct search engine prompt targeted at filetypes
         search_query = query
         if search_format == "PDF (Books)":
             search_query += " filetype:pdf"
@@ -370,13 +394,11 @@ def search_internet_for_resources(query, search_format):
         with DDGS() as ddgs:
             results = list(ddgs.text(search_query, max_results=15))
             
-        # Format the search results to feed to OpenAI
         search_context = ""
         for idx, r in enumerate(results):
             search_context += f"Result #{idx+1}:\nTitle: {r['title']}\nURL: {r['href']}\nSnippet: {r['body']}\n\n"
             
-        # Use OpenAI to filter and compile clean resource links
-        client = OpenAI(api_key=OPENAI_API_KEY)
+        client = OpenAI(api_key=api_key)
         system_prompt = f"""You are a Digital Library Assistant. Analyze the web search results and extract direct download links matching the requested format: {search_format}.
 Filter out garbage redirects, ad sites, or landing pages. Extract ONLY direct links to resource files.
 Return the results ONLY as a JSON list of objects. Each object MUST contain:
@@ -397,7 +419,6 @@ DO NOT wrap JSON in code blocks (e.g. ```json), just output the raw JSON string.
         )
         
         raw_json = response.choices[0].message.content.strip()
-        # Clean potential markdown output
         if raw_json.startswith("```"):
             raw_json = raw_json.split("\n", 1)[1].rsplit("\n", 1)[0].strip()
             
@@ -421,6 +442,15 @@ with st.sidebar:
                 st.error("Failed to sync catalog. Please verify rclone connection.")
     else:
         st.info("ℹ️ **Cloud Mode Active**\n\nAuto-sync via Rclone is disabled in the cloud. To update library items, run the app locally, click Sync, and push the updated `Digital_Library_Catalog.json` to GitHub.")
+
+    # API Key Configuration (Excluded from GitHub repository commits via .gitignore)
+    st.markdown("---")
+    with st.expander("🔑 OpenAI API Key Configuration"):
+        current_api_key = get_openai_api_key()
+        openai_key_input = st.text_input("OpenAI API Key:", value=current_api_key, type="password", placeholder="sk-proj-...").strip()
+        if openai_key_input != current_api_key:
+            save_openai_key(openai_key_input)
+            st.toast("OpenAI API Key saved securely!", icon="🔒")
 
     # Simplified Internal Downloader Portal (Local Execution Only)
     st.markdown("---")
@@ -474,13 +504,11 @@ if nav_option == "📚 Bookshelf & Web Search":
                 st.subheader(f"🌐 AI Live Internet Results for: '{search_query}' ({search_format})")
                 st.caption("AI is crawling the web and extracting direct media download links...")
                 
-                # Fetch temporary resources from DuckDuckGo + OpenAI compiler
                 temp_results = search_internet_for_resources(search_query, search_format)
                 
                 if not temp_results:
                     st.warning("No direct media download links found on the web for this query. Try adjusting your keywords.")
                 else:
-                    # Map format to specific visual styles
                     icon = "📚"
                     if "MP3" in search_format:
                         icon = "🎧"
@@ -497,7 +525,6 @@ if nav_option == "📚 Bookshelf & Web Search":
                         cover_b64 = get_cover_url(name, search_format)
                         bg_style = f"background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.85)), url('{cover_b64}') no-repeat center center; background-size: cover;" if cover_b64 else "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);"
                         
-                        # Clickable widget leading directly to the temporary internet URL
                         html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card" style="{bg_style}"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>🌐 {source}</span><span>GET ↗</span></div></div></a>'
                     html_grid += '</div>'
                     st.markdown(html_grid, unsafe_allow_html=True)
@@ -561,7 +588,6 @@ elif nav_option == "💬 AI Assistant Chat":
             {"role": "assistant", "content": "Hello! I am your AI Study Assistant connected to the Cosmic Digital Library. Ask me anything!"}
         ]
         
-    # Render chat interface container
     chat_container = st.container()
     
     with chat_container:
@@ -571,18 +597,21 @@ elif nav_option == "💬 AI Assistant Chat":
             
     # Input field
     if user_prompt := st.chat_input("Type your question here..."):
-        # Append user message
         st.session_state.messages.append({"role": "user", "content": user_prompt})
-        # Rerender chat immediately
         st.rerun()
         
     # Generate response if last message is from user
     if st.session_state.messages[-1]["role"] == "user":
         with st.spinner("AI is thinking..."):
             try:
-                client = OpenAI(api_key=OPENAI_API_KEY)
+                api_key = get_openai_api_key()
+                if not api_key:
+                    st.error("⚠️ OpenAI API Key is missing. Please configure it in the sidebar settings expander.")
+                    st.stop()
+                    
+                client = OpenAI(api_key=api_key)
                 
-                # Fetch a clean list of local catalog files to feed as context
+                # Fetch local catalog context
                 local_files_context = ""
                 if catalog is not None and not catalog.empty:
                     local_files_context = "\n".join([f"- {row['Name']} ({row['Category']})" for idx, row in catalog.iterrows()])
@@ -594,13 +623,10 @@ elif nav_option == "💬 AI Assistant Chat":
                     }
                 ]
                 
-                # Append conversation history
                 for msg in st.session_state.messages[:-1]:
                     prompt_messages.append({"role": msg["role"], "content": msg["content"]})
-                # Append last user message
                 prompt_messages.append({"role": "user", "content": st.session_state.messages[-1]["content"]})
                 
-                # Request completion
                 completion = client.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=prompt_messages,
