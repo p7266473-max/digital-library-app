@@ -16,6 +16,117 @@ from duckduckgo_search import DDGS
 # Ensure rclone in local bin is visible in PATH
 os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
 
+# Environment Detection
+IS_LOCAL = os.path.exists("/home/efar")
+IS_COLAB = os.path.exists("/content")
+
+# --- STREAMLIT CLOUD DOORWAY MODE ---
+if not IS_LOCAL and not IS_COLAB:
+    st.set_page_config(
+        page_title="Cosmic Digital Library Gateway",
+        page_icon="🌌",
+        layout="wide",
+        initial_sidebar_state="collapsed"
+    )
+    
+    # Hide Streamlit header, footer, and padding for seamless full-screen iframe integration
+    st.markdown("""
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        .block-container {
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+            padding-left: 0rem;
+            padding-right: 0rem;
+        }
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            z-index: 999999;
+        }
+        body {
+            background-color: #0f172a;
+            color: #cbd5e1;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    # Fetch current Cloudflare Tunnel URL from GitHub Repository API (Instant, No Cache)
+    tunnel_url = ""
+    repo = "p7266473-max/digital-library-app"
+    path = "active_tunnel.txt"
+    api_url = f"https://api.github.com/repos/{repo}/contents/{path}"
+    
+    try:
+        req = urllib.request.Request(
+            api_url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)', 'Accept': 'application/vnd.github.v3+json'}
+        )
+        with urllib.request.urlopen(req, timeout=3) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            content_b64 = data.get("content", "")
+            tunnel_url = base64.b64decode(content_b64.encode("utf-8")).decode("utf-8").strip()
+    except Exception as e:
+        st.error(f"Error checking compute node status: {e}")
+
+    # Check if the fetched tunnel is online
+    is_active = False
+    if tunnel_url and "test-tunnel" not in tunnel_url:
+        try:
+            check_req = urllib.request.Request(tunnel_url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+            with urllib.request.urlopen(check_req, timeout=2.5) as check_res:
+                if check_res.status in [200, 301, 302]:
+                    is_active = True
+        except Exception:
+            pass
+
+    if is_active:
+        # Load Colab-hosted application inside a borderless, full-screen frame
+        st.markdown(f'<iframe src="{tunnel_url}"></iframe>', unsafe_allow_html=True)
+    else:
+        # Compute node is offline, show setup and sleep page
+        st.markdown("""
+        <div style="text-align: center; margin-top: 120px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+            <h1 style="color: #38bdf8; font-size: 2.8rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 10px;">🌌 Cosmic Compute Node Offline</h1>
+            <p style="color: #94a3b8; font-size: 1.15rem; max-width: 580px; margin: 15px auto 45px auto; line-height: 1.6;">
+                The high-performance cloud server for this library is currently sleeping to save resources. 
+                Please wake up the worker to load the bookshelves.
+            </p>
+            <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 35px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06); max-width: 520px; margin: 0 auto; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <h3 style="color: #f8fafc; margin-top: 0; font-size: 1.25rem; font-weight: 700; margin-bottom: 20px;">🛠️ Activation Steps for Admin:</h3>
+                <ol style="color: #cbd5e1; line-height: 1.9; padding-left: 20px; font-size: 1.05rem;">
+                    <li style="margin-bottom: 10px;">Open your Google Colab <b>Digital Library Notebook</b>.</li>
+                    <li style="margin-bottom: 10px;">Click <b>Run All</b> on the cells to start the tunnel.</li>
+                    <li style="margin-bottom: 10px;">The node links automatically! This page will refresh into the bookshelves within seconds.</li>
+                </ol>
+            </div>
+            <p style="color: #475569; font-size: 0.85rem; margin-top: 60px;">Digital Library Gateway Doorway v3.0</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Auto-reload doorway tab every 15s to check if admin waked it up
+        st.markdown("""
+        <script>
+            setTimeout(function() {
+                window.location.reload();
+            }, 15000);
+        </script>
+        """, unsafe_allow_html=True)
+    st.stop()
+
+
+# --- STREAMLIT COMPUTATION APP (LOCAL / COLAB WORKER ENVIRONMENT) ---
 st.set_page_config(
     page_title="Cosmic Digital Library",
     page_icon="🌌",
@@ -256,6 +367,10 @@ def download_and_upload_locally(download_url, category_folder):
     temp_path = os.path.join("/tmp", file_name)
     is_youtube = "youtube.com" in download_url or "youtu.be" in download_url
     
+    # Check if running in Google Colab (with mounted Drive)
+    colab_drive_path = "/content/drive/MyDrive/Digital Library"
+    is_colab_mount = os.path.exists(colab_drive_path)
+    
     try:
         if is_youtube:
             st.write("Checking local yt-dlp dependencies...")
@@ -290,18 +405,28 @@ def download_and_upload_locally(download_url, category_folder):
             with urllib.request.urlopen(request) as response, open(temp_path, 'wb') as out_file:
                 shutil.copyfileobj(response, out_file)
         
-        st.write("Uploading to Google Drive...")
-        rclone_dest = f"stories_drive:Digital Library/{category_folder}/{os.path.basename(temp_path)}"
-        upload_cmd = ["rclone", "copyto", temp_path, rclone_dest]
-        upload_res = subprocess.run(upload_cmd, capture_output=True, text=True)
-        
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
-            
-        if upload_res.returncode == 0:
-            return True, f"Successfully added: `{os.path.basename(temp_path)}`"
+        if is_colab_mount:
+            st.write("Saving file directly to mounted Google Drive...")
+            dest_dir = os.path.join(colab_drive_path, category_folder)
+            os.makedirs(dest_dir, exist_ok=True)
+            dest_path = os.path.join(dest_dir, os.path.basename(temp_path))
+            shutil.copy2(temp_path, dest_path)
+            if os.path.exists(temp_path):
+                os.remove(temp_path)
+            return True, f"Successfully saved directly to Google Drive: `{os.path.basename(temp_path)}`"
         else:
-            return False, f"Rclone upload error: {upload_res.stderr}"
+            st.write("Uploading to Google Drive via Rclone...")
+            rclone_dest = f"stories_drive:Digital Library/{category_folder}/{os.path.basename(temp_path)}"
+            upload_cmd = ["rclone", "copyto", temp_path, rclone_dest]
+            upload_res = subprocess.run(upload_cmd, capture_output=True, text=True)
+            
+            if os.path.exists(temp_path):
+                os.remove(temp_path)
+                
+            if upload_res.returncode == 0:
+                return True, f"Successfully added: `{os.path.basename(temp_path)}`"
+            else:
+                return False, f"Rclone upload error: {upload_res.stderr}"
             
     except Exception as e:
         if os.path.exists(temp_path):
@@ -381,7 +506,6 @@ def search_internet_for_resources(query, search_format):
         for idx, r in enumerate(results):
             search_context += f"Result #{idx+1}:\nTitle: {r['title']}\nURL: {r['href']}\nSnippet: {r['body']}\n\n"
             
-        # Initialize client with Zen OpenCode credentials
         client = OpenAI(api_key=get_auth_token(), base_url=get_api_endpoint())
         system_prompt = f"""You are a Digital Library Assistant. Analyze the web search results and extract direct download links matching the requested format: {search_format}.
 Filter out garbage redirects, ad sites, or landing pages. Extract ONLY direct links to resource files.
@@ -425,12 +549,15 @@ with st.sidebar:
             else:
                 st.error("Failed to sync catalog. Please verify rclone connection.")
     else:
-        st.info("ℹ️ **Cloud Mode Active**\n\nAuto-sync via Rclone is disabled in the cloud. To update library items, run the app locally, click Sync, and push the updated `Digital_Library_Catalog.json` to GitHub.")
+        st.info("ℹ️ **Cloud Compute Mode Active**\n\nDirect catalog syncing is run locally by the admin. The cloud application reads dynamically from the committed database.")
 
-    # Simplified Internal Downloader Portal (Local Execution Only)
+    # Simplified Downloader Portal (Local & Colab Mounts Only)
+    colab_drive_path = "/content/drive/MyDrive/Digital Library"
+    downloader_active = rclone_available or os.path.exists(colab_drive_path)
+    
     st.markdown("---")
     with st.expander("⬇️ Add Resource to Drive"):
-        if rclone_available:
+        if downloader_active:
             st.write("Download books/media directly to your authenticated Google Drive.")
             download_url = st.text_input("Resource URL:", placeholder="Paste direct link or YouTube URL...").strip()
             
@@ -451,7 +578,7 @@ with st.sidebar:
                     else:
                         st.error(f"Download/Upload failed: {msg}")
         else:
-            st.info("ℹ️ **Local Dev Mode Feature**\n\nThe internal downloader runs commands on your local machine and uses rclone to upload to Google Drive. It is disabled in the cloud environment.")
+            st.info("ℹ️ **Local / Compute Dev Feature**\n\nThe internal downloader runs commands on your local machine or your Colab backend. It is disabled in gateway doorway mode.")
 
 catalog = load_catalog()
 
@@ -579,7 +706,6 @@ elif nav_option == "💬 AI Assistant Chat":
     if st.session_state.messages[-1]["role"] == "user":
         with st.spinner("AI is thinking..."):
             try:
-                # Initialize client with Zen OpenCode credentials
                 client = OpenAI(api_key=get_auth_token(), base_url=get_api_endpoint())
                 
                 # Fetch local catalog context
