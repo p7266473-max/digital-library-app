@@ -28,9 +28,9 @@ st.markdown("""
     }
     .book-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 35px;
-        padding: 30px 10px;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 25px;
+        padding: 20px 10px;
         perspective: 1000px;
     }
     .book-card-link {
@@ -45,14 +45,14 @@ st.markdown("""
     }
     .book-card {
         position: relative;
-        border-radius: 6px 16px 16px 6px;
+        border-radius: 5px 12px 12px 5px;
         border: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: -8px 10px 20px rgba(0, 0, 0, 0.6), inset 3px 0 0 rgba(255, 255, 255, 0.15);
-        height: 280px;
+        box-shadow: -6px 8px 16px rgba(0, 0, 0, 0.6), inset 2px 0 0 rgba(255, 255, 255, 0.15);
+        height: 240px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 24px 20px 20px 28px;
+        padding: 18px 14px 14px 22px;
         overflow: hidden;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         transform-style: preserve-3d;
@@ -71,28 +71,28 @@ st.markdown("""
         width: 14px;
         background: linear-gradient(to right, #0f172a 0%, #1e293b 60%, #0f172a 100%);
         box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.08), 2px 0 5px rgba(0, 0, 0, 0.5);
-        border-radius: 6px 0 0 6px;
+        border-radius: 5px 0 0 5px;
         z-index: 10;
     }
     .book-icon {
-        font-size: 32px;
-        margin-bottom: 12px;
-        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+        font-size: 26px;
+        margin-bottom: 8px;
+        filter: drop-shadow(0 3px 5px rgba(0,0,0,0.5));
     }
     .book-title {
-        font-size: 14px;
+        font-size: 12.5px;
         font-weight: 700;
         color: #f8fafc;
-        line-height: 1.4;
-        margin-bottom: 8px;
+        line-height: 1.35;
+        margin-bottom: 6px;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        text-shadow: 0 2px 3px rgba(0,0,0,0.8);
     }
     .book-meta {
-        font-size: 11px;
+        font-size: 10px;
         color: #38bdf8;
         font-weight: 700;
         text-transform: uppercase;
