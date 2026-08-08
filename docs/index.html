@@ -4,308 +4,190 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cosmic Digital Library</title>
-  <meta name="description" content="A high-performance digital library for students — books, journals, audio, videos and AI-powered search." />
+  <meta name="description" content="A high-performance digital library for students." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: #030712;
-      color: #f8fafc;
-      font-family: 'Inter', sans-serif;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{
+      background:#030712;color:#f8fafc;
+      font-family:'Inter',sans-serif;
+      min-height:100vh;display:flex;flex-direction:column;
+      align-items:center;justify-content:center;overflow:hidden;
     }
-
-    /* Starfield */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
+    body::before{
+      content:'';position:fixed;inset:0;pointer-events:none;
       background:
-        radial-gradient(ellipse at 50% 0%, #0f2a4a 0%, #030712 60%),
-        radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,0.8) 0%, transparent 100%),
-        radial-gradient(1px 1px at 33% 65%, rgba(255,255,255,0.6) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 52% 12%, rgba(148,216,255,0.9) 0%, transparent 100%),
-        radial-gradient(1px 1px at 73% 78%, rgba(255,255,255,0.7) 0%, transparent 100%),
-        radial-gradient(1px 1px at 88% 38%, rgba(255,255,255,0.5) 0%, transparent 100%),
-        radial-gradient(1px 1px at 22% 88%, rgba(255,255,255,0.6) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 91% 62%, rgba(148,216,255,0.8) 0%, transparent 100%),
-        radial-gradient(1px 1px at 58% 48%, rgba(255,255,255,0.5) 0%, transparent 100%),
-        radial-gradient(1px 1px at 44% 33%, rgba(255,255,255,0.7) 0%, transparent 100%),
-        radial-gradient(1px 1px at 78% 18%, rgba(255,255,255,0.6) 0%, transparent 100%);
-      pointer-events: none;
-      z-index: 0;
+        radial-gradient(ellipse at 50% 0%,#0f2a4a 0%,#030712 60%),
+        radial-gradient(1px 1px at 12% 22%,rgba(255,255,255,.8) 0%,transparent 100%),
+        radial-gradient(1px 1px at 33% 65%,rgba(255,255,255,.6) 0%,transparent 100%),
+        radial-gradient(1.5px 1.5px at 52% 12%,rgba(148,216,255,.9) 0%,transparent 100%),
+        radial-gradient(1px 1px at 73% 78%,rgba(255,255,255,.7) 0%,transparent 100%),
+        radial-gradient(1px 1px at 88% 38%,rgba(255,255,255,.5) 0%,transparent 100%),
+        radial-gradient(1px 1px at 22% 88%,rgba(255,255,255,.6) 0%,transparent 100%),
+        radial-gradient(1.5px 1.5px at 91% 62%,rgba(148,216,255,.8) 0%,transparent 100%);
     }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 560px;
-      padding: 20px;
+    .wrap{position:relative;z-index:1;width:90%;max-width:540px;display:flex;flex-direction:column;align-items:center;}
+    .emoji{font-size:68px;animation:float 4s ease-in-out infinite;margin-bottom:14px;}
+    h1{
+      font-size:clamp(1.7rem,5vw,2.7rem);font-weight:800;text-align:center;
+      background:linear-gradient(135deg,#38bdf8 0%,#818cf8 50%,#e879f9 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      letter-spacing:-.03em;
     }
-
-    .logo-emoji {
-      font-size: 72px;
-      display: block;
-      text-align: center;
-      animation: float 4s ease-in-out infinite;
-      margin-bottom: 16px;
+    .sub{color:#475569;font-size:.85rem;margin-top:5px;text-align:center;}
+    .terminal{
+      width:100%;margin-top:28px;
+      background:rgba(9,13,22,.92);border:1px solid rgba(56,189,248,.18);
+      border-radius:13px;padding:20px 24px;
+      backdrop-filter:blur(14px);
+      box-shadow:0 0 50px rgba(56,189,248,.05),0 20px 60px rgba(0,0,0,.55);
+      font-family:'Courier Prime',monospace;
     }
-    h1 {
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #e879f9 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.03em;
-      text-align: center;
+    .tdots{display:flex;gap:6px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.05);}
+    .td{width:10px;height:10px;border-radius:50%;}
+    .td-r{background:#ef4444}.td-y{background:#f59e0b}.td-g{background:#22c55e}
+    .tlabel{color:#475569;font-size:10px;margin-left:8px;align-self:center;}
+    .log{font-size:12.5px;line-height:1.8;color:#64748b;opacity:0;animation:fadeIn .35s forwards;}
+    .ok{color:#4ade80}.wait{color:#fb7185}.info{color:#38bdf8}.warn{color:#f59e0b}
+    .cur{animation:blink 1s infinite;color:#38bdf8;}
+    .prog-wrap{margin-top:16px;opacity:0;animation:fadeIn .35s forwards;animation-delay:1.8s;}
+    .prog-lbl{display:flex;justify-content:space-between;font-size:10px;color:#334155;margin-bottom:5px;}
+    .prog-track{background:#020617;border:1px solid rgba(56,189,248,.18);border-radius:5px;height:6px;overflow:hidden;}
+    .prog-fill{height:100%;background:linear-gradient(90deg,#38bdf8,#818cf8);box-shadow:0 0 6px rgba(56,189,248,.5);border-radius:5px;width:0%;transition:width .8s ease;}
+    .pill{
+      margin-top:20px;display:inline-flex;align-items:center;gap:8px;
+      background:rgba(15,23,42,.8);border:1px solid rgba(255,255,255,.07);
+      border-radius:99px;padding:8px 18px;font-size:12px;color:#64748b;
     }
-    .tagline {
-      color: #475569;
-      font-size: 0.9rem;
-      margin-top: 6px;
-      text-align: center;
+    .sdot{width:8px;height:8px;border-radius:50%;background:#ef4444;box-shadow:0 0 7px #ef4444;animation:pR 1.5s infinite;transition:background .5s,box-shadow .5s;}
+    .sdot.green{background:#22c55e;box-shadow:0 0 7px #22c55e;animation:pG 1.5s infinite;}
+    #stext{transition:color .4s;}
+    .open-btn{
+      display:none;margin-top:20px;
+      padding:12px 32px;border-radius:10px;border:none;cursor:pointer;
+      background:linear-gradient(135deg,#38bdf8,#818cf8);
+      color:#fff;font-size:15px;font-weight:700;font-family:'Inter',sans-serif;
+      box-shadow:0 4px 20px rgba(56,189,248,.35);
+      transition:transform .2s,box-shadow .2s;
+      text-decoration:none;text-align:center;
     }
-
-    /* Terminal card */
-    .terminal {
-      width: 100%;
-      background: rgba(9, 13, 22, 0.9);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      border-radius: 14px;
-      padding: 22px 26px;
-      margin-top: 32px;
-      backdrop-filter: blur(16px);
-      box-shadow: 0 0 50px rgba(56, 189, 248, 0.06), 0 24px 64px rgba(0,0,0,0.6);
-      font-family: 'Courier Prime', monospace;
-    }
-    .term-dots {
-      display: flex; gap: 6px; margin-bottom: 16px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .td { width:11px; height:11px; border-radius:50%; }
-    .td-r{background:#ef4444;} .td-y{background:#f59e0b;} .td-g{background:#22c55e;}
-    .term-label { color:#475569; font-size:11px; margin-left:8px; align-self:center; }
-
-    .log { font-size:13px; line-height:1.75; color:#64748b; opacity:0; animation: fadeIn .35s forwards; }
-    .ok   { color:#4ade80; }
-    .wait { color:#fb7185; }
-    .info { color:#38bdf8; }
-    .warn { color:#f59e0b; }
-    .cursor { animation: blink 1s infinite; color:#38bdf8; }
-
-    /* Progress */
-    .prog-wrap {
-      margin-top: 18px; opacity:0;
-      animation: fadeIn .35s forwards;
-      animation-delay: 2s;
-    }
-    .prog-label {
-      display:flex; justify-content:space-between;
-      font-size:11px; color:#334155; margin-bottom:6px;
-    }
-    .prog-track {
-      background:#020617;
-      border: 1px solid rgba(56,189,248,0.2);
-      border-radius:6px; height:7px; overflow:hidden;
-    }
-    .prog-fill {
-      height:100%;
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
-      box-shadow: 0 0 8px rgba(56,189,248,0.6);
-      border-radius:6px;
-      width:0%;
-      transition: width 0.8s ease;
-    }
-
-    /* Status pill */
-    .pill {
-      margin-top: 24px;
-      display:inline-flex; align-items:center; gap:9px;
-      background: rgba(15,23,42,0.8);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius:99px; padding: 9px 20px;
-      font-size:13px; color:#64748b;
-    }
-    .sdot {
-      width:9px; height:9px; border-radius:50%;
-      background:#ef4444; box-shadow:0 0 8px #ef4444;
-      animation: pulseR 1.5s infinite;
-      transition: background 0.5s, box-shadow 0.5s;
-    }
-    .sdot.green {
-      background:#22c55e; box-shadow:0 0 8px #22c55e;
-      animation: pulseG 1.5s infinite;
-    }
-    #stext { transition: color .4s; }
-
-    /* Redirect countdown */
-    #countdown-wrap {
-      display:none;
-      margin-top:20px;
-      text-align:center;
-      font-size:13px;
-      color:#64748b;
-    }
-    #countdown-wrap a {
-      color:#38bdf8;
-      text-decoration:underline;
-      cursor:pointer;
-    }
-    #countdown-num { color:#f8fafc; font-weight:700; }
-
-    @keyframes float   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-    @keyframes fadeIn  { to{opacity:1} }
-    @keyframes blink   { 50%{opacity:0} }
-    @keyframes pulseR  { 0%,100%{box-shadow:0 0 6px #ef4444} 50%{box-shadow:0 0 14px #ef4444} }
-    @keyframes pulseG  { 0%,100%{box-shadow:0 0 6px #22c55e} 50%{box-shadow:0 0 14px #22c55e} }
+    .open-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(56,189,248,.5);}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+    @keyframes fadeIn{to{opacity:1}}
+    @keyframes blink{50%{opacity:0}}
+    @keyframes pR{0%,100%{box-shadow:0 0 5px #ef4444}50%{box-shadow:0 0 12px #ef4444}}
+    @keyframes pG{0%,100%{box-shadow:0 0 5px #22c55e}50%{box-shadow:0 0 12px #22c55e}}
   </style>
 </head>
 <body>
-<div class="container">
-  <span class="logo-emoji">🌌</span>
+<div class="wrap">
+  <div class="emoji">🌌</div>
   <h1>Cosmic Digital Library</h1>
-  <p class="tagline">Powered by GitHub Actions · Cloudflare Tunnel</p>
+  <p class="sub">GitHub Actions · Cloudflare Tunnel</p>
 
   <div class="terminal">
-    <div class="term-dots">
-      <div class="td td-r"></div>
-      <div class="td td-y"></div>
-      <div class="td td-g"></div>
-      <span class="term-label">compute-node — boot sequence</span>
+    <div class="tdots">
+      <div class="td td-r"></div><div class="td td-y"></div><div class="td td-g"></div>
+      <span class="tlabel">compute-node — boot sequence</span>
     </div>
     <div class="log" style="animation-delay:.1s"><span class="ok">[ OK ]</span>&nbsp; Connecting to GitHub Node Registry...</div>
-    <div class="log" style="animation-delay:.6s"><span class="ok">[ OK ]</span>&nbsp; Resolving active Cloudflare tunnel...</div>
-    <div class="log" id="log3" style="animation-delay:1.1s"><span class="wait">[ WAIT ]</span>&nbsp; Waking compute node <span class="cursor">▌</span></div>
-    <div class="log" id="log4" style="animation-delay:1.6s"><span class="info">[ INFO ]</span>&nbsp; Estimated boot: ~45 seconds</div>
-
+    <div class="log" style="animation-delay:.55s"><span class="ok">[ OK ]</span>&nbsp; Resolving active Cloudflare tunnel...</div>
+    <div class="log" id="log3" style="animation-delay:1s"><span class="wait">[ WAIT ]</span>&nbsp; Verifying compute node <span class="cur">▌</span></div>
+    <div class="log" id="log4" style="animation-delay:1.45s"><span class="info">[ INFO ]</span>&nbsp; Estimated boot: ~45 seconds</div>
     <div class="prog-wrap">
-      <div class="prog-label">
-        <span>Launching Streamlit engine</span>
-        <span id="pct">0%</span>
-      </div>
+      <div class="prog-lbl"><span>Launching Streamlit engine</span><span id="pct">0%</span></div>
       <div class="prog-track"><div class="prog-fill" id="prog"></div></div>
     </div>
   </div>
 
-  <div class="pill">
-    <div class="sdot" id="sdot"></div>
-    <span id="stext">Waking up compute node…</span>
-  </div>
+  <div class="pill"><div class="sdot" id="sdot"></div><span id="stext">Waking up compute node…</span></div>
 
-  <div id="countdown-wrap">
-    Launching in <span id="countdown-num">3</span>s &nbsp;·&nbsp;
-    <a id="direct-link" href="#" target="_blank">click here if it doesn't open</a>
-  </div>
+  <!-- This button appears when node is confirmed live -->
+  <a class="open-btn" id="open-btn" href="#" target="_self">🚀 Open Cosmic Digital Library</a>
 </div>
 
 <script>
-  const REPO    = 'p7266473-max/digital-library-app';
-  const RAW     = `https://raw.githubusercontent.com/${REPO}/main/active_tunnel.txt`;
-  const DISPATCH= `https://api.github.com/repos/${REPO}/dispatches`;
-  const T       = ['ghp_b113','7gzyHn9i','wOw4ltGV','JzXWeRfD','cH317dxL'].join('');
+  const REPO     = 'p7266473-max/digital-library-app';
+  const RAW      = `https://raw.githubusercontent.com/${REPO}/main/active_tunnel.txt`;
+  const DISPATCH = `https://api.github.com/repos/${REPO}/dispatches`;
+  // CORS proxy to read tunnel body and confirm it's actually Streamlit
+  const PROXY    = 'https://corsproxy.io/?url=';
+  const T        = ['ghp_b113','7gzyHn9i','wOw4ltGV','JzXWeRfD','cH317dxL'].join('');
 
   const sdot    = document.getElementById('sdot');
   const stext   = document.getElementById('stext');
   const log3    = document.getElementById('log3');
   const log4    = document.getElementById('log4');
   const prog    = document.getElementById('prog');
-  const pct     = document.getElementById('pct');
-  const cdWrap  = document.getElementById('countdown-wrap');
-  const cdNum   = document.getElementById('countdown-num');
-  const dlLink  = document.getElementById('direct-link');
+  const pctEl   = document.getElementById('pct');
+  const openBtn = document.getElementById('open-btn');
 
   let triggered = false;
   let checks    = 0;
-  let progVal   = 0;
+  let liveURL   = null;
 
-  // Animate progress bar while waiting
-  function stepProgress() {
-    const targets = [18,36,54,70,84,94];
-    const delays  = [3000,8000,14000,22000,32000,45000];
-    targets.forEach((t, i) => {
-      setTimeout(() => {
-        if (progVal < t) {
-          progVal = t;
-          prog.style.width = t + '%';
-          pct.textContent  = t + '%';
-        }
-      }, delays[i]);
-    });
-  }
-  stepProgress();
+  // Smooth progress animation while waiting
+  const steps = [[18,3000],[36,9000],[54,16000],[70,25000],[84,36000],[94,50000]];
+  let pv = 0;
+  steps.forEach(([v,d]) => setTimeout(() => {
+    if (!liveURL && pv < v) { pv=v; prog.style.width=v+'%'; pctEl.textContent=v+'%'; }
+  }, d));
 
   async function triggerDispatch() {
-    if (triggered) return;
-    triggered = true;
+    if (triggered) return; triggered = true;
     try {
       await fetch(DISPATCH, {
-        method: 'POST',
-        headers: {
-          'Authorization': `token ${T}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ event_type: 'start-compute-node' })
+        method:'POST',
+        headers:{'Authorization':`token ${T}`,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+        body: JSON.stringify({event_type:'start-compute-node'})
       });
-    } catch(e) {}
+    } catch(e){}
   }
 
-  function launchApp(url) {
-    // Update UI to green / ready
+  function goLive(url) {
+    liveURL = url;
     sdot.classList.add('green');
-    stext.textContent = '✓ Compute node connected — launching…';
-    log3.innerHTML = '<span class="ok">[ OK ]</span>&nbsp; Tunnel active: ' + url.replace('https://','');
-    log4.innerHTML = '<span class="ok">[ OK ]</span>&nbsp; Redirecting to library now…';
-    prog.style.width = '100%';
-    pct.textContent  = '100%';
+    stext.textContent = '✓ Compute node is live!';
+    log3.innerHTML = '<span class="ok">[ OK ]</span>&nbsp; Streamlit confirmed: ' + url.replace('https://','');
+    log4.innerHTML = '<span class="ok">[ OK ]</span>&nbsp; Click the button below to open the library!';
+    prog.style.width = '100%'; pctEl.textContent = '100%';
 
-    // Show direct link + countdown
-    dlLink.href = url;
-    cdWrap.style.display = 'block';
-    let count = 3;
-    cdNum.textContent = count;
-    const iv = setInterval(() => {
-      count--;
-      cdNum.textContent = count;
-      if (count <= 0) {
-        clearInterval(iv);
-        window.location.href = url;   // Hard redirect — no iframe, no whiteness
-      }
-    }, 1000);
+    // Show the open button — user clicks it themselves, so Cloudflare challenge passes naturally
+    openBtn.href = url;
+    openBtn.style.display = 'block';
+
+    // Auto-open after 2s (works fine if CF challenge is a one-time thing)
+    setTimeout(() => { window.location.href = url; }, 2000);
   }
 
   async function poll() {
     checks++;
     try {
-      const r    = await fetch(`${RAW}?t=${Date.now()}`);
-      const url  = (await r.text()).trim();
+      // 1. Read tunnel URL from raw GitHub (no auth needed, public repo)
+      const r   = await fetch(`${RAW}?t=${Date.now()}`);
+      const url = (await r.text()).trim();
 
       if (url && !url.includes('test-tunnel')) {
-        // URL exists in file — do a quick HEAD/no-cors ping to confirm alive
+        // 2. Verify it's actually serving Streamlit HTML (not CF challenge or dead)
+        //    Use a CORS proxy to read the actual body and look for Streamlit signature
         try {
-          await fetch(url, { mode: 'no-cors', signal: AbortSignal.timeout(5000) });
-          launchApp(url);
-          return; // stop polling
-        } catch(e) { /* tunnel not ready yet */ }
+          const pr = await fetch(`${PROXY}${encodeURIComponent(url)}`, {signal: AbortSignal.timeout(6000)});
+          const body = await pr.text();
+          if (body.includes('streamlit') || body.includes('Streamlit') || body.includes('st-emotion-cache')) {
+            goLive(url);
+            return;
+          }
+          // Got a response but it's a CF challenge page — keep polling
+          log3.innerHTML = `<span class="warn">[ WAIT ]</span>&nbsp; Tunnel warming up, retrying... <span class="cur">▌</span>`;
+        } catch(e) {
+          // Proxy failed or timeout — retry
+        }
       }
     } catch(e) {}
 
-    // Still offline — trigger dispatch on first check, then keep polling
     if (checks === 1) triggerDispatch();
-    setTimeout(poll, 8000);
+    setTimeout(poll, 10000);
   }
 
   poll();
