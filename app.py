@@ -329,7 +329,16 @@ def load_catalog():
                 icon = cat_info[1]
                 
                 file_id = item.get("ID", "")
-                url = f"https://drive.google.com/open?id={file_id}" if file_id else "#"
+                if file_id:
+                    if name.lower().endswith(".epub"):
+                        state_dict = {"ids": [file_id], "action": "open", "resourceKeys": {}}
+                        state_json = json.dumps(state_dict)
+                        state_encoded = urllib.parse.quote(state_json)
+                        url = f"https://epubreader.1bestlink.net/?state={state_encoded}"
+                    else:
+                        url = f"https://drive.google.com/open?id={file_id}"
+                else:
+                    url = "#"
                 
                 size_bytes = item.get("Size", -1)
                 size_mb = f"{size_bytes / (1024*1024):.2f}" if size_bytes > 0 else "N/A"
