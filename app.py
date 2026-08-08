@@ -15,73 +15,97 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom premium styling
+# Custom premium 3D book widget styling
 st.markdown("""
 <style>
     .main {
         background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         color: #f8fafc;
     }
-    .card-grid {
+    .book-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 10px 0;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 30px;
+        padding: 20px 0;
     }
-    .media-card {
-        background: rgba(255, 255, 255, 0.03);
+    .book-card {
+        position: relative;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        border-radius: 6px 16px 16px 6px;
         border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 20px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 3px 0 0 rgba(255, 255, 255, 0.1);
+        height: 320px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 200px;
-        backdrop-filter: blur(10px);
+        padding: 24px 20px 20px 28px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+        perspective: 1000px;
     }
-    .media-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15);
-        border-color: #38bdf8;
-        background: rgba(255, 255, 255, 0.05);
+    .book-card:hover {
+        transform: rotateY(-12deg) translateY(-8px);
+        box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.5), -2px 0 5px rgba(56, 189, 248, 0.3), 0 0 15px rgba(56, 189, 248, 0.1);
+        border-color: rgba(56, 189, 248, 0.3);
     }
-    .media-title {
-        font-size: 15px;
-        font-weight: 600;
+    .book-spine {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 14px;
+        background: linear-gradient(to right, #0f172a 0%, #1e293b 60%, #0f172a 100%);
+        box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.08), 2px 0 5px rgba(0, 0, 0, 0.4);
+        border-radius: 6px 0 0 6px;
+        z-index: 10;
+    }
+    .book-icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    }
+    .book-title {
+        font-size: 14px;
+        font-weight: 700;
         color: #f8fafc;
+        line-height: 1.4;
         margin-bottom: 8px;
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
-        line-height: 1.4;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
-    .media-meta {
-        font-size: 13px;
+    .book-meta {
+        font-size: 11px;
         color: #94a3b8;
-        margin-bottom: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-top: auto;
     }
-    .action-btn {
-        background: #38bdf8;
+    .book-btn {
+        margin-top: 14px;
+        background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
         color: #0f172a !important;
-        font-weight: bold;
+        font-weight: 800;
         text-align: center;
-        padding: 8px 16px;
-        border-radius: 8px;
+        padding: 8px 12px;
+        border-radius: 6px;
         text-decoration: none;
-        display: inline-block;
-        transition: background 0.2s;
-        font-size: 14px;
+        font-size: 12px;
+        box-shadow: 0 4px 8px rgba(56, 189, 248, 0.2);
+        transition: all 0.2s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
         width: 100%;
         box-sizing: border-box;
     }
-    .action-btn:hover {
-        background: #0ea5e9;
-    }
-    .icon {
-        font-size: 28px;
-        margin-bottom: 8px;
+    .book-btn:hover {
+        background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+        box-shadow: 0 6px 12px rgba(56, 189, 248, 0.35);
+        transform: translateY(-1px);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -97,15 +121,12 @@ def fetch_catalog_from_drive():
     if not shutil.which("rclone"):
         return False
     try:
-        # 1. Run Rclone lsjson recursively
         cmd = ["rclone", "lsjson", "-R", "stories_drive:Digital Library"]
         res = subprocess.run(cmd, capture_output=True, text=True)
         if res.returncode == 0:
-            # Save raw JSON locally
             with open(LOCAL_JSON, "w") as f:
                 f.write(res.stdout)
             
-            # 2. Process to build Excel sheet for Google Drive
             items = json.loads(res.stdout)
             data = []
             for item in items:
@@ -137,8 +158,6 @@ def fetch_catalog_from_drive():
             
             df = pd.DataFrame(data)
             df.to_excel(LOCAL_EXCEL, index=False)
-            
-            # Upload Excel to Drive
             subprocess.run(["rclone", "copyto", LOCAL_EXCEL, DRIVE_TARGET_EXCEL])
             return True
         return False
@@ -184,7 +203,6 @@ def load_catalog():
                 if len(parts) >= 2:
                     raw_cat = parts[0]
                 
-                # Fetch clean category label and icon
                 cat_info = category_mapping.get(raw_cat, ("General Archive", "📁"))
                 category_label = cat_info[0]
                 icon = cat_info[1]
@@ -235,8 +253,8 @@ else:
         filtered_df = catalog[catalog['Name'].str.lower().str.contains(search_query)]
         st.subheader(f"🔍 Search Results ({len(filtered_df)} matches)")
         
-        # Render search result grid
-        html_grid = '<div class="card-grid">'
+        # Render search result grid with 3D Book Cover style
+        html_grid = '<div class="book-grid">'
         for idx, row in filtered_df.iterrows():
             name = row['Name']
             url = row['URL']
@@ -244,16 +262,14 @@ else:
             cat = row['Category']
             icon = row['Icon']
             
-            # Single-line HTML string to prevent markdown code block rendering due to indentation
-            html_grid += f'<div class="media-card"><div><div class="icon">{icon}</div><div class="media-title">{name}</div></div><div><div class="media-meta">📁 {cat} | 📦 {size} MB</div><a href="{url}" target="_blank" class="action-btn">🔗 View / Download</a></div></div>'
+            # Single-line HTML string representing the 3D book cover card
+            html_grid += f'<div class="book-card"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div><div class="book-meta">📦 {size} MB | 📁 {cat}</div><a href="{url}" target="_blank" class="book-btn">🔗 Read Book</a></div></div>'
         html_grid += '</div>'
         st.markdown(html_grid, unsafe_allow_html=True)
     else:
         # Categorized Tab Layout
-        # Build category tabs with matching icons
         tabs_labels = []
         for cat in categories:
-            # Find the icon for this category label from the mapping
             icon = "📁"
             for k, v in category_mapping.items():
                 if v[0] == cat:
@@ -267,14 +283,15 @@ else:
             with tab:
                 cat_df = catalog[catalog['Category'] == cat]
                 
-                html_grid = '<div class="card-grid">'
+                # Render grid with 3D Book Cover style
+                html_grid = '<div class="book-grid">'
                 for idx, row in cat_df.iterrows():
                     name = row['Name']
                     url = row['URL']
                     size = row['Size_MB']
                     icon = row['Icon']
                     
-                    # Single-line HTML string to prevent markdown code block rendering due to indentation
-                    html_grid += f'<div class="media-card"><div><div class="icon">{icon}</div><div class="media-title">{name}</div></div><div><div class="media-meta">📦 {size} MB</div><a href="{url}" target="_blank" class="action-btn">🔗 View / Download</a></div></div>'
+                    # Single-line HTML string representing the 3D book cover card
+                    html_grid += f'<div class="book-card"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div><div class="book-meta">📦 {size} MB</div><a href="{url}" target="_blank" class="book-btn">🔗 Read Book</a></div></div>'
                 html_grid += '</div>'
                 st.markdown(html_grid, unsafe_allow_html=True)
