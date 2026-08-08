@@ -1,0 +1,1955 @@
+[
+  {
+    "Path": "Digital_Library_Catalog.csv",
+    "Name": "Digital_Library_Catalog.csv",
+    "Size": 15506,
+    "MimeType": "text/csv",
+    "ModTime": "2026-08-04T13:37:39.509Z",
+    "IsDir": false,
+    "ID": "1sEQX_qSkRsAVlNYX0kvI4VPtZ4WZuRIU"
+  },
+  {
+    "Path": "00_Master_Index_and_Guide.docx",
+    "Name": "00_Master_Index_and_Guide.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:59:48.793Z",
+    "IsDir": false,
+    "ID": "1ATtTkj3fuP-SgJJ-KS4dPSoP3PlvW5rNr5Di3WQMgPo"
+  },
+  {
+    "Path": "Scholar_Archive",
+    "Name": "Scholar_Archive",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T11:52:45.690Z",
+    "IsDir": true,
+    "ID": "10rxzSWf63jMI0oKB4bjjQgR3Egovxldb"
+  },
+  {
+    "Path": "06_English_Language_and_Learning",
+    "Name": "06_English_Language_and_Learning",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:29:57.769Z",
+    "IsDir": true,
+    "ID": "1N0JJQB8Q4PVbgKiya6owFMye2t6Z8saS"
+  },
+  {
+    "Path": "06_English_Language_and_Literature",
+    "Name": "06_English_Language_and_Literature",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:29:55.390Z",
+    "IsDir": true,
+    "ID": "1QMISaMKvTONTiXuB9eVxa6qnqNukG_El"
+  },
+  {
+    "Path": "05_News_and_Industry_Blogs",
+    "Name": "05_News_and_Industry_Blogs",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:16:15.591Z",
+    "IsDir": true,
+    "ID": "1rxmQbuTZ3_tTI2uBaNtw_zuxL3UySHe_"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos",
+    "Name": "04_Video_Tutorials_and_Demos",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:16:07.989Z",
+    "IsDir": true,
+    "ID": "1g1dZU-IdTi5brFejuOoX2NLYqNgZXkFk"
+  },
+  {
+    "Path": "03_Audio_and_Podcasts",
+    "Name": "03_Audio_and_Podcasts",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:16:01.189Z",
+    "IsDir": true,
+    "ID": "1fqkQkL8UDk821bz9fhUxtHvF4tz4GCmJ"
+  },
+  {
+    "Path": "02_Articles_and_Research_Papers",
+    "Name": "02_Articles_and_Research_Papers",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:15:54.299Z",
+    "IsDir": true,
+    "ID": "1cHc0t-25W96vzPkwtVRXz4owjCZV07sz"
+  },
+  {
+    "Path": "01_Books_and_Textbooks",
+    "Name": "01_Books_and_Textbooks",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:15:45.383Z",
+    "IsDir": true,
+    "ID": "1n2jh_SfYKFCmfLqNkGHmpyEtW2aQytoR"
+  },
+  {
+    "Path": "05_News_and_Blogs",
+    "Name": "05_News_and_Blogs",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:49.985Z",
+    "IsDir": true,
+    "ID": "104QzFstT_FjnHAzRnLa6MfBhsI2SiJTK"
+  },
+  {
+    "Path": "04_Videos_and_Tutorials",
+    "Name": "04_Videos_and_Tutorials",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:49.700Z",
+    "IsDir": true,
+    "ID": "1TWGulhoH7eiWC7QMFgkB86DW88sISJLT"
+  },
+  {
+    "Path": "03_Audio_and_Podcasts",
+    "Name": "03_Audio_and_Podcasts",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:49.588Z",
+    "IsDir": true,
+    "ID": "1Ubm4dycHYCH0gmEp77N7FvWxscrN2GKK"
+  },
+  {
+    "Path": "02_Articles_and_Journals",
+    "Name": "02_Articles_and_Journals",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:49.367Z",
+    "IsDir": true,
+    "ID": "17C0nnC2Q1EQYiNzOeOYdF7madcTZI-1J"
+  },
+  {
+    "Path": "01_Books_and_Textbooks",
+    "Name": "01_Books_and_Textbooks",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:41.368Z",
+    "IsDir": true,
+    "ID": "1-hVH76vjlqdOjsqEaAhvlEAgqNvm67Ts"
+  },
+  {
+    "Path": "02_Articles_and_Research_Papers/Research_Papers_and_Standards_Guide.docx",
+    "Name": "Research_Papers_and_Standards_Guide.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:59:50.425Z",
+    "IsDir": false,
+    "ID": "1xvFi8W6xfZxKgFE5M3YAZGcymyJ_R-cuGrlToWzEIMM"
+  },
+  {
+    "Path": "02_Articles_and_Research_Papers/2026_Civil_Engineering_Research_Compendium.pdf.docx",
+    "Name": "2026_Civil_Engineering_Research_Compendium.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:50:24.152Z",
+    "IsDir": false,
+    "ID": "1-ugVGNiN-oE-TyEzWtDbJlMzdtaYrPfAEhuqCgx6PbY"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/04_Conversational_and_Daily_English",
+    "Name": "04_Conversational_and_Daily_English",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:30:25.356Z",
+    "IsDir": true,
+    "ID": "1VBNEEO_N-95P-WoTblyYsy094Jr1BCbi"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/03_Reading_and_Comprehension",
+    "Name": "03_Reading_and_Comprehension",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:30:18.656Z",
+    "IsDir": true,
+    "ID": "1fIPiulrZ9JItif-WqxheswLTwo3lS5N_"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/02_Grammar_and_Vocabulary",
+    "Name": "02_Grammar_and_Vocabulary",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:30:12.412Z",
+    "IsDir": true,
+    "ID": "1jheQEltPVugCz9PZOtqVpZSF3yYNt85O"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/01_Stories_and_Fiction",
+    "Name": "01_Stories_and_Fiction",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:30:04.367Z",
+    "IsDir": true,
+    "ID": "1clJFCXQkik-SxtA-nPsGWLiovbNcAlIC"
+  },
+  {
+    "Path": "Scholar_Archive/Untitled presentation.pptx",
+    "Name": "Untitled presentation.pptx",
+    "Size": 12571060,
+    "MimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "ModTime": "2026-08-04T12:51:57.844Z",
+    "IsDir": false,
+    "ID": "1j9dC0-nurpPK6S1ihtTSAIxeMJfpCLzf"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers",
+    "Name": "AI_100_Papers",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T11:53:32.227Z",
+    "IsDir": true,
+    "ID": "1XCyQYGx1R7--APKjnY5VuRKKR-2070ZW"
+  },
+  {
+    "Path": "Scholar_Archive/ASE",
+    "Name": "ASE",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T11:53:01.441Z",
+    "IsDir": true,
+    "ID": "1GSbpvdeTKrCxiyZ1fWKp97xC-CAJBeYS"
+  },
+  {
+    "Path": "Scholar_Archive/res",
+    "Name": "res",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T11:52:56.468Z",
+    "IsDir": true,
+    "ID": "1ZEyEOz2ptQ5k0d4RUxcM7qgBgti_v9iz"
+  },
+  {
+    "Path": "Scholar_Archive/riaz anne",
+    "Name": "riaz anne",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T11:52:50.590Z",
+    "IsDir": true,
+    "ID": "15y2DiJnBkKvePFgtNNdGi28uYb08uHCT"
+  },
+  {
+    "Path": "Scholar_Archive/bu phd",
+    "Name": "bu phd",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T11:52:47.533Z",
+    "IsDir": true,
+    "ID": "1ixN5YX_A6ySKjb9CqP7ukjzbayDatC1o"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Digital_Library_Video_Tutorials_and_Demos_Link_Directory.docx",
+    "Name": "Digital_Library_Video_Tutorials_and_Demos_Link_Directory.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T21:11:37.746Z",
+    "IsDir": false,
+    "ID": "1xI1Sy2pT1VxurALwGzdMX8jP3wsj4nFv1-wWTsqKN34"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/electricsheep-flock-244-32500-3.mp4",
+    "Name": "electricsheep-flock-244-32500-3.mp4",
+    "Size": 471986,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T13:00:00.384Z",
+    "IsDir": false,
+    "ID": "1EvON2zCN68zUmyEZQWM2gJyfu_NqPpaM"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Automotive Service.mp4",
+    "Name": "Automotive Service.mp4",
+    "Size": 62773628,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:55.426Z",
+    "IsDir": false,
+    "ID": "1zQpG1cNm2R-_6ocOAA5BhLQVXLc0NTw0"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Video_Lectures_and_Demonstrations_Directory.docx",
+    "Name": "Video_Lectures_and_Demonstrations_Directory.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:59:54.255Z",
+    "IsDir": false,
+    "ID": "1Ba3Z1cpg91_luRWZpwG9-IqHfeajRvkPj1lWjwDNb7U"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Video_Lectures_and_Software_Tutorial_Handbook.pdf.docx",
+    "Name": "Video_Lectures_and_Software_Tutorial_Handbook.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:59:54.199Z",
+    "IsDir": false,
+    "ID": "1xWx89dWPaajMphB2Hp9ak1ojcCqyL4_0U6vzcHVU1Wk"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Doctor in Industry (Part I).mp4",
+    "Name": "Doctor in Industry (Part I).mp4",
+    "Size": 117249712,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:54.014Z",
+    "IsDir": false,
+    "ID": "1aNYlq9YO7P8vcmdGPpBCRNpeTqg2TBGC"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/test file mp4.mp4",
+    "Name": "test file mp4.mp4",
+    "Size": 1462498,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:53.453Z",
+    "IsDir": false,
+    "ID": "1de06GLHDBmynEbsiwNWpdb5aGVz5xxwZ"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Sleep for Health.mp4",
+    "Name": "Sleep for Health.mp4",
+    "Size": 66986081,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:52.638Z",
+    "IsDir": false,
+    "ID": "1HAfB0YN_PrNx_UC0NdopgtIH77zlpsJf"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Joan Avoids a Cold.mp4",
+    "Name": "Joan Avoids a Cold.mp4",
+    "Size": 65083997,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:52.426Z",
+    "IsDir": false,
+    "ID": "15E5SqRMHDm0K8p22B2SXZ76vUPFKQujk"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/electricsheep-flock-244-32500-2.mp4",
+    "Name": "electricsheep-flock-244-32500-2.mp4",
+    "Size": 480090,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:52.187Z",
+    "IsDir": false,
+    "ID": "1Si1gJQBM3iFOXnsm8qHQ-fEB0aZK4ymB"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Breath-Takers, 2.mp4",
+    "Name": "Breath-Takers, 2.mp4",
+    "Size": 393322290,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:52.161Z",
+    "IsDir": false,
+    "ID": "1anKA80yXjAaVk548uEHfR9qQZpPhlX7a"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Health Your Posture.mp4",
+    "Name": "Health Your Posture.mp4",
+    "Size": 66520877,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:52.107Z",
+    "IsDir": false,
+    "ID": "10ebTEIGJ8htaBKIDUaYXQHnCC6e2Rzeh"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Sex Madness.mp4",
+    "Name": "Sex Madness.mp4",
+    "Size": 324928028,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:51.965Z",
+    "IsDir": false,
+    "ID": "1RNUKR_4UApZD-TQ9YOQkc6PMk9Kweccf"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Final Fantasy II (SNES) - 356 - Kevin Juang.mp4",
+    "Name": "Final Fantasy II (SNES) - 356 - Kevin Juang.mp4",
+    "Size": 34487173,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:51.215Z",
+    "IsDir": false,
+    "ID": "1AVVnAB1SoUYSXlf2k8yyYXqYalA6YwTZ"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Deus Ex (PC) - 12902 - Nick Alward.mp4",
+    "Name": "Deus Ex (PC) - 12902 - Nick Alward.mp4",
+    "Size": 18822371,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:51.063Z",
+    "IsDir": false,
+    "ID": "1-udD6X_3-2t98ZD3n0UQ88S-KGjqBQgE"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Banjo-Tooie (N64) - 100% wdeath abuse 45413 - Peter Branam-Lefkove.mp4",
+    "Name": "Banjo-Tooie (N64) - 100% wdeath abuse 45413 - Peter Branam-Lefkove.mp4",
+    "Size": 97416684,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:50.610Z",
+    "IsDir": false,
+    "ID": "1WN-S6fL5gx1gFQCcXztw6EED3QnG5uyI"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/From the Ground Up.mp4",
+    "Name": "From the Ground Up.mp4",
+    "Size": 119087429,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:50.519Z",
+    "IsDir": false,
+    "ID": "1rpYdUwuhveA9cCs-8PcGjqE5N91T6qIw"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Babies and Breadwinners (Part II).mp4",
+    "Name": "Babies and Breadwinners (Part II).mp4",
+    "Size": 62250580,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:50.470Z",
+    "IsDir": false,
+    "ID": "11CU8Z3icfeEjfkhyjDU4j4obsb8d6GL9"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/Zelda Majora's Mask (N64) - 100% 655 - Peter Branam-Lefkove.mp4",
+    "Name": "Zelda Majora's Mask (N64) - 100% 655 - Peter Branam-Lefkove.mp4",
+    "Size": 41443495,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:52:25.893Z",
+    "IsDir": false,
+    "ID": "1Ck8z-V8skJ7c2jwdKbcYKMTeFtND7Sq5"
+  },
+  {
+    "Path": "04_Video_Tutorials_and_Demos/About Bananas.mp4",
+    "Name": "About Bananas.mp4",
+    "Size": 68512128,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:50:47.380Z",
+    "IsDir": false,
+    "ID": "1uCP0zaBGiqdSN91wGbbj79qHYO9djcGT"
+  },
+  {
+    "Path": "03_Audio_and_Podcasts/Digital_Library_Audio_Lectures_and_Podcasts_Link_Directory.docx",
+    "Name": "Digital_Library_Audio_Lectures_and_Podcasts_Link_Directory.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T21:12:18.391Z",
+    "IsDir": false,
+    "ID": "1uqpePqRTW3TIbhdz3xaBPnexvZeOXk8M7B55e_vjOuw"
+  },
+  {
+    "Path": "03_Audio_and_Podcasts/Civil_Engineering_Podcasts_and_Audio_Directory.docx",
+    "Name": "Civil_Engineering_Podcasts_and_Audio_Directory.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:59:48.981Z",
+    "IsDir": false,
+    "ID": "1LwX1_GjPBrg-DU3hT38dLYX1D0FBS_R6nT1302kwsB4"
+  },
+  {
+    "Path": "03_Audio_and_Podcasts/Audio_Lectures_and_Podcast_Study_Companion.pdf.docx",
+    "Name": "Audio_Lectures_and_Podcast_Study_Companion.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:50:34.991Z",
+    "IsDir": false,
+    "ID": "1u1tqWwlhUofxUFqdJlAjKFj0t-In7E-XAf608WE-LW8"
+  },
+  {
+    "Path": "05_News_and_Industry_Blogs/Latest_Civil_Engineering_News_and_Blogs_2026.docx",
+    "Name": "Latest_Civil_Engineering_News_and_Blogs_2026.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:59:49.930Z",
+    "IsDir": false,
+    "ID": "1OyhgAIo-qTQfVaa9tcuqRtr_2IffGK-BX7FySnD7W4Y"
+  },
+  {
+    "Path": "05_News_and_Industry_Blogs/Principles of Digital Content Creation and Online Marketing Strategy.docx",
+    "Name": "Principles of Digital Content Creation and Online Marketing Strategy.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:59:49.072Z",
+    "IsDir": false,
+    "ID": "1kfwslmFoW55LwGQP0jwOLF5hFK7rqy5jaHmz4wCLSNo"
+  },
+  {
+    "Path": "05_News_and_Industry_Blogs/2026_Civil_Engineering_Industry_News_Digest.pdf.docx",
+    "Name": "2026_Civil_Engineering_Industry_News_Digest.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:51:40.053Z",
+    "IsDir": false,
+    "ID": "13obz7GTzp8-bCxIKd_mTobDq28k9HucHXENur7TvA64"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/Digital_Library_English_Language_and_Literature_Link_Directory.docx",
+    "Name": "Digital_Library_English_Language_and_Literature_Link_Directory.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T21:12:49.997Z",
+    "IsDir": false,
+    "ID": "1d4KdzQcvR7OixPYAgu61OwLtmyM3yYQ1vD9g66e9t4g"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Fundamentals of Digital Marketing & Brand Strategy.docx",
+    "Name": "Fundamentals of Digital Marketing & Brand Strategy.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:46.629Z",
+    "IsDir": false,
+    "ID": "1QGBboP1vss0MMgj_MsgBb9WYXrCM980k1OrimvItBSw"
+  },
+  {
+    "Path": "03_Audio_and_Podcasts/I Have a Dream, Martin Luther King Jr..mp3",
+    "Name": "I Have a Dream, Martin Luther King Jr..mp3",
+    "Size": 15764507,
+    "MimeType": "audio/mpeg",
+    "ModTime": "2026-08-04T12:51:45.925Z",
+    "IsDir": false,
+    "ID": "1tNefheKLuX82l3raXwr-Y2EPeqqroLsR"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2360] The Riddle of the Sands.epub",
+    "Name": "[2360] The Riddle of the Sands.epub",
+    "Size": 1827750,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.743Z",
+    "IsDir": false,
+    "ID": "1BscWT-HIxyT4W9FbdWPZO1SVUCDJUM4u"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[60979] Reminiscences of a Stock Operator.epub",
+    "Name": "[60979] Reminiscences of a Stock Operator.epub",
+    "Size": 380701,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.681Z",
+    "IsDir": false,
+    "ID": "1DifdZf14YhPQc0XSHV0KQUxlUjBjlf7w"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2087] Life and Letters of Charles Darwin \u2014 Volume 1.epub",
+    "Name": "[2087] Life and Letters of Charles Darwin \u2014 Volume 1.epub",
+    "Size": 943632,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.653Z",
+    "IsDir": false,
+    "ID": "1A6WF4MRxgtYSMtxXXGuPJ7dRBRxXHQv4"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[74] The Adventures of Tom Sawyer, Complete.epub",
+    "Name": "[74] The Adventures of Tom Sawyer, Complete.epub",
+    "Size": 16672865,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.630Z",
+    "IsDir": false,
+    "ID": "1tbk6e37Ch8Bprqw9KYou9yxgBDaiz-TE"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[221] The Return of Sherlock Holmes.epub",
+    "Name": "[221] The Return of Sherlock Holmes.epub",
+    "Size": 330620,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.618Z",
+    "IsDir": false,
+    "ID": "15nf6ugll0xKCNXlCWlG-KSRVXiAXvwtm"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2038] The Lock and Key Library Classic Mystery and Detective Stories Modern English.epub",
+    "Name": "[2038] The Lock and Key Library Classic Mystery and Detective Stories Modern English.epub",
+    "Size": 914428,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.603Z",
+    "IsDir": false,
+    "ID": "168W-jgRbUMuc56KrOqzylFXhO9xaiEhf"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[47530] Oliver Twist, Vol. 2 (of 3).epub",
+    "Name": "[47530] Oliver Twist, Vol. 2 (of 3).epub",
+    "Size": 826447,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.449Z",
+    "IsDir": false,
+    "ID": "1pGtmnRDamNp_mvfBz1plKge7ivYrGfeM"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2162] Anarchism and Other Essays.epub",
+    "Name": "[2162] Anarchism and Other Essays.epub",
+    "Size": 243531,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.428Z",
+    "IsDir": false,
+    "ID": "16uVKhuEnC8XUWYmxHD3dUzwwAwabNVnl"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2760] Celebrated Crimes (Complete).epub",
+    "Name": "[2760] Celebrated Crimes (Complete).epub",
+    "Size": 1573539,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.420Z",
+    "IsDir": false,
+    "ID": "19hrdv3jCNCyn-GyJPRMDJngnUb80EwGT"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[8492] The King in Yellow.epub",
+    "Name": "[8492] The King in Yellow.epub",
+    "Size": 429970,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.410Z",
+    "IsDir": false,
+    "ID": "1_h5wJ67k8LgOn-uMeWB5b-dPCc3Z3fDv"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2350] His last bow $b Some later reminiscences of Sherlock Holmes.epub",
+    "Name": "[2350] His last bow $b Some later reminiscences of Sherlock Holmes.epub",
+    "Size": 357006,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.342Z",
+    "IsDir": false,
+    "ID": "12KTOb-gyYoXJgqIo16B7RYQwQZmTWgWB"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[6081] Biographia Literaria.epub",
+    "Name": "[6081] Biographia Literaria.epub",
+    "Size": 549498,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.325Z",
+    "IsDir": false,
+    "ID": "1OG2sKxF3-clU3yFnY1IB01YczdgKtEec"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[3289] The Valley of Fear.epub",
+    "Name": "[3289] The Valley of Fear.epub",
+    "Size": 2036867,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.283Z",
+    "IsDir": false,
+    "ID": "1GeYDsj0XpvqybNZtrIEBbOYMCH_rQcXD"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1155] The Secret Adversary.epub",
+    "Name": "[1155] The Secret Adversary.epub",
+    "Size": 454849,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.175Z",
+    "IsDir": false,
+    "ID": "1CuLq-oUnWuzYbrn6JdN1qWlxW2BEr_aF"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[69087] The murder of Roger Ackroyd.epub",
+    "Name": "[69087] The murder of Roger Ackroyd.epub",
+    "Size": 875370,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.163Z",
+    "IsDir": false,
+    "ID": "1jMZJRFkZs3X2q-L0ajTcyT1hsyFDO7jq"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[155] The Moonstone.epub",
+    "Name": "[155] The Moonstone.epub",
+    "Size": 658913,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.151Z",
+    "IsDir": false,
+    "ID": "1JWaZN-J4pzgtymvHcON6CcS3UXPRpVhu"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[76668] Trial by water.epub",
+    "Name": "[76668] Trial by water.epub",
+    "Size": 331373,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.144Z",
+    "IsDir": false,
+    "ID": "1UHLqnD0GroD1Kbnxnan3zMGI88zCYvwW"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[921] De Profundis.epub",
+    "Name": "[921] De Profundis.epub",
+    "Size": 111264,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.086Z",
+    "IsDir": false,
+    "ID": "1A_fgo3fhoTJV8vRAdwrX-ixhVe24p-u6"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1514] A Midsummer Night's Dream.epub",
+    "Name": "[1514] A Midsummer Night's Dream.epub",
+    "Size": 325389,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.068Z",
+    "IsDir": false,
+    "ID": "1ltfxxvE8XS2TEufYaWIM4IKy-H7t6h-R"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[583] The Woman in White.epub",
+    "Name": "[583] The Woman in White.epub",
+    "Size": 691942,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:34.018Z",
+    "IsDir": false,
+    "ID": "1T4dZ3cnDrSBECo5-M6Ql94TqRnHKEeo-"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[175] The Phantom of the Opera.epub",
+    "Name": "[175] The Phantom of the Opera.epub",
+    "Size": 263840,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.923Z",
+    "IsDir": false,
+    "ID": "1kmMm5S_gIr3HZwVHgKmxqJT_faQ9vTjS"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[84] Frankenstein; or, the modern prometheus.epub",
+    "Name": "[84] Frankenstein; or, the modern prometheus.epub",
+    "Size": 474401,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.880Z",
+    "IsDir": false,
+    "ID": "1FaM611pdqjn4Cxs97o9sM66lhJAQza78"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[834] The Memoirs of Sherlock Holmes.epub",
+    "Name": "[834] The Memoirs of Sherlock Holmes.epub",
+    "Size": 776839,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.865Z",
+    "IsDir": false,
+    "ID": "1PUBKp-CmkqqFNuvTyclJpMMisM9dy_I4"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[863] The Mysterious Affair at Styles.epub",
+    "Name": "[863] The Mysterious Affair at Styles.epub",
+    "Size": 392321,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.857Z",
+    "IsDir": false,
+    "ID": "19Ef7tmRZ7QzNynx94nOjjLYFxapS11lG"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[4200] The Diary of Samuel Pepys \u2014 Complete.epub",
+    "Name": "[4200] The Diary of Samuel Pepys \u2014 Complete.epub",
+    "Size": 2582442,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.827Z",
+    "IsDir": false,
+    "ID": "1aPQ24m9HJdA2jktAV63WdcuDsYa_-Ld0"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[108] The Return of Sherlock Holmes.epub",
+    "Name": "[108] The Return of Sherlock Holmes.epub",
+    "Size": 683193,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.823Z",
+    "IsDir": false,
+    "ID": "1f_EQPfZJ8Ao2UzYC4RmyQOooPsXvmhmV"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[45839] Dracula.epub",
+    "Name": "[45839] Dracula.epub",
+    "Size": 460712,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.784Z",
+    "IsDir": false,
+    "ID": "1FVTEhgPCVIETCsHHZk7jAnyMG4nxxTRR"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[223] The wisdom of Father Brown.epub",
+    "Name": "[223] The wisdom of Father Brown.epub",
+    "Size": 248409,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.708Z",
+    "IsDir": false,
+    "ID": "1j5rsnmPgn9boy_bRD-qS9pHdYKKzulkJ"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[42671] Pride and Prejudice.epub",
+    "Name": "[42671] Pride and Prejudice.epub",
+    "Size": 4748590,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.619Z",
+    "IsDir": false,
+    "ID": "16mOKQcFLZBJL5ROfmE7BeudQ4X-NjGQy"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[24739] Bidwell's Travels, from Wall Street to London Prison Fifteen Years in Solitude.epub",
+    "Name": "[24739] Bidwell's Travels, from Wall Street to London Prison Fifteen Years in Solitude.epub",
+    "Size": 4501697,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.574Z",
+    "IsDir": false,
+    "ID": "1cSusyz2E6haMgO_NFQLgI9FmIQEb-c27"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[209] The Turn of the Screw.epub",
+    "Name": "[209] The Turn of the Screw.epub",
+    "Size": 387533,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.561Z",
+    "IsDir": false,
+    "ID": "1HIAOTAnfiC3FoeMWG1bqMHhV6yyiwfs-"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2527] The Sorrows of Young Werther.epub",
+    "Name": "[2527] The Sorrows of Young Werther.epub",
+    "Size": 181639,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.560Z",
+    "IsDir": false,
+    "ID": "1ymUatfoPLnjxwAbvMlPZ-yY3aBs1bgQN"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2097] The Sign of the Four.epub",
+    "Name": "[2097] The Sign of the Four.epub",
+    "Size": 364994,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.522Z",
+    "IsDir": false,
+    "ID": "1kSoqUedCIE5saxR6-WU7iPsLMaOJMb5N"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[6400] The Lives of the Twelve Caesars, Complete.epub",
+    "Name": "[6400] The Lives of the Twelve Caesars, Complete.epub",
+    "Size": 653384,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.484Z",
+    "IsDir": false,
+    "ID": "1xVFaZELdMHzgGW7p_FZrrOZ9uFKDiNqm"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[204] The innocence of Father Brown.epub",
+    "Name": "[204] The innocence of Father Brown.epub",
+    "Size": 459467,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.467Z",
+    "IsDir": false,
+    "ID": "18TMklzgUMdmt0mTk6YWhNRGUJg7T6oO4"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2147] The Works of Edgar Allan Poe \u2014 Volume 1.epub",
+    "Name": "[2147] The Works of Edgar Allan Poe \u2014 Volume 1.epub",
+    "Size": 307815,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.400Z",
+    "IsDir": false,
+    "ID": "1WUIe8Icc9OX7TJI3LZridcQ4DO6eIaWy"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[6635] A Romance of Billy-Goat Hill.epub",
+    "Name": "[6635] A Romance of Billy-Goat Hill.epub",
+    "Size": 284401,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.306Z",
+    "IsDir": false,
+    "ID": "1MnPY8tl2yNS1QyH5TBihFIY_0vW6yHKj"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[4712] The Landloper The Romance of a Man on Foot.epub",
+    "Name": "[4712] The Landloper The Romance of a Man on Foot.epub",
+    "Size": 314770,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.279Z",
+    "IsDir": false,
+    "ID": "1RPlwTNLrA5iqHh1DXfL6ReObhG647sGL"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[3922] The Red Lily \u2014 Complete.epub",
+    "Name": "[3922] The Red Lily \u2014 Complete.epub",
+    "Size": 251401,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.244Z",
+    "IsDir": false,
+    "ID": "1dQQWQWJ7zQ1jN1myg9SIj3tjB6Gu2q1c"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[103] Around the World in Eighty Days.epub",
+    "Name": "[103] Around the World in Eighty Days.epub",
+    "Size": 443373,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.243Z",
+    "IsDir": false,
+    "ID": "1GPUxz_gUoix6gYBcpXH90Ogp33UE9MvZ"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1523] As You Like It.epub",
+    "Name": "[1523] As You Like It.epub",
+    "Size": 333086,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.182Z",
+    "IsDir": false,
+    "ID": "1Bc7_JoR8a7CNhfEoVTkyJ5aXM-fnYWVc"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2825] Undine.epub",
+    "Name": "[2825] Undine.epub",
+    "Size": 147560,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.176Z",
+    "IsDir": false,
+    "ID": "1F2XuBoPJMlJ2QNJLLnDRGc7HmBD2H5eA"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[224] A pair of blue eyes.epub",
+    "Name": "[224] A pair of blue eyes.epub",
+    "Size": 428018,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.160Z",
+    "IsDir": false,
+    "ID": "1wjbQNnmr_VZm4jo-_B0UfYbXL8A-Njvr"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1608] Camille (La Dame aux Camilias).epub",
+    "Name": "[1608] Camille (La Dame aux Camilias).epub",
+    "Size": 253572,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.103Z",
+    "IsDir": false,
+    "ID": "1nxe4HSyeoVrynOVSfLECqn2YMBHi0T3M"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[4499] Complete Short Works of George Meredith.epub",
+    "Name": "[4499] Complete Short Works of George Meredith.epub",
+    "Size": 498514,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:33.003Z",
+    "IsDir": false,
+    "ID": "1u9WJ5HQJBrCB5mg8oCjpc7MUldLHW2xO"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[51252] The Book of the Thousand Nights and a Night \u2014 Volume 01 (of 10).epub",
+    "Name": "[51252] The Book of the Thousand Nights and a Night \u2014 Volume 01 (of 10).epub",
+    "Size": 1879752,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.990Z",
+    "IsDir": false,
+    "ID": "1ea_0Z2rwSiIvLuHIa_ZFyu9uU49Hy6it"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2002] Sonnets from the Portuguese.epub",
+    "Name": "[2002] Sonnets from the Portuguese.epub",
+    "Size": 341732,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.907Z",
+    "IsDir": false,
+    "ID": "1W4n6XYtf-SIsAHeiUqcUZuKEMYrQOJKx"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2620] The Home Book of Verse \u2014 Volume 2.epub",
+    "Name": "[2620] The Home Book of Verse \u2014 Volume 2.epub",
+    "Size": 670546,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.843Z",
+    "IsDir": false,
+    "ID": "1kGm80XW7-CcB8rZVJCb58nE6CkkPkrV6"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1212] Love and Freindship [sic].epub",
+    "Name": "[1212] Love and Freindship [sic].epub",
+    "Size": 371946,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.817Z",
+    "IsDir": false,
+    "ID": "1DpMtQ1YZ7ou1XI4GPbNB69lo-kmGr1w0"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[37106] Little Women; Or, Meg, Jo, Beth, and Amy.epub",
+    "Name": "[37106] Little Women; Or, Meg, Jo, Beth, and Amy.epub",
+    "Size": 16913267,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.703Z",
+    "IsDir": false,
+    "ID": "1ydx_3pWYLXejbfumH2GRFw6P5IPJ-S_P"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[23] Narrative of the Life of Frederick Douglass, an American Slave.epub",
+    "Name": "[23] Narrative of the Life of Frederick Douglass, an American Slave.epub",
+    "Size": 371782,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.700Z",
+    "IsDir": false,
+    "ID": "1C0Mlcngywif_cWueCr58lt7zsxyM4MhV"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1184] The Count of Monte Cristo.epub",
+    "Name": "[1184] The Count of Monte Cristo.epub",
+    "Size": 84579918,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.699Z",
+    "IsDir": false,
+    "ID": "1TnPQU3v1KxE4KZ0kda0pV9QVvH0XT07y"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2148] The Works of Edgar Allan Poe \u2014 Volume 2.epub",
+    "Name": "[2148] The Works of Edgar Allan Poe \u2014 Volume 2.epub",
+    "Size": 342050,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.611Z",
+    "IsDir": false,
+    "ID": "1Jj2I4DxXga02o0_haKrbjbFH0h_AkfmZ"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[70854] The Countess of Pembroke's Arcadia.epub",
+    "Name": "[70854] The Countess of Pembroke's Arcadia.epub",
+    "Size": 1056896,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.533Z",
+    "IsDir": false,
+    "ID": "1hHSyj3m2K6BaNmCtWl3yl4YWthqgI4kV"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2852] The Hound of the Baskervilles.epub",
+    "Name": "[2852] The Hound of the Baskervilles.epub",
+    "Size": 316732,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.525Z",
+    "IsDir": false,
+    "ID": "1a_qsFMpSktiwE3w0kxnQf89C4vAdZsuc"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[76178] I am a woman.epub",
+    "Name": "[76178] I am a woman.epub",
+    "Size": 442762,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.462Z",
+    "IsDir": false,
+    "ID": "1YY0PoXslH3WT63jguilCpLMkkSWTWNbk"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[245] Life on the Mississippi.epub",
+    "Name": "[245] Life on the Mississippi.epub",
+    "Size": 26380301,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.444Z",
+    "IsDir": false,
+    "ID": "1MyX7JFLukT_EB34TkmlZmEvtxytRnDR3"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[161] Sense and Sensibility.epub",
+    "Name": "[161] Sense and Sensibility.epub",
+    "Size": 580825,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.333Z",
+    "IsDir": false,
+    "ID": "1t9Gfeff8Vl8UtuXxO2vGRY7db4MfMf1p"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[244] A Study in Scarlet.epub",
+    "Name": "[244] A Study in Scarlet.epub",
+    "Size": 196148,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.247Z",
+    "IsDir": false,
+    "ID": "1pEYxTH6-V519JzniYK4xCg4FJxF1QpNc"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1112] Romeo and Juliet.epub",
+    "Name": "[1112] Romeo and Juliet.epub",
+    "Size": 335584,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.196Z",
+    "IsDir": false,
+    "ID": "1eoltyu-Jks4XwoUShi9j8-ttwRp-8jMg"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[589] Catriona.epub",
+    "Name": "[589] Catriona.epub",
+    "Size": 324881,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.166Z",
+    "IsDir": false,
+    "ID": "1_15RKhOclD1NdcyXzLv-UpVAU2OSJh0C"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[393] The Blue Lagoon A Romance.epub",
+    "Name": "[393] The Blue Lagoon A Romance.epub",
+    "Size": 255064,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.120Z",
+    "IsDir": false,
+    "ID": "1ByDB4lqkIuF21t0Qhrde28SzWgZgz-A_"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[21839] Sense and Sensibility.epub",
+    "Name": "[21839] Sense and Sensibility.epub",
+    "Size": 2108348,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:32.113Z",
+    "IsDir": false,
+    "ID": "1_bDrwoSwhZ2mg5gO3hIR6o5ncHNrvbr9"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[71046] Modern English biography, volume 2 (of 4), I-Q.epub",
+    "Name": "[71046] Modern English biography, volume 2 (of 4), I-Q.epub",
+    "Size": 2137746,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.971Z",
+    "IsDir": false,
+    "ID": "1WW7vt3roye4lZ0tBTBWkeRH6zi4qzPyr"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1259] Twenty years after.epub",
+    "Name": "[1259] Twenty years after.epub",
+    "Size": 933163,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.942Z",
+    "IsDir": false,
+    "ID": "1QaFpa8k7PGCawdYtk026iI930709mJsY"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[564] The Mystery of Edwin Drood.epub",
+    "Name": "[564] The Mystery of Edwin Drood.epub",
+    "Size": 1798872,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.890Z",
+    "IsDir": false,
+    "ID": "1wcajFAY8eKLxMY-ra338Apu1uGqsJU8b"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[42] The strange case of Dr. Jekyll and Mr. Hyde.epub",
+    "Name": "[42] The strange case of Dr. Jekyll and Mr. Hyde.epub",
+    "Size": 293254,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.841Z",
+    "IsDir": false,
+    "ID": "1wb3nHbQ9QYdpTFl6VIcIySRLEJLp5dcW"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[3296] The Confessions of St. Augustine.epub",
+    "Name": "[3296] The Confessions of St. Augustine.epub",
+    "Size": 320492,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.840Z",
+    "IsDir": false,
+    "ID": "1HKFP0oVKPpdscomRU7_6LcF4Cu4fmU8d"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[34413] The Love Letters of Mary Wollstonecraft to Gilbert Imlay.epub",
+    "Name": "[34413] The Love Letters of Mary Wollstonecraft to Gilbert Imlay.epub",
+    "Size": 561148,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.770Z",
+    "IsDir": false,
+    "ID": "1M8N0JnO0xiRnzYZ4fhPTctf7mR087Qjn"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[75201] A farewell to arms.epub",
+    "Name": "[75201] A farewell to arms.epub",
+    "Size": 213234,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.764Z",
+    "IsDir": false,
+    "ID": "1UtklKPCK2TMJRM2oOXV393jCBwxAhPXB"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[43] The strange case of Dr. Jekyll and Mr. Hyde.epub",
+    "Name": "[43] The strange case of Dr. Jekyll and Mr. Hyde.epub",
+    "Size": 304784,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.611Z",
+    "IsDir": false,
+    "ID": "1Pok9phmyfF4I2g7CIdcvEbXRZQzrsvd-"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[76639] Eloisa $b or, A series of original letters.epub",
+    "Name": "[76639] Eloisa $b or, A series of original letters.epub",
+    "Size": 922130,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.606Z",
+    "IsDir": false,
+    "ID": "1KIrbHUo8P18waNWDl9QUzer9hOMPsWpZ"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[468] Manon Lescaut.epub",
+    "Name": "[468] Manon Lescaut.epub",
+    "Size": 211019,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.555Z",
+    "IsDir": false,
+    "ID": "182SajCA6AzRmmsGKTb_73xEZYsJjbf9I"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[145] Middlemarch.epub",
+    "Name": "[145] Middlemarch.epub",
+    "Size": 1071395,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.548Z",
+    "IsDir": false,
+    "ID": "1lMc_m0Q6qgJCq6EAERAT-2D3ILMdlRyw"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[831] Four Arthurian Romances.epub",
+    "Name": "[831] Four Arthurian Romances.epub",
+    "Size": 492898,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.545Z",
+    "IsDir": false,
+    "ID": "16tQDyd9povHvNnPnHlfzuJ-1mRlL-gsf"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[72] Thuvia, maid of Mars.epub",
+    "Name": "[72] Thuvia, maid of Mars.epub",
+    "Size": 344978,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.501Z",
+    "IsDir": false,
+    "ID": "1_6qMm5lSBbvOjEvuDzmtxd4d1LH1Ky8g"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[601] The Monk A Romance.epub",
+    "Name": "[601] The Monk A Romance.epub",
+    "Size": 403890,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.500Z",
+    "IsDir": false,
+    "ID": "1vHTY8lsXy3GG-iqubW5COt14zIBHMlhm"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[59828] The String of Pearls; Or, The Barber of Fleet Street. A Domestic Romance..epub",
+    "Name": "[59828] The String of Pearls; Or, The Barber of Fleet Street. A Domestic Romance..epub",
+    "Size": 12359715,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.423Z",
+    "IsDir": false,
+    "ID": "1ciBCa9y10A7IE7KzZnobyrz3wwJX_Lm5"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[62215] Le Fant\u00f4me de l'Op\u00e9ra.epub",
+    "Name": "[62215] Le Fant\u00f4me de l'Op\u00e9ra.epub",
+    "Size": 446631,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.322Z",
+    "IsDir": false,
+    "ID": "1euhTx5vD4KIqkWVbyxCXBp_KVzU7rbC0"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2680] Meditations.epub",
+    "Name": "[2680] Meditations.epub",
+    "Size": 454746,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.280Z",
+    "IsDir": false,
+    "ID": "17NhN_taTU45PsRoJDEpeJw1K-ObAEF01"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[100] The Complete Works of William Shakespeare.epub",
+    "Name": "[100] The Complete Works of William Shakespeare.epub",
+    "Size": 2883403,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.265Z",
+    "IsDir": false,
+    "ID": "1B0VlvIEgEqxAHgB26x9dtTAwMtd02CuC"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[6133] The Extraordinary Adventures of Ars\u00e8ne Lupin, Gentleman-Burglar.epub",
+    "Name": "[6133] The Extraordinary Adventures of Ars\u00e8ne Lupin, Gentleman-Burglar.epub",
+    "Size": 406865,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.236Z",
+    "IsDir": false,
+    "ID": "1u6Z92Ei9rU_XRS9wCpaYUACCA4R_McV9"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[345] Dracula.epub",
+    "Name": "[345] Dracula.epub",
+    "Size": 602409,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.226Z",
+    "IsDir": false,
+    "ID": "1Ev1s733h6QkBKwHqLvd2ksMUe6IZ11Og"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1695] The Man Who Was Thursday A Nightmare.epub",
+    "Name": "[1695] The Man Who Was Thursday A Nightmare.epub",
+    "Size": 414070,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.220Z",
+    "IsDir": false,
+    "ID": "1HuW5zUvdwWV_JNZhuKUZhVRNd_KqkZOw"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[3011] The Lady of the Lake.epub",
+    "Name": "[3011] The Lady of the Lake.epub",
+    "Size": 460465,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.218Z",
+    "IsDir": false,
+    "ID": "1LZAUAVKaHgq90He83hj4QrzTnPTfrg61"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1260] Jane Eyre An Autobiography.epub",
+    "Name": "[1260] Jane Eyre An Autobiography.epub",
+    "Size": 3094715,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:31.039Z",
+    "IsDir": false,
+    "ID": "1B7eFnGAgmtzraXywBUq-Kvp7P5SbuFJo"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[5197] My Life \u2014 Volume 1.epub",
+    "Name": "[5197] My Life \u2014 Volume 1.epub",
+    "Size": 974888,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.999Z",
+    "IsDir": false,
+    "ID": "16Cxx4z6U4CuYXTahFgvif-nW3pWtLyCS"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2868] The Green Mummy.epub",
+    "Name": "[2868] The Green Mummy.epub",
+    "Size": 467933,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.984Z",
+    "IsDir": false,
+    "ID": "1QsPvhUeC1_5aAlT0Kb8Mp0RPnsnz4ZZJ"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[67979] The Blue Castle a novel.epub",
+    "Name": "[67979] The Blue Castle a novel.epub",
+    "Size": 652976,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.973Z",
+    "IsDir": false,
+    "ID": "1cooOFrt_WnIJMYQO8dwXWutZzCmoFiu8"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[65238] The Secret of Chimneys.epub",
+    "Name": "[65238] The Secret of Chimneys.epub",
+    "Size": 477535,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.951Z",
+    "IsDir": false,
+    "ID": "1c-fUc1ZsxWO-8-yD109WfMOVKpXQyFo8"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1661] The Adventures of Sherlock Holmes.epub",
+    "Name": "[1661] The Adventures of Sherlock Holmes.epub",
+    "Size": 379445,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.934Z",
+    "IsDir": false,
+    "ID": "1kLelWYTwm149oh4y0bjNvuDYIoQJebJ2"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[11] Alice's Adventures in Wonderland.epub",
+    "Name": "[11] Alice's Adventures in Wonderland.epub",
+    "Size": 189231,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.932Z",
+    "IsDir": false,
+    "ID": "1agHRKCV8fsirhMSWKW4VSoBEofmhg0CR"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1342] Pride and Prejudice.epub",
+    "Name": "[1342] Pride and Prejudice.epub",
+    "Size": 24835612,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.907Z",
+    "IsDir": false,
+    "ID": "1dIoSWl8jL166euwQnpPds5hcKWUI2DH8"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[3268] The Mysteries of Udolpho.epub",
+    "Name": "[3268] The Mysteries of Udolpho.epub",
+    "Size": 982458,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.693Z",
+    "IsDir": false,
+    "ID": "1k4BGdQ89RT5p1rdkR4gISHRYOaJTKNeK"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2465] Carmen.epub",
+    "Name": "[2465] Carmen.epub",
+    "Size": 318860,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.684Z",
+    "IsDir": false,
+    "ID": "1v7oRMbGJrOEU6jEdr-DD_Danhgfchc7s"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2701] Moby Dick; Or, The Whale.epub",
+    "Name": "[2701] Moby Dick; Or, The Whale.epub",
+    "Size": 812600,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.680Z",
+    "IsDir": false,
+    "ID": "1TMyX-VH9C6hXNoOhhdXWhoFZ8BelE0S7"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2641] A Room with a View.epub",
+    "Name": "[2641] A Room with a View.epub",
+    "Size": 453740,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.680Z",
+    "IsDir": false,
+    "ID": "19tgsLmfwnphyXRamez6cQkSV42hFp2lk"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[2554] Crime and Punishment.epub",
+    "Name": "[2554] Crime and Punishment.epub",
+    "Size": 783861,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.670Z",
+    "IsDir": false,
+    "ID": "1VmaqhMBNhsaBLFfTM9my3tRF7oaSyRxX"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1727] The Odyssey Rendered into English prose for the use of those who cannot read the original.epub",
+    "Name": "[1727] The Odyssey Rendered into English prose for the use of those who cannot read the original.epub",
+    "Size": 445840,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.664Z",
+    "IsDir": false,
+    "ID": "1J2E1TeAs8yv3Sa9CqEuX6Dr_y8XJG9yd"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/[1513] Romeo and Juliet.epub",
+    "Name": "[1513] Romeo and Juliet.epub",
+    "Size": 341054,
+    "MimeType": "application/epub+zip",
+    "ModTime": "2026-08-04T12:51:30.660Z",
+    "IsDir": false,
+    "ID": "19vxXCQjxhTlKKhoLb82h8HaSqiAAqHKB"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Fundamentals of Civil Engineering & Structural Design Textbook.docx",
+    "Name": "Fundamentals of Civil Engineering & Structural Design Textbook.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:46:47.203Z",
+    "IsDir": false,
+    "ID": "1MriZku3GC2toLDwEyIn5PuiyS50e8Obrz4XOve9VdTI"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Civil_Engineering_Textbooks_Catalog.docx",
+    "Name": "Civil_Engineering_Textbooks_Catalog.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:17:36.473Z",
+    "IsDir": false,
+    "ID": "1DFvzjwj1aUboyYdb-NXwWJ2Gw_r1Dv4klrjxsSSqapg"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/The Modern Professional's Guide to Digital Productivity & Leadership.docx",
+    "Name": "The Modern Professional's Guide to Digital Productivity & Leadership.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T10:37:43.040Z",
+    "IsDir": false,
+    "ID": "1eSfRFNvTFkOU6wER_LbIJhAwan4ayhCFzxnhFMvxHrw"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Introduction to Sustainable Engineering & Smart Cities.docx",
+    "Name": "Introduction to Sustainable Engineering & Smart Cities.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T10:37:03.386Z",
+    "IsDir": false,
+    "ID": "1aOyUqK8MJ1Y88fCDIgUIKsrMUh4Z5GorC8htpSfeRg8"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Sustainable Urban Infrastructure & Environmental Systems.docx",
+    "Name": "Sustainable Urban Infrastructure & Environmental Systems.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T10:31:32.857Z",
+    "IsDir": false,
+    "ID": "1EfEDgD9JD1295VDFp8I_Azxf_n_9Rv082T0rUowyXRw"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/04_Reading_and_Literary_Analysis",
+    "Name": "04_Reading_and_Literary_Analysis",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:30:23.344Z",
+    "IsDir": true,
+    "ID": "17uhnrfEhpcg39llr8MT0dPF-WW1YFNFl"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/03_Vocabulary_and_Idioms",
+    "Name": "03_Vocabulary_and_Idioms",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:30:17.119Z",
+    "IsDir": true,
+    "ID": "1vKexu7u-17Qzlm0f9s7iSDOO_IxVPBKl"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/02_Grammar_and_Composition",
+    "Name": "02_Grammar_and_Composition",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:30:11.285Z",
+    "IsDir": true,
+    "ID": "11aZ8dx9C1_-tjnVpiUXook9fq_R0t9rp"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/01_Stories_and_Fiction",
+    "Name": "01_Stories_and_Fiction",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T10:30:05.278Z",
+    "IsDir": true,
+    "ID": "10W-1T6kBqPRb_Dpf09Xl9D8egyGr_wqx"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Construction Management & Materials",
+    "Name": "Construction Management & Materials",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:16:47.107Z",
+    "IsDir": true,
+    "ID": "16J_lxqfJzYXIYW4uSx4dUTlSvt826Z3B"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Water Resources & Environmental Engineering",
+    "Name": "Water Resources & Environmental Engineering",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:16:41.601Z",
+    "IsDir": true,
+    "ID": "1S1Z2_1Jfl0kuvK_INuxMwlhYDMhqx1_k"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Transportation & Highway Engineering",
+    "Name": "Transportation & Highway Engineering",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:16:35.301Z",
+    "IsDir": true,
+    "ID": "1dHx1SrwrrjpnWDOQCRsJyytQ6CzUA2_9"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Geotechnical & Foundation Engineering",
+    "Name": "Geotechnical & Foundation Engineering",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:16:28.402Z",
+    "IsDir": true,
+    "ID": "1f2AUAxrUN-7TGaLooVNsILIxzMUI9GaY"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Structural Engineering",
+    "Name": "Structural Engineering",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:16:22.809Z",
+    "IsDir": true,
+    "ID": "1ei6vWN701Y5l6D1ZNUtO7FNxxnnA4y1q"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Construction_Management",
+    "Name": "Construction_Management",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:58.557Z",
+    "IsDir": true,
+    "ID": "1ejqaGaM4nSWPnt1kNGfOmkYUzE2fg_6S"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Water_Resources_and_Environmental",
+    "Name": "Water_Resources_and_Environmental",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:58.539Z",
+    "IsDir": true,
+    "ID": "115h1aGN9nbDKipKTtbmGPaQsL0Nuav5F"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Geotechnical_Engineering",
+    "Name": "Geotechnical_Engineering",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:58.130Z",
+    "IsDir": true,
+    "ID": "1jbUqg68pgDxrJCxGHUsZ8i6dLOoz3SHj"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Transportation_and_Urban_Planning",
+    "Name": "Transportation_and_Urban_Planning",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:57.608Z",
+    "IsDir": true,
+    "ID": "1RagUqzOzslAsPXq3PeKTKMlFA9H38f5h"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Structural_Engineering",
+    "Name": "Structural_Engineering",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-03T22:13:57.256Z",
+    "IsDir": true,
+    "ID": "1tX-JuYg4EE8xNhZtkoGIr1zxjEdatFXp"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/04_Conversational_and_Daily_English/Everyday English Conversations - Real-World Dialogues.docx",
+    "Name": "Everyday English Conversations - Real-World Dialogues.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:53.409Z",
+    "IsDir": false,
+    "ID": "1vzqqoIPgeLwpUDnpjS0taEp3_ecmPYzGRWgiBUylvk4"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/01_Stories_and_Fiction/The Whispering Oak & Other Short Stories.docx",
+    "Name": "The Whispering Oak & Other Short Stories.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:56.483Z",
+    "IsDir": false,
+    "ID": "12BIpLi9wVpgOiz9qRb9U9EJnk-nIhhD3c69jTylkPKQ"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/01_Stories_and_Fiction/Journeys Beyond the Horizon.docx",
+    "Name": "Journeys Beyond the Horizon.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:54.255Z",
+    "IsDir": false,
+    "ID": "1d9Lun9gxD9vjy1deLxfggjVOLB2q2LS37JeDtY22xCw"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/02_Grammar_and_Vocabulary/Mastering English Grammar - A Practical Guide.docx",
+    "Name": "Mastering English Grammar - A Practical Guide.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:53.129Z",
+    "IsDir": false,
+    "ID": "1E7vwdA-092skrzOjD11r1Nj6qiO4bBb-9NkxsGeiChQ"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/01_Stories_and_Fiction/Fables of Wisdom and Wonder.docx",
+    "Name": "Fables of Wisdom and Wonder.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:51.985Z",
+    "IsDir": false,
+    "ID": "1cWZWbxtWLUT79775AhLFj9MIr4Ihmo0EJMjraVS8oWY"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/02_Grammar_and_Vocabulary/Essential Vocabulary Builder - 1000 Words for Fluency.docx",
+    "Name": "Essential Vocabulary Builder - 1000 Words for Fluency.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:50.752Z",
+    "IsDir": false,
+    "ID": "1EJ0NPVXLHpxUWTcqgINPUsf9FMRa9134zEkCqgyhhfQ"
+  },
+  {
+    "Path": "06_English_Language_and_Learning/03_Reading_and_Comprehension/The Art of Reading - Critical Thinking and Text Analysis.docx",
+    "Name": "The Art of Reading - Critical Thinking and Text Analysis.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:52.422Z",
+    "IsDir": false,
+    "ID": "1xHjWzLbl8Xs_Lb9duQoKsGZrr1dO21gJvb8xW0A_Evc"
+  },
+  {
+    "Path": "Scholar_Archive/ASE/ASE_Week8_Full_50_Slides.pptx",
+    "Name": "ASE_Week8_Full_50_Slides.pptx",
+    "Size": 297480,
+    "MimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "ModTime": "2026-08-04T13:00:00.380Z",
+    "IsDir": false,
+    "ID": "1gl0QNOMbe_uiT1xW6xq-c0Pa4_naNuRL"
+  },
+  {
+    "Path": "Scholar_Archive/res/application_dossier.docx",
+    "Name": "application_dossier.docx",
+    "Size": 8179,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T12:59:59.852Z",
+    "IsDir": false,
+    "ID": "19PAzg5YLMqO4iYMe5w4hYnlR5RCZ1mtF"
+  },
+  {
+    "Path": "Scholar_Archive/ASE/ase_week8.png",
+    "Name": "ase_week8.png",
+    "Size": 1317602,
+    "MimeType": "image/png",
+    "ModTime": "2026-08-04T12:59:59.695Z",
+    "IsDir": false,
+    "ID": "1VEpe_6cXrCo2ZENcSv8Lbc6bxks2gQPr"
+  },
+  {
+    "Path": "Scholar_Archive/ASE/ase_week8.1.pptx",
+    "Name": "ase_week8.1.pptx",
+    "Size": 17644693,
+    "MimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "ModTime": "2026-08-04T12:59:57.096Z",
+    "IsDir": false,
+    "ID": "1XtpQ1YKhXSv1Apkik-cQWnzhtLoB-erM"
+  },
+  {
+    "Path": "Scholar_Archive/bu phd/scene3_value.jpg",
+    "Name": "scene3_value.jpg",
+    "Size": 836067,
+    "MimeType": "image/jpeg",
+    "ModTime": "2026-08-04T12:59:56.538Z",
+    "IsDir": false,
+    "ID": "1AFuEFOkxtSvkS8FK3biPjXoa0YinOxzR"
+  },
+  {
+    "Path": "Scholar_Archive/bu phd/scene1_hook.jpg",
+    "Name": "scene1_hook.jpg",
+    "Size": 701138,
+    "MimeType": "image/jpeg",
+    "ModTime": "2026-08-04T12:59:56.382Z",
+    "IsDir": false,
+    "ID": "1LPOqlW1ADKjMEvz1hf1pe9tM9-oRfm87"
+  },
+  {
+    "Path": "Scholar_Archive/bu phd/scene2_solution.jpg",
+    "Name": "scene2_solution.jpg",
+    "Size": 773693,
+    "MimeType": "image/jpeg",
+    "ModTime": "2026-08-04T12:59:56.346Z",
+    "IsDir": false,
+    "ID": "1dUD1RxHvrnf3NU8c6ucGvdfOPzA2KBvM"
+  },
+  {
+    "Path": "Scholar_Archive/bu phd/scene4_cta.jpg",
+    "Name": "scene4_cta.jpg",
+    "Size": 761602,
+    "MimeType": "image/jpeg",
+    "ModTime": "2026-08-04T12:59:55.885Z",
+    "IsDir": false,
+    "ID": "1dyPZqooKfzyp51F-Q7lyqBlLTfDT7Qkj"
+  },
+  {
+    "Path": "Scholar_Archive/bu phd/build_colab_script.py",
+    "Name": "build_colab_script.py",
+    "Size": 5764,
+    "MimeType": "text/x-python",
+    "ModTime": "2026-08-04T12:59:55.367Z",
+    "IsDir": false,
+    "ID": "1UrJiUMzla-Ke0CIrD69rNIwp3iMPNOXG"
+  },
+  {
+    "Path": "Scholar_Archive/bu phd/render_colab.py",
+    "Name": "render_colab.py",
+    "Size": 4101840,
+    "MimeType": "text/x-python",
+    "ModTime": "2026-08-04T12:59:55.101Z",
+    "IsDir": false,
+    "ID": "1g2yyPcIlLZL8QiTy-3U68wVBjyGgqpDC"
+  },
+  {
+    "Path": "Scholar_Archive/bu phd/binary_phd_promo.mp4",
+    "Name": "binary_phd_promo.mp4",
+    "Size": 1597438,
+    "MimeType": "video/mp4",
+    "ModTime": "2026-08-04T12:59:54.540Z",
+    "IsDir": false,
+    "ID": "12kvwxmHNpkj_gAzIlBEeUVHUUNFYXaBN"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents",
+    "Name": "04_Artificial_Intelligence_and_Agents",
+    "Size": 0,
+    "MimeType": "inode/directory",
+    "ModTime": "2026-08-04T11:53:34.983Z",
+    "IsDir": true,
+    "ID": "1aF-OxNk4_hFT5agDZnnV6m55uhbimi6E"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/04_Reading_and_Literary_Analysis/English Reading Comprehension & Analytical Critical Reading.docx",
+    "Name": "English Reading Comprehension & Analytical Critical Reading.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:02:59.302Z",
+    "IsDir": false,
+    "ID": "1koigZ6J2Ok6Yu1l2WHO5tGL__K8DuU1Au12FcNoQz68"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/02_Grammar_and_Composition/The Art of Academic & Creative Writing.docx",
+    "Name": "The Art of Academic & Creative Writing.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:02:12.086Z",
+    "IsDir": false,
+    "ID": "1mkfxDkLhNFWd3FZhHAREXa1TmBFJbCu5m0XTQ-vEsRA"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/02_Grammar_and_Composition/English Grammar Masterclass: Complete Guide to Syntax and Punctuation.docx",
+    "Name": "English Grammar Masterclass: Complete Guide to Syntax and Punctuation.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:01:58.497Z",
+    "IsDir": false,
+    "ID": "1_NKfDJDPFpSTgKXeUfrt-35EwJpL0TbaafbxUwtpSGE"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/03_Vocabulary_and_Idioms/Mastering English Vocabulary & Contextual Expressions.docx",
+    "Name": "Mastering English Vocabulary & Contextual Expressions.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:02:52.993Z",
+    "IsDir": false,
+    "ID": "1XnYBDCq31AGE1WfDFajTz_VSgaNOPRLPiV9ZGp0ez9s"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/03_Vocabulary_and_Idioms/The Essential Guide to English Idioms, Phrasal Verbs, and Collocations.docx",
+    "Name": "The Essential Guide to English Idioms, Phrasal Verbs, and Collocations.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T10:31:38.584Z",
+    "IsDir": false,
+    "ID": "10S8NGrqlfj71Zbq8td0CMx1gMqdbT5GIiH0qo-UGsSE"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Structural Engineering/Comprehensive_Structural_Engineering_Textbook_Vol1.docx",
+    "Name": "Comprehensive_Structural_Engineering_Textbook_Vol1.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:04:00.197Z",
+    "IsDir": false,
+    "ID": "14XNJ5ZaMMfQl1rUo1ZGqYZKxjiJwdr-SI4TtVbiRD0w"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Transportation & Highway Engineering/Transportation_and_Highway_Engineering_Guide.pdf.docx",
+    "Name": "Transportation_and_Highway_Engineering_Guide.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:02:52.718Z",
+    "IsDir": false,
+    "ID": "1q6tGGhdaia706wjYWEhH4x72HRmC_ahcw8wiXDra42w"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/01_Stories_and_Fiction/The Echoes of Eldoria & Other Tales.docx",
+    "Name": "The Echoes of Eldoria & Other Tales.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:02:06.475Z",
+    "IsDir": false,
+    "ID": "1F1yGNInxmR9Q92unma7aU1OPlqyobSB8T05EVxBvNtM"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Transportation & Highway Engineering/Comprehensive_Transportation_Engineering_Textbook_Vol1.docx",
+    "Name": "Comprehensive_Transportation_Engineering_Textbook_Vol1.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:02:04.449Z",
+    "IsDir": false,
+    "ID": "1j9gL6qOFwEpKOIVTMikTFDWvSSKSsRohKH5gezNiB0s"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Water Resources & Environmental Engineering/Water_Resources_and_Hydraulics_Manual.pdf.docx",
+    "Name": "Water_Resources_and_Hydraulics_Manual.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:02:03.392Z",
+    "IsDir": false,
+    "ID": "1WPalR6it42LdbPR1DuX_iXdMfSlk5RSD_0aWriz7Ogo"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Construction Management & Materials/Construction_Management_and_Materials_Handbook.pdf.docx",
+    "Name": "Construction_Management_and_Materials_Handbook.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T13:02:01.314Z",
+    "IsDir": false,
+    "ID": "1ir_-cJ7YMxlw8LCaJfXxvd5DZ0SOYtycYyimoCI48ek"
+  },
+  {
+    "Path": "06_English_Language_and_Literature/01_Stories_and_Fiction/The Clockmaker's Secret and Modern Parables.docx",
+    "Name": "The Clockmaker's Secret and Modern Parables.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-04T10:31:32.930Z",
+    "IsDir": false,
+    "ID": "1i7gSI140MO0ntwTVFFKu1Uf0SmUTMyotrNAXVMFeNxE"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Geotechnical & Foundation Engineering/Geotechnical_and_Soil_Mechanics_Manual.pdf.docx",
+    "Name": "Geotechnical_and_Soil_Mechanics_Manual.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-03T22:23:32.241Z",
+    "IsDir": false,
+    "ID": "1kj2uRmB3JmWFxp6scBvh9cHYdpcMOt4PSS4WcoHy7Hs"
+  },
+  {
+    "Path": "01_Books_and_Textbooks/Structural Engineering/Structural_Engineering_Handbook_Volume_1.pdf.docx",
+    "Name": "Structural_Engineering_Handbook_Volume_1.pdf.docx",
+    "Size": -1,
+    "MimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "ModTime": "2026-08-03T22:23:20.523Z",
+    "IsDir": false,
+    "ID": "1tlar7N_qJDSFcDKj7FwuRJiPxuX-P9lZnP9pHoY27OQ"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] AtumAI A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies.pdf",
+    "Name": "[2026] AtumAI A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies.pdf",
+    "Size": 504059,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:58.485Z",
+    "IsDir": false,
+    "ID": "1Aepw_jfVH7e7H2dhcD4Ole36MAgB7BvR"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] Analytic Planning under Uncertainty with Moment Closure.pdf",
+    "Name": "[2026] Analytic Planning under Uncertainty with Moment Closure.pdf",
+    "Size": 722728,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:58.206Z",
+    "IsDir": false,
+    "ID": "1j9RT4J8SAhabIXDWBIkFECuvymvxzBFI"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] Agentic Commerce World An Auditable and Verifiable Environment for Vibe Commerce.pdf",
+    "Name": "[2026] Agentic Commerce World An Auditable and Verifiable Environment for Vibe Commerce.pdf",
+    "Size": 713991,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:57.937Z",
+    "IsDir": false,
+    "ID": "1W8hSVJiywepVqwwD5tk4eXHpdH04-xJ-"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] A Taxonomy of Cognitive Capability Gaps in Generative and Agentic AI.pdf",
+    "Name": "[2026] A Taxonomy of Cognitive Capability Gaps in Generative and Agentic AI.pdf",
+    "Size": 1238819,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:57.873Z",
+    "IsDir": false,
+    "ID": "1z3n2pXCMMyBfHnWnE1-FGTsAqaMp142d"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] Agentic Incident Response through Digital Twin-Enhanced Multiscale Planning.pdf",
+    "Name": "[2026] Agentic Incident Response through Digital Twin-Enhanced Multiscale Planning.pdf",
+    "Size": 1579694,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:56.941Z",
+    "IsDir": false,
+    "ID": "1StjKsk6BOJ048rtT9pdozD5m4lWZ2iIX"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] Can AI Agents Simulate AB Test Outcomes A Validation Framework for Agentic Experimentation.pdf",
+    "Name": "[2026] Can AI Agents Simulate AB Test Outcomes A Validation Framework for Agentic Experimentation.pdf",
+    "Size": 245011,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:56.439Z",
+    "IsDir": false,
+    "ID": "1CdOE34RDHpi8eXM4bijBAJtlNgFWiQHU"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] Antares Foundation Models for Agentic Vulnerability Localization.pdf",
+    "Name": "[2026] Antares Foundation Models for Agentic Vulnerability Localization.pdf",
+    "Size": 1337968,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:56.392Z",
+    "IsDir": false,
+    "ID": "1LTDlFCtKsJVjI2O9REz0TTpeCNg_7_r7"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning.pdf",
+    "Name": "[2026] Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning.pdf",
+    "Size": 12112619,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:55.652Z",
+    "IsDir": false,
+    "ID": "1-qWE0L57QiaVsGUfC49rUGmH_cDkUIMy"
+  },
+  {
+    "Path": "Scholar_Archive/AI_100_Papers/04_Artificial_Intelligence_and_Agents/[2026] From Profiling to Synthesis Benchmarking Implicit Behavioral Alignment in Personalized LLM Agents.pdf",
+    "Name": "[2026] From Profiling to Synthesis Benchmarking Implicit Behavioral Alignment in Personalized LLM Agents.pdf",
+    "Size": 3955808,
+    "MimeType": "application/pdf",
+    "ModTime": "2026-08-04T13:01:55.477Z",
+    "IsDir": false,
+    "ID": "1xhKs38-7mqqlbV_Yx2S5X5kvzyn2MNH_"
+  }
+]
