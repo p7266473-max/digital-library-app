@@ -1,0 +1,12 @@
+[server]
+headless = true
+port = 8501
+address = "0.0.0.0"
+# Allow WebSocket connections from any origin (required for Cloudflare tunnel)
+enableCORS = false
+enableXsrfProtection = false
+
+[browser]
+# Prevents Streamlit from trying to open a browser tab on the server
+serverAddress = "0.0.0.0"
+gatherUsageStats = false
