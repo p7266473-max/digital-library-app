@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom premium 3D book widget styling
+# Custom premium 3D book shelf styling with permanently rotated book cards
 st.markdown("""
 <style>
     .main {
@@ -24,17 +24,28 @@ st.markdown("""
     }
     .book-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 30px;
-        padding: 20px 0;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 35px;
+        padding: 30px 10px;
+        perspective: 1000px; /* Perspective for the entire grid */
+    }
+    .book-card-link {
+        text-decoration: none !important;
+        color: #f8fafc !important;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    .book-card-link:hover {
+        color: #f8fafc !important;
+        text-decoration: none !important;
     }
     .book-card {
         position: relative;
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         border-radius: 6px 16px 16px 6px;
         border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 3px 0 0 rgba(255, 255, 255, 0.1);
-        height: 320px;
+        box-shadow: -8px 10px 20px rgba(0, 0, 0, 0.5), inset 3px 0 0 rgba(255, 255, 255, 0.1);
+        height: 280px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -42,12 +53,12 @@ st.markdown("""
         overflow: hidden;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         transform-style: preserve-3d;
-        perspective: 1000px;
+        transform: rotateY(-18deg) rotateX(4deg); /* Permanently turned 3D book on shelf */
     }
-    .book-card:hover {
-        transform: rotateY(-12deg) translateY(-8px);
-        box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.5), -2px 0 5px rgba(56, 189, 248, 0.3), 0 0 15px rgba(56, 189, 248, 0.1);
-        border-color: rgba(56, 189, 248, 0.3);
+    .book-card-link:hover .book-card {
+        transform: rotateY(-5deg) rotateX(2deg) scale(1.04); /* Straightens and pulls forward on hover */
+        box-shadow: -2px 15px 25px rgba(0, 0, 0, 0.6), -2px 0 8px rgba(56, 189, 248, 0.4), 0 0 15px rgba(56, 189, 248, 0.2);
+        border-color: rgba(56, 189, 248, 0.4);
     }
     .book-spine {
         position: absolute;
@@ -79,33 +90,14 @@ st.markdown("""
     }
     .book-meta {
         font-size: 11px;
-        color: #94a3b8;
-        font-weight: 600;
+        color: #38bdf8;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         margin-top: auto;
-    }
-    .book-btn {
-        margin-top: 14px;
-        background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-        color: #0f172a !important;
-        font-weight: 800;
-        text-align: center;
-        padding: 8px 12px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 12px;
-        box-shadow: 0 4px 8px rgba(56, 189, 248, 0.2);
-        transition: all 0.2s ease;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .book-btn:hover {
-        background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
-        box-shadow: 0 6px 12px rgba(56, 189, 248, 0.35);
-        transform: translateY(-1px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -253,7 +245,7 @@ else:
         filtered_df = catalog[catalog['Name'].str.lower().str.contains(search_query)]
         st.subheader(f"🔍 Search Results ({len(filtered_df)} matches)")
         
-        # Render search result grid with 3D Book Cover style
+        # Render search result grid with clickable 3D Book Cover cards
         html_grid = '<div class="book-grid">'
         for idx, row in filtered_df.iterrows():
             name = row['Name']
@@ -262,8 +254,8 @@ else:
             cat = row['Category']
             icon = row['Icon']
             
-            # Single-line HTML string representing the 3D book cover card
-            html_grid += f'<div class="book-card"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div><div class="book-meta">📦 {size} MB | 📁 {cat}</div><a href="{url}" target="_blank" class="book-btn">🔗 Read Book</a></div></div>'
+            # Clickable wrapper link around the entire 3D book cover card
+            html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
         html_grid += '</div>'
         st.markdown(html_grid, unsafe_allow_html=True)
     else:
@@ -283,7 +275,7 @@ else:
             with tab:
                 cat_df = catalog[catalog['Category'] == cat]
                 
-                # Render grid with 3D Book Cover style
+                # Render grid with clickable 3D Book Cover cards
                 html_grid = '<div class="book-grid">'
                 for idx, row in cat_df.iterrows():
                     name = row['Name']
@@ -291,7 +283,7 @@ else:
                     size = row['Size_MB']
                     icon = row['Icon']
                     
-                    # Single-line HTML string representing the 3D book cover card
-                    html_grid += f'<div class="book-card"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div><div class="book-meta">📦 {size} MB</div><a href="{url}" target="_blank" class="book-btn">🔗 Read Book</a></div></div>'
+                    # Clickable wrapper link around the entire 3D book cover card
+                    html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
                 html_grid += '</div>'
                 st.markdown(html_grid, unsafe_allow_html=True)
