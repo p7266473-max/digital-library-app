@@ -95,27 +95,135 @@ if not IS_LOCAL and not IS_COLAB:
         # Load Colab-hosted application inside a borderless, full-screen frame
         st.markdown(f'<iframe src="{tunnel_url}"></iframe>', unsafe_allow_html=True)
     else:
-        # Compute node is offline, show setup and sleep page
+        # Hiren's BootCD / Live OS Bootloader loader simulation screen
         st.markdown("""
-        <div style="text-align: center; margin-top: 120px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-            <h1 style="color: #38bdf8; font-size: 2.8rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 10px;">🌌 Cosmic Compute Node Offline</h1>
-            <p style="color: #94a3b8; font-size: 1.15rem; max-width: 580px; margin: 15px auto 45px auto; line-height: 1.6;">
-                The high-performance cloud server for this library is currently sleeping to save resources. 
-                Please wake up the worker to load the bookshelves.
-            </p>
-            <div style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 35px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06); max-width: 520px; margin: 0 auto; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                <h3 style="color: #f8fafc; margin-top: 0; font-size: 1.25rem; font-weight: 700; margin-bottom: 20px;">🛠️ Activation Steps for Admin:</h3>
-                <ol style="color: #cbd5e1; line-height: 1.9; padding-left: 20px; font-size: 1.05rem;">
-                    <li style="margin-bottom: 10px;">Open your Google Colab <b>Digital Library Notebook</b>.</li>
-                    <li style="margin-bottom: 10px;">Click <b>Run All</b> on the cells to start the tunnel.</li>
-                    <li style="margin-bottom: 10px;">The node links automatically! This page will refresh into the bookshelves within seconds.</li>
-                </ol>
+        <div style="background-color: #030712; color: #38bdf8; font-family: 'Courier Prime', Courier, monospace; padding: 25px; min-height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 999999;">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+                
+                .terminal {
+                    background-color: #090d16;
+                    border: 2px solid #1e293b;
+                    border-radius: 8px;
+                    padding: 30px;
+                    max-width: 800px;
+                    margin: 50px auto;
+                    box-shadow: 0 0 30px rgba(56, 189, 248, 0.12), inset 0 0 15px rgba(0,0,0,0.8);
+                    position: relative;
+                }
+                .terminal::after {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    top: 0; left: 0; bottom: 0; right: 0;
+                    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
+                    z-index: 2;
+                    background-size: 100% 3px, 3px 100%;
+                    pointer-events: none;
+                    opacity: 0.85;
+                }
+                .logo {
+                    color: #e2e8f0;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    white-space: pre-wrap;
+                    line-height: 1.15;
+                    font-size: 12px;
+                    text-shadow: 0 0 8px #38bdf8;
+                }
+                .console-line {
+                    margin-bottom: 10px;
+                    font-size: 14.5px;
+                    line-height: 1.4;
+                    opacity: 0;
+                    animation: fadeIn 0.4s forwards;
+                }
+                .progress-bar-container {
+                    margin: 25px 0 15px 0;
+                }
+                .progress-bar-wrapper {
+                    border: 1px solid #38bdf8;
+                    padding: 2px;
+                    border-radius: 4px;
+                    background-color: #020617;
+                    height: 22px;
+                    display: flex;
+                    align-items: center;
+                }
+                .progress-bar {
+                    background-color: #38bdf8;
+                    height: 100%;
+                    width: 0%;
+                    animation: fillProgress 12s linear forwards;
+                    box-shadow: 0 0 10px #38bdf8;
+                }
+                .instruction-box {
+                    border-top: 1px solid rgba(255,255,255,0.08);
+                    margin-top: 30px;
+                    padding-top: 25px;
+                    color: #94a3b8;
+                }
+                .blink {
+                    animation: blink 1s infinite;
+                }
+                @keyframes fadeIn {
+                    to { opacity: 1; }
+                }
+                @keyframes blink {
+                    50% { opacity: 0; }
+                }
+                @keyframes fillProgress {
+                    0% { width: 0%; }
+                    10% { width: 12%; }
+                    25% { width: 34%; }
+                    45% { width: 56%; }
+                    70% { width: 78%; }
+                    90% { width: 95%; }
+                    100% { width: 98%; }
+                }
+            </style>
+            
+            <div class="terminal">
+                <div class="logo">
+ _  _ _ ___  ___ _  _ ____   ___  ____ ____ ___    ____ ____ 
+ |__| | |__] |__] |\\ | [__    |__] |  | |  |  |     |  | [__  
+ |  | | |  \\ |  \\ | \\| ___]   |__] |__| |__|  |  .  |__| ___] 
+=============================================================
+HIREN'S BOOTCD PE - LIVE WEB OS BUILDER v3.0 (COSMIC NODE)
+=============================================================</div>
+                
+                <div class="console-line" style="animation-delay: 0.3s;"><span style="color: #4ade80;">[ OK ]</span> Initializing gateway runtime environment...</div>
+                <div class="console-line" style="animation-delay: 0.9s;"><span style="color: #4ade80;">[ OK ]</span> Querying active doorway credentials from GitHub API...</div>
+                <div class="console-line" style="animation-delay: 1.5s;"><span style="color: #38bdf8;">[ INFO ]</span> Decoded Server Node: <span style="color: #cbd5e1;">p7266473-max/digital-library-app</span></div>
+                <div class="console-line" style="animation-delay: 2.1s;"><span style="color: #4ade80;">[ OK ]</span> Verifying Zen OpenCode platform connection...</div>
+                <div class="console-line" style="animation-delay: 2.7s;"><span style="color: #fb7185;">[ WAIT ]</span> Connecting to Cloudflare secure tunnel...</div>
+                <div class="console-line" style="animation-delay: 3.3s;"><span style="color: #f59e0b;">[ WARNING ]</span> Compute node is currently sleeping / unresponsive.</div>
+                
+                <div class="progress-bar-container" style="opacity: 0; animation: fadeIn 0.4s forwards; animation-delay: 3.9s;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px;">
+                        <span>Loading Live OS Setup...</span>
+                        <span class="blink" style="color: #fb7185;">Connecting...</span>
+                    </div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                
+                <div class="instruction-box console-line" style="animation-delay: 4.5s;">
+                    <span style="color: #f8fafc; font-weight: 700;">🛠️ STEPS TO WAKE COMPUTE NODE (FOR ADMIN):</span>
+                    <ol style="margin-top: 10px; padding-left: 20px; line-height: 1.8;">
+                        <li>Open the Google Colab <b>Digital Library Notebook</b>.</li>
+                        <li>Click <b>Run All</b> on the cells (make sure to authorize Google Drive).</li>
+                        <li>The node will automatically connect, and this doorway will refresh.</li>
+                    </ol>
+                </div>
+                
+                <div class="console-line blink" style="animation-delay: 5.0s; color: #94a3b8; margin-top: 20px;">_</div>
             </div>
-            <p style="color: #475569; font-size: 0.85rem; margin-top: 60px;">Digital Library Gateway Doorway v3.0</p>
         </div>
         """, unsafe_allow_html=True)
         
-        # Auto-reload doorway tab every 15s to check if admin waked it up
+        # Reload gateway tab every 15s to check if node became active
         st.markdown("""
         <script>
             setTimeout(function() {
