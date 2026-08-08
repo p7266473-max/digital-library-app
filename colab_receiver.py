@@ -1,5 +1,5 @@
 # ==============================================================================
-# GOOGLE COLAB DOWNLOADER RECEIVER SCRIPT
+# GOOGLE COLAB DOWNLOADER RECEIVER SCRIPT (v2.0 - With YouTube & User-Agent support)
 # ==============================================================================
 # Instructions:
 # 1. Open Google Colab (https://colab.research.google.com) and create a new notebook.
@@ -22,7 +22,7 @@ print(f"Verified target root: {drive_path}")
 
 # 2. Install FastAPI, Uvicorn, and Cloudflared dependencies
 print("Installing dependencies...")
-!pip install -q fastapi uvicorn pydantic requests nest-asyncio
+!pip install -q fastapi uvicorn pydantic requests nest-asyncio yt-dlp
 print("Downloading Cloudflare Tunnel binary...")
 !curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
 !dpkg -i cloudflared.deb
@@ -52,23 +52,44 @@ def download_file(req: DownloadRequest):
     target_dir = os.path.join(drive_path, req.category_folder)
     os.makedirs(target_dir, exist_ok=True)
     
-    file_path = os.path.join(target_dir, req.file_name)
     print(f"\n[INCOMING] Request to download: {req.download_url}")
-    print(f"[TARGET] Saving to: {file_path}")
+    
+    # Check if the URL is a YouTube link
+    is_youtube = "youtube.com" in req.download_url or "youtu.be" in req.download_url
     
     try:
-        # Run wget inside Colab for high-speed download
-        cmd = ["wget", "-q", "--show-progress", "-O", file_path, req.download_url]
-        # Run process and wait for completion
+        if is_youtube:
+            # Determine if we should save as Audio (MP3) or Video (MP4)
+            is_audio = "Audio" in req.category_folder or "Podcast" in req.category_folder
+            # Use YouTube video title as the file name automatically
+            output_template = os.path.join(target_dir, "%(title)s.%(ext)s")
+            
+            if is_audio:
+                print(f"[YOUTUBE DETECTED] Extracting audio as MP3 to: {target_dir}")
+                cmd = ["yt-dlp", "-x", "--audio-format", "mp3", "--no-warnings", "-o", output_template, req.download_url]
+            else:
+                print(f"[YOUTUBE DETECTED] Downloading video as MP4 to: {target_dir}")
+                cmd = ["yt-dlp", "-f", "mp4", "--no-warnings", "-o", output_template, req.download_url]
+        else:
+            # Standard file download (PDF/EPUB/DOCX/etc.)
+            file_path = os.path.join(target_dir, req.file_name)
+            print(f"[STANDARD URL] Saving to: {file_path}")
+            
+            # Run wget with a mock browser User-Agent to bypass download blocks (e.g. from YouTube/Google/Libgen)
+            user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+            cmd = ["wget", "-q", "--show-progress", f"--user-agent={user_agent}", "-O", file_path, req.download_url]
+        
+        # Run command
         process = subprocess.run(cmd, capture_output=True)
         
         if process.returncode == 0:
-            print(f"[SUCCESS] Download completed for: {req.file_name}")
-            return {"status": "success", "message": f"Successfully downloaded and saved: {req.file_name}"}
+            print("[SUCCESS] Download completed!")
+            return {"status": "success", "message": "Successfully downloaded and saved media file directly to Google Drive!"}
         else:
             err_msg = process.stderr.decode()
-            print(f"[ERROR] wget failed: {err_msg}")
+            print(f"[ERROR] Download failed: {err_msg}")
             raise HTTPException(status_code=500, detail=f"Download failed: {err_msg}")
+            
     except Exception as e:
         print(f"[EXCEPTION] Failed to process download: {e}")
         raise HTTPException(status_code=500, detail=str(e))
@@ -76,7 +97,6 @@ def download_file(req: DownloadRequest):
 # 4. Start Background Cloudflare Tunnel
 def start_cloudflare_tunnel():
     print("Starting Cloudflare Tunnel...")
-    # Cloudflared will output logs to stdout. We parse it to find the trycloudflare.com URL.
     proc = subprocess.Popen(
         ["cloudflared", "tunnel", "--url", "http://localhost:8000"],
         stdout=subprocess.PIPE,
