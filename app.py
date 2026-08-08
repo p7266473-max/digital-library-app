@@ -7,6 +7,7 @@ import shutil
 import base64
 from PIL import Image
 import io
+import requests
 
 # Ensure rclone in local bin is visible in PATH
 os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
@@ -138,7 +139,6 @@ def get_base64_covers():
 covers_cache = get_base64_covers()
 
 def get_cover_url(name, category):
-    # Specific categories mapping
     if "Audio" in category:
         key = "cover_audio"
     elif "Videos" in category:
@@ -146,12 +146,9 @@ def get_cover_url(name, category):
     elif "News" in category:
         key = "cover_news"
     else:
-        # Distribute book covers deterministically based on name
         text_covers = ["cover_math", "cover_science", "cover_literature", "cover_art", "cover_history", "cover_islam", "cover_cosmic"]
         checksum = sum(ord(c) for c in name)
         key = text_covers[checksum % len(text_covers)]
-        
-    # Return Base64 data if available, else fall back to a linear gradient background
     return covers_cache.get(key, "")
 
 def fetch_catalog_from_drive():
@@ -275,6 +272,43 @@ with st.sidebar:
                 st.error("Failed to sync catalog. Please verify rclone connection.")
     else:
         st.info("ℹ️ **Cloud Mode Active**\n\nAuto-sync via Rclone is disabled in the cloud. To update library items, run the app locally, click Sync, and push the updated `Digital_Library_Catalog.json` to GitHub.")
+
+    # Colab Downloader Portal
+    st.markdown("---")
+    with st.expander("⬇️ Colab Downloader Portal"):
+        st.write("Stream books directly to Google Drive using Google Colab runtimes.")
+        colab_url = st.text_input("Colab Tunnel URL:", placeholder="https://xxx.trycloudflare.com").strip()
+        download_url = st.text_input("Book Download URL:", placeholder="e.g. https://domain.com/book.pdf").strip()
+        file_name = st.text_input("Save File Name:", placeholder="e.g. chemistry.pdf").strip()
+        
+        category_options = list(category_mapping.keys())
+        target_folder = st.selectbox("Destination Folder:", category_options)
+        
+        if st.button("🚀 Start Cloud Download", use_container_width=True):
+            if not colab_url or not download_url or not file_name:
+                st.warning("Please fill in all fields (Tunnel URL, Download URL, and Save File Name).")
+            else:
+                api_url = f"{colab_url.rstrip('/')}/download"
+                st.write("Initiating cloud stream request to Colab...")
+                
+                try:
+                    payload = {
+                        "download_url": download_url,
+                        "category_folder": target_folder,
+                        "file_name": file_name
+                    }
+                    response = requests.post(api_url, json=payload, timeout=120)
+                    
+                    if response.status_code == 200:
+                        res_data = response.json()
+                        if res_data.get("status") == "success":
+                            st.success(f"🎉 Success!\n\n{res_data.get('message')}\n\nRefreshed library will show the book once you sync.")
+                        else:
+                            st.error(f"Error: {res_data.get('message')}")
+                    else:
+                        st.error(f"Colab service returned status code {response.status_code}: {response.text}")
+                except requests.exceptions.RequestException as e:
+                    st.error(f"Connection to Colab failed. Verify your Tunnel URL is active and typed correctly. Details: {e}")
 
 catalog = load_catalog()
 
