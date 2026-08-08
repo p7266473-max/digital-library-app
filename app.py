@@ -481,51 +481,82 @@ def load_catalog():
             st.error(f"Error reading catalog JSON: {e}")
     return None
 
-# Zen OpenCode platform real-time internet search function
+# Real-time internet search using DuckDuckGo + Zen OpenCode AI
 def search_internet_for_resources(query, search_format):
     try:
-        search_query = query
-        if search_format == "PDF (Books)":
-            search_query += " filetype:pdf"
-        elif search_format == "MP3 (Audio)":
-            search_query += " audio mp3 download"
-        elif search_format == "MP4 (Videos)":
-            search_query += " video mp4 download"
-            
-        with DDGS() as ddgs:
-            results = list(ddgs.text(search_query, max_results=15))
-            
-        search_context = ""
-        for idx, r in enumerate(results):
-            search_context += f"Result #{idx+1}:\nTitle: {r['title']}\nURL: {r['href']}\nSnippet: {r['body']}\n\n"
-            
-        client = OpenAI(api_key=get_auth_token(), base_url=get_api_endpoint())
-        system_prompt = f"""You are a Digital Library Assistant. Analyze the web search results and extract direct download links matching the requested format: {search_format}.
-Filter out garbage redirects, ad sites, or landing pages. Extract ONLY direct links to resource files.
-Return the results ONLY as a JSON list of objects. Each object MUST contain:
-- "Name": Title/clean name of the book/video/audio
-- "URL": Direct download link to the file
-- "Size_MB": Estimate file size if snippet hints, otherwise return "N/A"
-- "Source": Short domain name source
+        # Build targeted search query per format
+        if search_format == "📄 PDF Books":
+            ddg_query = f'{query} filetype:pdf free download'
+            yt_query  = None
+        elif search_format == "🎧 Audio / Podcasts":
+            ddg_query = f'{query} mp3 free download audio'
+            yt_query  = f'{query} audio'
+        elif search_format == "🎬 YouTube Videos":
+            ddg_query = None
+            yt_query  = query
+        elif search_format == "🎬 MP4 Videos":
+            ddg_query = f'{query} mp4 free download'
+            yt_query  = None
+        else:
+            ddg_query = query
+            yt_query  = None
 
-DO NOT wrap JSON in code blocks (e.g. ```json), just output the raw JSON string."""
+        results = []
 
-        response = client.chat.completions.create(
-            model="deepseek-v4-flash-free",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": f"User query: '{query}'\n\nWeb Search Data:\n{search_context}"}
-            ],
-            temperature=0.2
-        )
-        
-        raw_json = response.choices[0].message.content.strip()
-        if raw_json.startswith("```"):
-            raw_json = raw_json.split("\n", 1)[1].rsplit("\n", 1)[0].strip()
-            
-        return json.loads(raw_json)
+        # ── YouTube search via DuckDuckGo ─────────────────────────────────────
+        if yt_query:
+            with DDGS() as ddgs:
+                yt_results = list(ddgs.videos(yt_query, max_results=12))
+            for r in yt_results:
+                url = r.get('content', '')
+                if 'youtube.com' in url or 'youtu.be' in url:
+                    results.append({
+                        'Name':     r.get('title', 'YouTube Video'),
+                        'URL':      url,
+                        'Size_MB':  'Stream',
+                        'Source':   'YouTube',
+                        'Thumbnail': r.get('images', {}).get('small', ''),
+                        'IsYouTube': True,
+                    })
+
+        # ── Web search for direct file links ──────────────────────────────────
+        if ddg_query:
+            with DDGS() as ddgs:
+                web_hits = list(ddgs.text(ddg_query, max_results=15))
+
+            search_context = ''.join(
+                f"#{i+1} Title: {r['title']}\nURL: {r['href']}\nSnippet: {r['body']}\n\n"
+                for i, r in enumerate(web_hits)
+            )
+
+            client = OpenAI(api_key=get_auth_token(), base_url=get_api_endpoint())
+            resp = client.chat.completions.create(
+                model="deepseek-v4-flash-free",
+                messages=[
+                    {"role": "system", "content": (
+                        f"You are a Digital Library resource extractor. From the search results below, "
+                        f"extract ONLY direct downloadable file links for format: {search_format}.\n"
+                        "Return a raw JSON array (no code fences). Each item must have:\n"
+                        '"Name": clean readable title\n'
+                        '"URL": direct file download URL (must end in .pdf/.mp3/.mp4 or be a known CDN)\n'
+                        '"Size_MB": estimated size or N/A\n'
+                        '"Source": domain name\n'
+                        '"IsYouTube": false'
+                    )},
+                    {"role": "user", "content": f"Query: {query}\n\n{search_context}"}
+                ],
+                temperature=0.1
+            )
+            raw = resp.choices[0].message.content.strip()
+            if raw.startswith('```'): raw = raw.split('\n', 1)[1].rsplit('\n', 1)[0]
+            try:
+                results += json.loads(raw)
+            except Exception:
+                pass
+
+        return results
     except Exception as e:
-        st.error(f"AI Internet search failed: {e}")
+        st.error(f"Internet search error: {e}")
         return []
 
 # Sidebar controls
@@ -589,40 +620,94 @@ if nav_option == "📚 Bookshelf & Web Search":
         with col_search:
             search_query = st.text_input("🔍 Search library catalog or search the internet:", "").strip()
         with col_format:
-            search_format = st.selectbox("Format Filter (For Web Search):", ["PDF (Books)", "MP3 (Audio)", "MP4 (Videos)"])
-        
+            search_format = st.selectbox("Format:", ["📄 PDF Books", "🎬 YouTube Videos", "🎧 Audio / Podcasts", "🎬 MP4 Videos"])
+
         # Toggle between local search and Live Web Search
-        is_web_search = st.checkbox("🌐 Run Real-Time Internet Search using AI", value=False)
+        is_web_search = st.checkbox("🌐 Search the Internet (AI-powered — saves directly to Library)", value=False)
         
         if search_query:
             if is_web_search:
-                st.subheader(f"🌐 AI Live Internet Results for: '{search_query}' ({search_format})")
-                st.caption("AI is crawling the web and extracting direct media download links...")
-                
-                temp_results = search_internet_for_resources(search_query, search_format)
-                
-                if not temp_results:
-                    st.warning("No direct media download links found on the web for this query. Try adjusting your keywords.")
+                st.subheader(f"🌐 Live Internet Search: **{search_query}**")
+                with st.spinner("Searching the internet and extracting resources..."):
+                    web_results = search_internet_for_resources(search_query, search_format)
+
+                if not web_results:
+                    st.warning("No resources found. Try different keywords or format.")
                 else:
-                    icon = "📚"
-                    if "MP3" in search_format:
-                        icon = "🎧"
-                    elif "MP4" in search_format:
-                        icon = "🎬"
-                        
-                    html_grid = '<div class="book-grid">'
-                    for r in temp_results:
-                        name = r.get("Name", "Untitled Web Book")
-                        url = r.get("URL", "#")
-                        size = r.get("Size_MB", "N/A")
-                        source = r.get("Source", "Web")
-                        
-                        cover_b64 = get_cover_url(name, search_format)
-                        bg_style = f"background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.85)), url('{cover_b64}') no-repeat center center; background-size: cover;" if cover_b64 else "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);"
-                        
-                        html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card" style="{bg_style}"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>🌐 {source}</span><span>GET ↗</span></div></div></a>'
-                    html_grid += '</div>'
-                    st.markdown(html_grid, unsafe_allow_html=True)
+                    colab_drive_path = "/content/drive/MyDrive/Digital Library"
+                    can_save = os.path.exists(colab_drive_path) or shutil.which("rclone") is not None
+
+                    st.caption(f"Found **{len(web_results)}** resources · {'✅ Save to Library enabled (running in Colab)' if can_save else '⚠️ Save disabled — open Colab compute node to enable'}")
+                    st.markdown("---")
+
+                    # Show results in rows of 3
+                    for row_start in range(0, len(web_results), 3):
+                        row_items = web_results[row_start:row_start+3]
+                        cols = st.columns(len(row_items))
+                        for col, item in zip(cols, row_items):
+                            name      = item.get('Name', 'Unknown')
+                            url       = item.get('URL', '#')
+                            size      = item.get('Size_MB', 'N/A')
+                            source    = item.get('Source', 'Web')
+                            is_yt     = item.get('IsYouTube', False)
+                            thumbnail = item.get('Thumbnail', '')
+                            icon = '🎬' if is_yt or '🎬' in search_format else ('🎧' if '🎧' in search_format else '📄')
+
+                            with col:
+                                # Thumbnail or coloured header
+                                if thumbnail:
+                                    st.image(thumbnail, use_container_width=True)
+                                else:
+                                    st.markdown(
+                                        f'<div style="background:linear-gradient(135deg,#1e293b,#0f172a);'
+                                        f'border-radius:10px;height:90px;display:flex;align-items:center;'
+                                        f'justify-content:center;font-size:2.2rem;margin-bottom:6px;">{icon}</div>',
+                                        unsafe_allow_html=True
+                                    )
+
+                                # Title (truncated)
+                                st.markdown(
+                                    f'<p style="font-size:12px;font-weight:700;color:#f8fafc;'
+                                    f'line-height:1.35;margin:4px 0 2px 0;height:52px;overflow:hidden;'
+                                    f'display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;">'
+                                    f'{name}</p>',
+                                    unsafe_allow_html=True
+                                )
+                                st.markdown(
+                                    f'<p style="font-size:10px;color:#38bdf8;margin-bottom:6px;">'
+                                    f'🌐 {source} · {size} MB</p>',
+                                    unsafe_allow_html=True
+                                )
+
+                                # Open link button
+                                st.link_button("↗ Open", url, use_container_width=True)
+
+                                # Save to Library button (only in Colab)
+                                if can_save:
+                                    btn_key = f"save_{row_start}_{name[:20]}"
+                                    if st.button("⬇️ Save to Library", key=btn_key, use_container_width=True):
+                                        # Pick correct category folder
+                                        if is_yt and ('🎧' in search_format or 'Audio' in search_format):
+                                            folder = '03_Audio_and_Podcasts'
+                                        elif is_yt or '🎬' in search_format:
+                                            folder = '04_Videos_and_Tutorials'
+                                        elif '🎧' in search_format:
+                                            folder = '03_Audio_and_Podcasts'
+                                        else:
+                                            folder = '01_Books_and_Textbooks'
+
+                                        with st.spinner(f'Downloading and saving "{name[:40]}"...'):
+                                            ok, msg = download_and_upload_locally(url, folder)
+                                        if ok:
+                                            st.success(f'✅ Saved! {msg}')
+                                            # Refresh catalog
+                                            if shutil.which('rclone'):
+                                                fetch_catalog_from_drive()
+                                            st.cache_data.clear()
+                                        else:
+                                            st.error(f'❌ {msg}')
+
+                                st.markdown('<div style="margin-bottom:18px;"></div>', unsafe_allow_html=True)
             else:
                 # Standard Local Search Catalog filtering
                 filtered_df = catalog[catalog['Name'].str.lower().str.contains(search_query.lower())]
