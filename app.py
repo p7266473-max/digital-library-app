@@ -4,6 +4,9 @@ import pandas as pd
 import os
 import json
 import shutil
+import base64
+from PIL import Image
+import io
 
 # Ensure rclone in local bin is visible in PATH
 os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
@@ -27,7 +30,7 @@ st.markdown("""
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 35px;
         padding: 30px 10px;
-        perspective: 1000px; /* Perspective for the entire grid */
+        perspective: 1000px;
     }
     .book-card-link {
         text-decoration: none !important;
@@ -41,10 +44,9 @@ st.markdown("""
     }
     .book-card {
         position: relative;
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         border-radius: 6px 16px 16px 6px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: -8px 10px 20px rgba(0, 0, 0, 0.5), inset 3px 0 0 rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: -8px 10px 20px rgba(0, 0, 0, 0.6), inset 3px 0 0 rgba(255, 255, 255, 0.15);
         height: 280px;
         display: flex;
         flex-direction: column;
@@ -53,12 +55,12 @@ st.markdown("""
         overflow: hidden;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         transform-style: preserve-3d;
-        transform: rotateY(-18deg) rotateX(4deg); /* Permanently turned 3D book on shelf */
+        transform: rotateY(-18deg) rotateX(4deg);
     }
     .book-card-link:hover .book-card {
-        transform: rotateY(-5deg) rotateX(2deg) scale(1.04); /* Straightens and pulls forward on hover */
-        box-shadow: -2px 15px 25px rgba(0, 0, 0, 0.6), -2px 0 8px rgba(56, 189, 248, 0.4), 0 0 15px rgba(56, 189, 248, 0.2);
-        border-color: rgba(56, 189, 248, 0.4);
+        transform: rotateY(-5deg) rotateX(2deg) scale(1.04);
+        box-shadow: -2px 15px 25px rgba(0, 0, 0, 0.7), -2px 0 8px rgba(56, 189, 248, 0.5), 0 0 15px rgba(56, 189, 248, 0.3);
+        border-color: rgba(56, 189, 248, 0.5);
     }
     .book-spine {
         position: absolute;
@@ -67,14 +69,14 @@ st.markdown("""
         bottom: 0;
         width: 14px;
         background: linear-gradient(to right, #0f172a 0%, #1e293b 60%, #0f172a 100%);
-        box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.08), 2px 0 5px rgba(0, 0, 0, 0.4);
+        box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.08), 2px 0 5px rgba(0, 0, 0, 0.5);
         border-radius: 6px 0 0 6px;
         z-index: 10;
     }
     .book-icon {
         font-size: 32px;
         margin-bottom: 12px;
-        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
     }
     .book-title {
         font-size: 14px;
@@ -86,7 +88,7 @@ st.markdown("""
         display: -webkit-box;
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.8);
     }
     .book-meta {
         font-size: 11px;
@@ -98,6 +100,7 @@ st.markdown("""
         display: flex;
         justify-content: space-between;
         align-items: center;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.8);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -108,6 +111,48 @@ st.write("Lightweight metadata catalog with direct high-speed Google Drive acces
 LOCAL_JSON = "Digital_Library_Catalog.json"
 LOCAL_EXCEL = "/tmp/Digital_Library_Catalog.xlsx"
 DRIVE_TARGET_EXCEL = "stories_drive:Digital Library/Digital_Library_Catalog.xlsx"
+
+# Convert local images to Base64 with resizing to optimize speed and payload size
+@st.cache_data
+def get_base64_covers():
+    covers = {}
+    covers_dir = "covers"
+    if not os.path.exists(covers_dir):
+        return covers
+        
+    for filename in os.listdir(covers_dir):
+        if filename.endswith(".jpg") or filename.endswith(".png"):
+            key = filename.replace(".jpg", "").replace(".png", "")
+            filepath = os.path.join(covers_dir, filename)
+            try:
+                with Image.open(filepath) as img:
+                    img.thumbnail((200, 280))
+                    buffered = io.BytesIO()
+                    img.convert("RGB").save(buffered, format="JPEG", quality=85)
+                    img_str = base64.b64encode(buffered.getvalue()).decode()
+                    covers[key] = f"data:image/jpeg;base64,{img_str}"
+            except Exception as e:
+                print(f"Error processing {filename}: {e}")
+    return covers
+
+covers_cache = get_base64_covers()
+
+def get_cover_url(name, category):
+    # Specific categories mapping
+    if "Audio" in category:
+        key = "cover_audio"
+    elif "Videos" in category:
+        key = "cover_video"
+    elif "News" in category:
+        key = "cover_news"
+    else:
+        # Distribute book covers deterministically based on name
+        text_covers = ["cover_math", "cover_science", "cover_literature", "cover_art", "cover_history", "cover_islam", "cover_cosmic"]
+        checksum = sum(ord(c) for c in name)
+        key = text_covers[checksum % len(text_covers)]
+        
+    # Return Base64 data if available, else fall back to a linear gradient background
+    return covers_cache.get(key, "")
 
 def fetch_catalog_from_drive():
     if not shutil.which("rclone"):
@@ -245,7 +290,7 @@ else:
         filtered_df = catalog[catalog['Name'].str.lower().str.contains(search_query)]
         st.subheader(f"🔍 Search Results ({len(filtered_df)} matches)")
         
-        # Render search result grid with clickable 3D Book Cover cards
+        # Render search result grid with clickable 3D Book Cover cards with cover artwork
         html_grid = '<div class="book-grid">'
         for idx, row in filtered_df.iterrows():
             name = row['Name']
@@ -254,8 +299,10 @@ else:
             cat = row['Category']
             icon = row['Icon']
             
-            # Clickable wrapper link around the entire 3D book cover card
-            html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
+            cover_b64 = get_cover_url(name, cat)
+            bg_style = f"background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.85)), url('{cover_b64}') no-repeat center center; background-size: cover;" if cover_b64 else "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);"
+            
+            html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card" style="{bg_style}"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
         html_grid += '</div>'
         st.markdown(html_grid, unsafe_allow_html=True)
     else:
@@ -275,7 +322,7 @@ else:
             with tab:
                 cat_df = catalog[catalog['Category'] == cat]
                 
-                # Render grid with clickable 3D Book Cover cards
+                # Render grid with clickable 3D Book Cover cards with cover artwork
                 html_grid = '<div class="book-grid">'
                 for idx, row in cat_df.iterrows():
                     name = row['Name']
@@ -283,7 +330,9 @@ else:
                     size = row['Size_MB']
                     icon = row['Icon']
                     
-                    # Clickable wrapper link around the entire 3D book cover card
-                    html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
+                    cover_b64 = get_cover_url(name, cat)
+                    bg_style = f"background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.85)), url('{cover_b64}') no-repeat center center; background-size: cover;" if cover_b64 else "background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);"
+                    
+                    html_grid += f'<a href="{url}" target="_blank" class="book-card-link"><div class="book-card" style="{bg_style}"><div class="book-spine"></div><div><div class="book-icon">{icon}</div><div class="book-title">{name}</div></div><div class="book-meta"><span>📦 {size} MB</span><span>READ ↗</span></div></div></a>'
                 html_grid += '</div>'
                 st.markdown(html_grid, unsafe_allow_html=True)
