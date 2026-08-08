@@ -7,8 +7,9 @@ import shutil
 import base64
 from PIL import Image
 import io
-import requests
 import urllib.parse
+import urllib.request
+import sys
 
 # Ensure rclone in local bin is visible in PATH
 os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
@@ -113,24 +114,6 @@ st.write("Lightweight metadata catalog with direct high-speed Google Drive acces
 LOCAL_JSON = "Digital_Library_Catalog.json"
 LOCAL_EXCEL = "/tmp/Digital_Library_Catalog.xlsx"
 DRIVE_TARGET_EXCEL = "stories_drive:Digital Library/Digital_Library_Catalog.xlsx"
-TUNNEL_CONFIG = "colab_tunnel.txt"
-
-# Persist Colab Tunnel URL across sessions
-def load_tunnel_url():
-    if os.path.exists(TUNNEL_CONFIG):
-        try:
-            with open(TUNNEL_CONFIG, "r") as f:
-                return f.read().strip()
-        except:
-            pass
-    return ""
-
-def save_tunnel_url(url):
-    try:
-        with open(TUNNEL_CONFIG, "w") as f:
-            f.write(url.strip())
-    except:
-        pass
 
 # Convert local images to Base64 with resizing to optimize speed and payload size
 @st.cache_data
@@ -232,6 +215,74 @@ category_mapping = {
     "General": ("General Archive", "📁")
 }
 
+def download_and_upload_locally(download_url, category_folder):
+    # Parse initial filename
+    parsed_url = urllib.parse.urlparse(download_url)
+    file_name = os.path.basename(parsed_url.path)
+    file_name = urllib.parse.unquote(file_name)
+    if not file_name or "." not in file_name:
+        file_name = "downloaded_resource.pdf"
+        
+    temp_path = os.path.join("/tmp", file_name)
+    is_youtube = "youtube.com" in download_url or "youtu.be" in download_url
+    
+    try:
+        if is_youtube:
+            st.write("Checking local yt-dlp dependencies...")
+            subprocess.run([sys.executable, "-m", "pip", "install", "-q", "yt-dlp"])
+            
+            is_audio = "Audio" in category_folder or "Podcast" in category_folder
+            output_template = os.path.join("/tmp", "%(title)s.%(ext)s")
+            
+            # Setup yt-dlp command
+            if is_audio:
+                st.write("Downloading YouTube audio and converting to MP3...")
+                cmd = ["yt-dlp", "-x", "--audio-format", "mp3", "--no-warnings", "-o", output_template, download_url]
+            else:
+                st.write("Downloading YouTube video as MP4...")
+                cmd = ["yt-dlp", "-f", "mp4", "--no-warnings", "-o", output_template, download_url]
+                
+            res = subprocess.run(cmd, capture_output=True, text=True)
+            if res.returncode != 0:
+                return False, f"yt-dlp download failed: {res.stderr}"
+                
+            # Get actual file name written by yt-dlp
+            get_name_cmd = ["yt-dlp", "--get-filename", "-o", output_template, download_url]
+            name_res = subprocess.run(get_name_cmd, capture_output=True, text=True)
+            if name_res.returncode == 0:
+                temp_path = name_res.stdout.strip()
+                if is_audio and not temp_path.endswith(".mp3"):
+                    temp_path = temp_path.rsplit(".", 1)[0] + ".mp3"
+            else:
+                return False, "Could not resolve video title for filename."
+        else:
+            st.write(f"Downloading file: `{file_name}`...")
+            # Request with human User-Agent
+            req_headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+            request = urllib.request.Request(download_url, headers=req_headers)
+            with urllib.request.urlopen(request) as response, open(temp_path, 'wb') as out_file:
+                shutil.copyfileobj(response, out_file)
+        
+        # Upload using rclone
+        st.write("Uploading to Google Drive...")
+        rclone_dest = f"stories_drive:Digital Library/{category_folder}/{os.path.basename(temp_path)}"
+        upload_cmd = ["rclone", "copyto", temp_path, rclone_dest]
+        upload_res = subprocess.run(upload_cmd, capture_output=True, text=True)
+        
+        # Delete local temp file
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+            
+        if upload_res.returncode == 0:
+            return True, f"Successfully added: `{os.path.basename(temp_path)}`"
+        else:
+            return False, f"Rclone upload error: {upload_res.stderr}"
+            
+    except Exception as e:
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+        return False, str(e)
+
 @st.cache_data(ttl=60)
 def load_catalog():
     if not os.path.exists(LOCAL_JSON) and shutil.which("rclone"):
@@ -281,7 +332,9 @@ def load_catalog():
 # Sidebar controls
 with st.sidebar:
     st.header("⚙️ Library Tools")
-    if shutil.which("rclone"):
+    rclone_available = shutil.which("rclone") is not None
+    
+    if rclone_available:
         if st.button("🔄 Sync Catalog from Drive", use_container_width=True):
             st.write("Downloading fresh catalog and updating Drive Excel Sheet...")
             if fetch_catalog_from_drive():
@@ -292,61 +345,32 @@ with st.sidebar:
     else:
         st.info("ℹ️ **Cloud Mode Active**\n\nAuto-sync via Rclone is disabled in the cloud. To update library items, run the app locally, click Sync, and push the updated `Digital_Library_Catalog.json` to GitHub.")
 
-    # Persistent Colab Connection Configuration
+    # Simplified Internal Downloader Portal (Local Execution Only)
     st.markdown("---")
-    with st.expander("⚙️ Colab Server Settings"):
-        current_tunnel = load_tunnel_url()
-        colab_url = st.text_input("Colab Tunnel URL:", value=current_tunnel, placeholder="https://xxx.trycloudflare.com").strip()
-        if colab_url != current_tunnel:
-            save_tunnel_url(colab_url)
-            st.toast("Colab Tunnel URL saved!", icon="💾")
-
-    # Simplified Downloader Portal
-    with st.expander("⬇️ Colab Downloader"):
-        st.write("Stream books directly to Google Drive via Colab.")
-        download_url = st.text_input("Book Download URL:", placeholder="Paste direct download link...").strip()
-        
-        category_options = list(category_mapping.keys())
-        target_folder = st.selectbox("Destination Folder:", category_options)
-        
-        if st.button("🚀 Start Cloud Download", use_container_width=True):
-            if not colab_url:
-                st.warning("Please configure your Colab Tunnel URL first in the 'Colab Server Settings' section above.")
-            elif "youtube.com" in colab_url or "youtu.be" in colab_url:
-                st.error("⚠️ **Invalid Configuration:** You entered a YouTube URL in the **Colab Tunnel URL** field. Please paste your Cloudflare Tunnel URL (e.g. `https://xxx.trycloudflare.com`) in the **Colab Server Settings** expander, and put your YouTube link in the **Book Download URL** field.")
-            elif not download_url:
-                st.warning("Please enter a Book Download URL.")
-            else:
-                # Automatically extract filename from the download URL path
-                parsed_url = urllib.parse.urlparse(download_url)
-                file_name = os.path.basename(parsed_url.path)
-                file_name = urllib.parse.unquote(file_name)
-                
-                # Fallback if URL doesn't have a clear filename
-                if not file_name or "." not in file_name:
-                    file_name = "downloaded_resource.pdf"
-                
-                api_url = f"{colab_url.rstrip('/')}/download"
-                st.write(f"Streaming request to Colab for: `{file_name}`...")
-                
-                try:
-                    payload = {
-                        "download_url": download_url,
-                        "category_folder": target_folder,
-                        "file_name": file_name
-                    }
-                    response = requests.post(api_url, json=payload, timeout=120)
-                    
-                    if response.status_code == 200:
-                        res_data = response.json()
-                        if res_data.get("status") == "success":
-                            st.success(f"🎉 Success!\n\n{res_data.get('message')}\n\nRefreshed library will show the book once you sync.")
-                        else:
-                            st.error(f"Error: {res_data.get('message')}")
+    with st.expander("⬇️ Add Resource to Drive"):
+        if rclone_available:
+            st.write("Download books/media directly to your authenticated Google Drive.")
+            download_url = st.text_input("Resource URL:", placeholder="Paste direct link or YouTube URL...").strip()
+            
+            category_options = list(category_mapping.keys())
+            target_folder = st.selectbox("Destination Folder:", category_options)
+            
+            if st.button("🚀 Download & Upload", use_container_width=True):
+                if not download_url:
+                    st.warning("Please enter a Resource URL.")
+                else:
+                    success, msg = download_and_upload_locally(download_url, target_folder)
+                    if success:
+                        st.success(msg)
+                        # Auto refresh local catalog
+                        st.write("Refreshing catalog...")
+                        if fetch_catalog_from_drive():
+                            st.cache_data.clear()
+                            st.success("Catalog refreshed! Refresh your browser to see the new item.")
                     else:
-                        st.error(f"Colab service returned status code {response.status_code}: {response.text}")
-                except requests.exceptions.RequestException as e:
-                    st.error(f"Connection to Colab failed. Verify your Tunnel URL is active and typed correctly. Details: {e}")
+                        st.error(f"Download/Upload failed: {msg}")
+        else:
+            st.info("ℹ️ **Local Dev Mode Feature**\n\nThe internal downloader runs commands on your local machine and uses rclone to upload to Google Drive. It is disabled in the cloud environment.")
 
 catalog = load_catalog()
 
