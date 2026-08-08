@@ -8,6 +8,7 @@ import base64
 from PIL import Image
 import io
 import requests
+import urllib.parse
 
 # Ensure rclone in local bin is visible in PATH
 os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
@@ -112,6 +113,24 @@ st.write("Lightweight metadata catalog with direct high-speed Google Drive acces
 LOCAL_JSON = "Digital_Library_Catalog.json"
 LOCAL_EXCEL = "/tmp/Digital_Library_Catalog.xlsx"
 DRIVE_TARGET_EXCEL = "stories_drive:Digital Library/Digital_Library_Catalog.xlsx"
+TUNNEL_CONFIG = "colab_tunnel.txt"
+
+# Persist Colab Tunnel URL across sessions
+def load_tunnel_url():
+    if os.path.exists(TUNNEL_CONFIG):
+        try:
+            with open(TUNNEL_CONFIG, "r") as f:
+                return f.read().strip()
+        except:
+            pass
+    return ""
+
+def save_tunnel_url(url):
+    try:
+        with open(TUNNEL_CONFIG, "w") as f:
+            f.write(url.strip())
+    except:
+        pass
 
 # Convert local images to Base64 with resizing to optimize speed and payload size
 @st.cache_data
@@ -273,23 +292,40 @@ with st.sidebar:
     else:
         st.info("ℹ️ **Cloud Mode Active**\n\nAuto-sync via Rclone is disabled in the cloud. To update library items, run the app locally, click Sync, and push the updated `Digital_Library_Catalog.json` to GitHub.")
 
-    # Colab Downloader Portal
+    # Persistent Colab Connection Configuration
     st.markdown("---")
-    with st.expander("⬇️ Colab Downloader Portal"):
-        st.write("Stream books directly to Google Drive using Google Colab runtimes.")
-        colab_url = st.text_input("Colab Tunnel URL:", placeholder="https://xxx.trycloudflare.com").strip()
-        download_url = st.text_input("Book Download URL:", placeholder="e.g. https://domain.com/book.pdf").strip()
-        file_name = st.text_input("Save File Name:", placeholder="e.g. chemistry.pdf").strip()
+    with st.expander("⚙️ Colab Server Settings"):
+        current_tunnel = load_tunnel_url()
+        colab_url = st.text_input("Colab Tunnel URL:", value=current_tunnel, placeholder="https://xxx.trycloudflare.com").strip()
+        if colab_url != current_tunnel:
+            save_tunnel_url(colab_url)
+            st.toast("Colab Tunnel URL saved!", icon="💾")
+
+    # Simplified Downloader Portal
+    with st.expander("⬇️ Colab Downloader"):
+        st.write("Stream books directly to Google Drive via Colab.")
+        download_url = st.text_input("Book Download URL:", placeholder="Paste direct download link...").strip()
         
         category_options = list(category_mapping.keys())
         target_folder = st.selectbox("Destination Folder:", category_options)
         
         if st.button("🚀 Start Cloud Download", use_container_width=True):
-            if not colab_url or not download_url or not file_name:
-                st.warning("Please fill in all fields (Tunnel URL, Download URL, and Save File Name).")
+            if not colab_url:
+                st.warning("Please configure your Colab Tunnel URL first in the 'Colab Server Settings' section above.")
+            elif not download_url:
+                st.warning("Please enter a Book Download URL.")
             else:
+                # Automatically extract filename from the download URL path
+                parsed_url = urllib.parse.urlparse(download_url)
+                file_name = os.path.basename(parsed_url.path)
+                file_name = urllib.parse.unquote(file_name)
+                
+                # Fallback if URL doesn't have a clear filename
+                if not file_name or "." not in file_name:
+                    file_name = "downloaded_resource.pdf"
+                
                 api_url = f"{colab_url.rstrip('/')}/download"
-                st.write("Initiating cloud stream request to Colab...")
+                st.write(f"Streaming request to Colab for: `{file_name}`...")
                 
                 try:
                     payload = {
