@@ -20,221 +20,76 @@ os.environ["PATH"] = "/home/efar/.local/bin:" + os.environ.get("PATH", "")
 IS_LOCAL = os.path.exists("/home/efar")
 IS_COLAB = os.path.exists("/content")
 
-# --- STREAMLIT CLOUD DOORWAY MODE ---
-if not IS_LOCAL and not IS_COLAB:
-    st.set_page_config(
-        page_title="Cosmic Digital Library Gateway",
-        page_icon="🌌",
-        layout="wide",
-        initial_sidebar_state="collapsed"
-    )
-    
-    # Hide Streamlit header, footer, and padding for seamless full-screen iframe integration
-    st.markdown("""
-    <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-        .block-container {
-            padding-top: 0rem;
-            padding-bottom: 0rem;
-            padding-left: 0rem;
-            padding-right: 0rem;
-        }
-        iframe {
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            z-index: 999999;
-        }
-        body {
-            background-color: #0f172a;
-            color: #cbd5e1;
-        }
-    </style>
-    """, unsafe_allow_html=True)
-    
-    # Fetch current Cloudflare Tunnel URL from GitHub Repository API (Instant, No Cache)
-    tunnel_url = ""
+# Helper to check the current Colab status (cached for 15s to prevent API spam)
+@st.cache_data(ttl=15)
+def check_colab_status():
     repo = "p7266473-max/digital-library-app"
     path = "active_tunnel.txt"
     api_url = f"https://api.github.com/repos/{repo}/contents/{path}"
-    
     try:
         req = urllib.request.Request(
             api_url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)', 'Accept': 'application/vnd.github.v3+json'}
+            headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'application/vnd.github.v3+json'}
         )
-        with urllib.request.urlopen(req, timeout=3) as response:
+        with urllib.request.urlopen(req, timeout=2.0) as response:
             data = json.loads(response.read().decode('utf-8'))
             content_b64 = data.get("content", "")
             tunnel_url = base64.b64decode(content_b64.encode("utf-8")).decode("utf-8").strip()
-    except Exception as e:
-        st.error(f"Error checking compute node status: {e}")
-
-    # Check if the fetched tunnel is online
-    is_active = False
-    if tunnel_url and "test-tunnel" not in tunnel_url:
-        try:
-            check_req = urllib.request.Request(tunnel_url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-            with urllib.request.urlopen(check_req, timeout=2.5) as check_res:
-                if check_res.status in [200, 301, 302]:
-                    is_active = True
-        except Exception:
-            pass
-
-    if is_active:
-        # Load Colab-hosted application inside a borderless, full-screen frame
-        st.markdown(f'<iframe src="{tunnel_url}"></iframe>', unsafe_allow_html=True)
-    else:
-        # Hiren's BootCD / Live OS Bootloader loader simulation screen
-        st.markdown("""
-        <div style="background-color: #030712; color: #38bdf8; font-family: 'Courier Prime', Courier, monospace; padding: 25px; min-height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 999999;">
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
-                
-                .terminal {
-                    background-color: #090d16;
-                    border: 2px solid #1e293b;
-                    border-radius: 8px;
-                    padding: 30px;
-                    max-width: 800px;
-                    margin: 50px auto;
-                    box-shadow: 0 0 30px rgba(56, 189, 248, 0.12), inset 0 0 15px rgba(0,0,0,0.8);
-                    position: relative;
-                }
-                .terminal::after {
-                    content: " ";
-                    display: block;
-                    position: absolute;
-                    top: 0; left: 0; bottom: 0; right: 0;
-                    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
-                    z-index: 2;
-                    background-size: 100% 3px, 3px 100%;
-                    pointer-events: none;
-                    opacity: 0.85;
-                }
-                .logo {
-                    color: #e2e8f0;
-                    font-weight: 700;
-                    margin-bottom: 20px;
-                    white-space: pre-wrap;
-                    line-height: 1.15;
-                    font-size: 12px;
-                    text-shadow: 0 0 8px #38bdf8;
-                }
-                .console-line {
-                    margin-bottom: 10px;
-                    font-size: 14.5px;
-                    line-height: 1.4;
-                    opacity: 0;
-                    animation: fadeIn 0.4s forwards;
-                }
-                .progress-bar-container {
-                    margin: 25px 0 15px 0;
-                }
-                .progress-bar-wrapper {
-                    border: 1px solid #38bdf8;
-                    padding: 2px;
-                    border-radius: 4px;
-                    background-color: #020617;
-                    height: 22px;
-                    display: flex;
-                    align-items: center;
-                }
-                .progress-bar {
-                    background-color: #38bdf8;
-                    height: 100%;
-                    width: 0%;
-                    animation: fillProgress 12s linear forwards;
-                    box-shadow: 0 0 10px #38bdf8;
-                }
-                .instruction-box {
-                    border-top: 1px solid rgba(255,255,255,0.08);
-                    margin-top: 30px;
-                    padding-top: 25px;
-                    color: #94a3b8;
-                }
-                .blink {
-                    animation: blink 1s infinite;
-                }
-                @keyframes fadeIn {
-                    to { opacity: 1; }
-                }
-                @keyframes blink {
-                    50% { opacity: 0; }
-                }
-                @keyframes fillProgress {
-                    0% { width: 0%; }
-                    10% { width: 12%; }
-                    25% { width: 34%; }
-                    45% { width: 56%; }
-                    70% { width: 78%; }
-                    90% { width: 95%; }
-                    100% { width: 98%; }
-                }
-            </style>
             
-            <div class="terminal">
-                <div class="logo">
- _  _ _ ___  ___ _  _ ____   ___  ____ ____ ___    ____ ____ 
- |__| | |__] |__] |\\ | [__    |__] |  | |  |  |     |  | [__  
- |  | | |  \\ |  \\ | \\| ___]   |__] |__| |__|  |  .  |__| ___] 
-=============================================================
-HIREN'S BOOTCD PE - LIVE WEB OS BUILDER v3.0 (COSMIC NODE)
-=============================================================</div>
-                
-                <div class="console-line" style="animation-delay: 0.3s;"><span style="color: #4ade80;">[ OK ]</span> Initializing gateway runtime environment...</div>
-                <div class="console-line" style="animation-delay: 0.9s;"><span style="color: #4ade80;">[ OK ]</span> Querying active doorway credentials from GitHub API...</div>
-                <div class="console-line" style="animation-delay: 1.5s;"><span style="color: #38bdf8;">[ INFO ]</span> Decoded Server Node: <span style="color: #cbd5e1;">p7266473-max/digital-library-app</span></div>
-                <div class="console-line" style="animation-delay: 2.1s;"><span style="color: #4ade80;">[ OK ]</span> Verifying Zen OpenCode platform connection...</div>
-                <div class="console-line" style="animation-delay: 2.7s;"><span style="color: #fb7185;">[ WAIT ]</span> Connecting to Cloudflare secure tunnel...</div>
-                <div class="console-line" style="animation-delay: 3.3s;"><span style="color: #f59e0b;">[ WARNING ]</span> Compute node is currently sleeping / unresponsive.</div>
-                
-                <div class="progress-bar-container" style="opacity: 0; animation: fadeIn 0.4s forwards; animation-delay: 3.9s;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px;">
-                        <span>Loading Live OS Setup...</span>
-                        <span class="blink" style="color: #fb7185;">Connecting...</span>
-                    </div>
-                    <div class="progress-bar-wrapper">
-                        <div class="progress-bar"></div>
-                    </div>
-                </div>
-                
-                <div class="instruction-box console-line" style="animation-delay: 4.5s;">
-                    <span style="color: #f8fafc; font-weight: 700;">🛠️ STEPS TO WAKE COMPUTE NODE (FOR ADMIN):</span>
-                    <ol style="margin-top: 10px; padding-left: 20px; line-height: 1.8;">
-                        <li>Open the Google Colab <b>Digital Library Notebook</b>.</li>
-                        <li>Click <b>Run All</b> on the cells (make sure to authorize Google Drive).</li>
-                        <li>The node will automatically connect, and this doorway will refresh.</li>
-                    </ol>
-                </div>
-                
-                <div class="console-line blink" style="animation-delay: 5.0s; color: #94a3b8; margin-top: 20px;">_</div>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # Reload gateway tab every 15s to check if node became active
+        # Verify if the tunnel actually responds
+        if tunnel_url and "test-tunnel" not in tunnel_url:
+            check_req = urllib.request.Request(tunnel_url, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(check_req, timeout=2.0) as check_res:
+                if check_res.status in [200, 301, 302]:
+                    return True, tunnel_url
+    except Exception:
+        pass
+    return False, ""
+
+# --- STREAMLIT CLOUD DOORWAY MODE REDIRECT ---
+if not IS_LOCAL and not IS_COLAB:
+    is_active_colab, tunnel_url = check_colab_status()
+    
+    if is_active_colab:
+        # Colab Compute is active! Redirect to the Colab-hosted application inside a borderless, full-screen frame
+        st.set_page_config(
+            page_title="Cosmic Digital Library Gateway",
+            page_icon="🌌",
+            layout="wide",
+            initial_sidebar_state="collapsed"
+        )
         st.markdown("""
-        <script>
-            setTimeout(function() {
-                window.location.reload();
-            }, 15000);
-        </script>
+        <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            .block-container {
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+                padding-left: 0rem;
+                padding-right: 0rem;
+            }
+            iframe {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                z-index: 999999;
+            }
+        </style>
         """, unsafe_allow_html=True)
-    st.stop()
+        st.markdown(f'<iframe src="{tunnel_url}"></iframe>', unsafe_allow_html=True)
+        st.stop()
 
 
-# --- STREAMLIT COMPUTATION APP (LOCAL / COLAB WORKER ENVIRONMENT) ---
+# --- STREAMLIT APP ENGINE (LOCAL CATALOG / ACTIVE RUNTIME) ---
 st.set_page_config(
     page_title="Cosmic Digital Library",
     page_icon="🌌",
@@ -347,8 +202,26 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🌌 Cosmic Digital Library")
-st.write("Lightweight metadata catalog with direct high-speed Google Drive access.")
+# Layout Title Header and Custom Secret Status Light
+col_title, col_status = st.columns([20, 1])
+with col_title:
+    st.title("🌌 Cosmic Digital Library")
+with col_status:
+    # 🟢 green for local/Colab, 🔴 red for offline cloud doorway mode
+    if IS_LOCAL or IS_COLAB:
+        st.markdown('<div style="width: 15px; height: 15px; border-radius: 50%; background-color: #22c55e; box-shadow: 0 0 12px #22c55e; margin-top: 25px;" title="Cloud Compute Node Connected"></div>', unsafe_allow_html=True)
+    else:
+        st.markdown('<div style="width: 15px; height: 15px; border-radius: 50%; background-color: #ef4444; box-shadow: 0 0 12px #ef4444; margin-top: 25px;" title="Cloud Compute Node Offline (Local Mode Active)"></div>', unsafe_allow_html=True)
+
+# Inject background JS to reload page on Streamlit Cloud if Colab turns online
+if not IS_LOCAL and not IS_COLAB:
+    st.markdown("""
+    <script>
+        setTimeout(function() {
+            window.location.reload();
+        }, 20000);
+    </script>
+    """, unsafe_allow_html=True)
 
 LOCAL_JSON = "Digital_Library_Catalog.json"
 LOCAL_EXCEL = "/tmp/Digital_Library_Catalog.xlsx"
