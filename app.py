@@ -312,6 +312,8 @@ with st.sidebar:
         if st.button("🚀 Start Cloud Download", use_container_width=True):
             if not colab_url:
                 st.warning("Please configure your Colab Tunnel URL first in the 'Colab Server Settings' section above.")
+            elif "youtube.com" in colab_url or "youtu.be" in colab_url:
+                st.error("⚠️ **Invalid Configuration:** You entered a YouTube URL in the **Colab Tunnel URL** field. Please paste your Cloudflare Tunnel URL (e.g. `https://xxx.trycloudflare.com`) in the **Colab Server Settings** expander, and put your YouTube link in the **Book Download URL** field.")
             elif not download_url:
                 st.warning("Please enter a Book Download URL.")
             else:
