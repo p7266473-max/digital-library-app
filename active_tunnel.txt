@@ -1,1 +1,1 @@
-https://reseller-ciao-lonely-angel.trycloudflare.com
+https://test-tunnel.trycloudflare.com
