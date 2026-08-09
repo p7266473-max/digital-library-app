@@ -1,1 +1,1 @@
-https://specialist-sally-environments-directions.trycloudflare.com
+https://test-tunnel.trycloudflare.com
