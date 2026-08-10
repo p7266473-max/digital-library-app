@@ -1,1 +1,1 @@
-https://hawaiian-modem-ins-marco.trycloudflare.com
+https://test-tunnel.trycloudflare.com
