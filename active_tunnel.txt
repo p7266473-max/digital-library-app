@@ -1,1 +1,1 @@
-https://tanks-twice-mailman-season.trycloudflare.com
+https://test-tunnel.trycloudflare.com
