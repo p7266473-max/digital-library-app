@@ -1,1 +1,1 @@
-https://notify-promising-intensive-hitachi.trycloudflare.com
+https://test-tunnel.trycloudflare.com
