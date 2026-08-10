@@ -1,1 +1,1 @@
-https://travels-sends-carl-pickup.trycloudflare.com
+https://test-tunnel.trycloudflare.com
