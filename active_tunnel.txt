@@ -1,1 +1,1 @@
-https://handhelds-wrestling-command-task.trycloudflare.com
+https://test-tunnel.trycloudflare.com
