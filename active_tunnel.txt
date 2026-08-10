@@ -1,1 +1,1 @@
-https://diverse-arch-developing-lookup.trycloudflare.com
+https://test-tunnel.trycloudflare.com
