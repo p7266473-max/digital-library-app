@@ -1,1 +1,1 @@
-https://patrol-events-abc-notices.trycloudflare.com
+https://test-tunnel.trycloudflare.com
