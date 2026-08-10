@@ -1,1 +1,1 @@
-https://hospitals-board-conventional-lyric.trycloudflare.com
+https://test-tunnel.trycloudflare.com
