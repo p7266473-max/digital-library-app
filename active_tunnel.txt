@@ -1,1 +1,1 @@
-https://publish-funky-carolina-wrapping.trycloudflare.com
+https://test-tunnel.trycloudflare.com
