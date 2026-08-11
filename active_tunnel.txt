@@ -1,1 +1,1 @@
-https://thereby-pvc-sky-pointed.trycloudflare.com
+https://test-tunnel.trycloudflare.com
