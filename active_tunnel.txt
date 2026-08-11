@@ -1,1 +1,1 @@
-https://infrastructure-warren-kate-yield.trycloudflare.com
+https://test-tunnel.trycloudflare.com
