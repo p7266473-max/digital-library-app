@@ -1,1 +1,1 @@
-https://survivors-nodes-tone-vista.trycloudflare.com
+https://test-tunnel.trycloudflare.com
