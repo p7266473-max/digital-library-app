@@ -1,1 +1,1 @@
-https://paths-elegant-crops-retail.trycloudflare.com
+https://test-tunnel.trycloudflare.com
