@@ -1,1 +1,1 @@
-https://cheque-sys-rice-unto.trycloudflare.com
+https://test-tunnel.trycloudflare.com
