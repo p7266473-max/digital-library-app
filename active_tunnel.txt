@@ -1,1 +1,1 @@
-https://picture-sys-sitemap-load.trycloudflare.com
+https://test-tunnel.trycloudflare.com
