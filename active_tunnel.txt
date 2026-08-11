@@ -1,1 +1,1 @@
-https://investigator-bind-surrounded-database.trycloudflare.com
+https://test-tunnel.trycloudflare.com
