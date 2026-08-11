@@ -1,1 +1,1 @@
-https://picks-quiet-nottingham-born.trycloudflare.com
+https://test-tunnel.trycloudflare.com
