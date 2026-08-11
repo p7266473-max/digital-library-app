@@ -1,1 +1,1 @@
-https://composer-relation-acids-tire.trycloudflare.com
+https://test-tunnel.trycloudflare.com
