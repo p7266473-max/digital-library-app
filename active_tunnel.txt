@@ -1,1 +1,1 @@
-https://consortium-improvements-seed-sandwich.trycloudflare.com
+https://test-tunnel.trycloudflare.com
