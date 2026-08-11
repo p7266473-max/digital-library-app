@@ -1,1 +1,1 @@
-https://firmware-injuries-discipline-competition.trycloudflare.com
+https://test-tunnel.trycloudflare.com
