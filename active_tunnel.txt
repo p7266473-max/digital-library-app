@@ -1,1 +1,1 @@
-https://shade-carlo-ctrl-gathered.trycloudflare.com
+https://test-tunnel.trycloudflare.com
