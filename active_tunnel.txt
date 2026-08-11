@@ -1,1 +1,1 @@
-https://jeans-routes-salaries-helping.trycloudflare.com
+https://test-tunnel.trycloudflare.com
