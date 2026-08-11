@@ -1,1 +1,1 @@
-https://sale-soa-estate-christina.trycloudflare.com
+https://test-tunnel.trycloudflare.com
