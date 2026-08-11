@@ -1,1 +1,1 @@
-https://chess-mode-group-seasons.trycloudflare.com
+https://test-tunnel.trycloudflare.com
