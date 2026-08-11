@@ -1,1 +1,1 @@
-https://default-finally-ward-cents.trycloudflare.com
+https://test-tunnel.trycloudflare.com
