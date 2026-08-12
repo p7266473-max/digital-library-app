@@ -1,1 +1,1 @@
-https://batteries-scuba-macro-markers.trycloudflare.com
+https://test-tunnel.trycloudflare.com
