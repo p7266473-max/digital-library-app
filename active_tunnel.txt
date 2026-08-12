@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://importance-trainer-travis-sec.trycloudflare.com
