@@ -1,1 +1,1 @@
-https://ray-competitors-bibliographic-run.trycloudflare.com
+https://test-tunnel.trycloudflare.com
