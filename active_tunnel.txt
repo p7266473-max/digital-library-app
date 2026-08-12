@@ -1,1 +1,1 @@
-https://realm-amp-tyler-mount.trycloudflare.com
+https://test-tunnel.trycloudflare.com
