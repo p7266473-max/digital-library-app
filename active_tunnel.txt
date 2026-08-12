@@ -1,1 +1,1 @@
-https://wishing-purchasing-chef-clouds.trycloudflare.com
+https://test-tunnel.trycloudflare.com
