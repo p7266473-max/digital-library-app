@@ -1,1 +1,1 @@
-https://resolutions-hour-frankfurt-jvc.trycloudflare.com
+https://test-tunnel.trycloudflare.com
