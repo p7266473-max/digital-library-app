@@ -1,1 +1,1 @@
-https://first-national-priority-join.trycloudflare.com
+https://test-tunnel.trycloudflare.com
