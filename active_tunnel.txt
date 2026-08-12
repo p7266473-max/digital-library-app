@@ -1,1 +1,1 @@
-https://championships-julian-hunter-lafayette.trycloudflare.com
+https://test-tunnel.trycloudflare.com
