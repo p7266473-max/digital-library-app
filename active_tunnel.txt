@@ -1,1 +1,1 @@
-https://produce-ipaq-combining-tested.trycloudflare.com
+https://test-tunnel.trycloudflare.com
