@@ -1,1 +1,1 @@
-https://moses-allen-pounds-connectivity.trycloudflare.com
+https://test-tunnel.trycloudflare.com
