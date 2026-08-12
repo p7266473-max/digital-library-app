@@ -1,1 +1,1 @@
-https://step-sharing-sending-bought.trycloudflare.com
+https://test-tunnel.trycloudflare.com
