@@ -1,1 +1,1 @@
-https://bush-scenario-bennett-containers.trycloudflare.com
+https://test-tunnel.trycloudflare.com
