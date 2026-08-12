@@ -1,1 +1,1 @@
-https://span-suggestion-supports-van.trycloudflare.com
+https://test-tunnel.trycloudflare.com
