@@ -1,1 +1,1 @@
-https://actions-yard-trails-hosting.trycloudflare.com
+https://test-tunnel.trycloudflare.com
