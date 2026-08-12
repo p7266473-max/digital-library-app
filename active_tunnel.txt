@@ -1,1 +1,1 @@
-https://indication-golden-strand-render.trycloudflare.com
+https://test-tunnel.trycloudflare.com
