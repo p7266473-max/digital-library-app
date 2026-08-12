@@ -1,1 +1,1 @@
-https://chest-winter-incidents-vital.trycloudflare.com
+https://test-tunnel.trycloudflare.com
