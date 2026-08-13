@@ -1,1 +1,1 @@
-https://likes-integration-benchmark-editing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
