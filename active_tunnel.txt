@@ -1,1 +1,1 @@
-https://cds-cream-pay-dat.trycloudflare.com
+https://test-tunnel.trycloudflare.com
