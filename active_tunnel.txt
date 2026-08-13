@@ -1,1 +1,1 @@
-https://modes-education-globe-polls.trycloudflare.com
+https://test-tunnel.trycloudflare.com
