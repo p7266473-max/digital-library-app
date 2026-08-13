@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://requested-sms-convergence-sec.trycloudflare.com
