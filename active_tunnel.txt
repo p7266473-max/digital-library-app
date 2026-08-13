@@ -1,1 +1,1 @@
-https://know-gateway-champion-verde.trycloudflare.com
+https://test-tunnel.trycloudflare.com
