@@ -1,1 +1,1 @@
-https://cycle-gently-bundle-includes.trycloudflare.com
+https://test-tunnel.trycloudflare.com
