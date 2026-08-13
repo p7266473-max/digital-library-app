@@ -1,1 +1,1 @@
-https://plugins-supreme-survive-analyze.trycloudflare.com
+https://test-tunnel.trycloudflare.com
