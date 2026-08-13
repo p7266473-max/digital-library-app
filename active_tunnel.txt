@@ -1,1 +1,1 @@
-https://requirements-estimated-tea-suzuki.trycloudflare.com
+https://test-tunnel.trycloudflare.com
