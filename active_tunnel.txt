@@ -1,1 +1,1 @@
-https://bee-newfoundland-milwaukee-clinton.trycloudflare.com
+https://test-tunnel.trycloudflare.com
