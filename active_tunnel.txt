@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://secrets-buyer-repository-thumb.trycloudflare.com
