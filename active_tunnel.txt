@@ -1,1 +1,1 @@
-https://rounds-beautiful-apnic-course.trycloudflare.com
+https://test-tunnel.trycloudflare.com
