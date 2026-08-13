@@ -1,1 +1,1 @@
-https://develop-strategies-drove-repository.trycloudflare.com
+https://test-tunnel.trycloudflare.com
