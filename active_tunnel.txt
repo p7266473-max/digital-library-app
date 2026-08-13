@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://fridge-expects-promises-spanking.trycloudflare.com
