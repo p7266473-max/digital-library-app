@@ -1,1 +1,1 @@
-https://sorts-flex-vault-coupons.trycloudflare.com
+https://test-tunnel.trycloudflare.com
