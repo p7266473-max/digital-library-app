@@ -1,1 +1,1 @@
-https://seasonal-adapters-measuring-ron.trycloudflare.com
+https://test-tunnel.trycloudflare.com
