@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://rats-phones-clean-rain.trycloudflare.com
