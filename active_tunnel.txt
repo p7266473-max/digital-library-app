@@ -1,1 +1,1 @@
-https://aspects-subject-protect-traditional.trycloudflare.com
+https://test-tunnel.trycloudflare.com
