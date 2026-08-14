@@ -1,1 +1,1 @@
-https://packages-justice-diagnostic-dance.trycloudflare.com
+https://test-tunnel.trycloudflare.com
