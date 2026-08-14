@@ -1,1 +1,1 @@
-https://harbour-reservoir-obligations-freebsd.trycloudflare.com
+https://test-tunnel.trycloudflare.com
