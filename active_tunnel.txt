@@ -1,1 +1,1 @@
-https://denver-kruger-united-outer.trycloudflare.com
+https://test-tunnel.trycloudflare.com
