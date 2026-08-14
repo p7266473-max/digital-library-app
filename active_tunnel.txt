@@ -1,1 +1,1 @@
-https://tap-prove-globe-representative.trycloudflare.com
+https://test-tunnel.trycloudflare.com
