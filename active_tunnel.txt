@@ -1,1 +1,1 @@
-https://register-sold-wyoming-format.trycloudflare.com
+https://test-tunnel.trycloudflare.com
