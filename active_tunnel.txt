@@ -1,1 +1,1 @@
-https://mixer-carried-relying-candidate.trycloudflare.com
+https://test-tunnel.trycloudflare.com
