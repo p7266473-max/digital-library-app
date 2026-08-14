@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://monitor-own-port-separation.trycloudflare.com
