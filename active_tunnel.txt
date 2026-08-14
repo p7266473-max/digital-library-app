@@ -1,1 +1,1 @@
-https://foo-fax-bonus-springs.trycloudflare.com
+https://test-tunnel.trycloudflare.com
