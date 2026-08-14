@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://revenue-sonic-sight-analyze.trycloudflare.com
