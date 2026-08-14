@@ -1,1 +1,1 @@
-https://risks-below-lyric-ripe.trycloudflare.com
+https://test-tunnel.trycloudflare.com
