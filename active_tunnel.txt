@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://tenant-align-stud-virtually.trycloudflare.com
