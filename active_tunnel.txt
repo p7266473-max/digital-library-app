@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://clark-environment-red-mining.trycloudflare.com
