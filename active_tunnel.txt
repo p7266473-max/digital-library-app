@@ -1,1 +1,1 @@
-https://libs-confirmed-char-welcome.trycloudflare.com
+https://test-tunnel.trycloudflare.com
