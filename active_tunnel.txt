@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://builds-bell-inside-strings.trycloudflare.com
