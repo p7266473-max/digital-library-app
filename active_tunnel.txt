@@ -1,1 +1,1 @@
-https://cotton-relevance-lean-auctions.trycloudflare.com
+https://test-tunnel.trycloudflare.com
