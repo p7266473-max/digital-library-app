@@ -1,1 +1,1 @@
-https://sand-hull-hawaii-bloom.trycloudflare.com
+https://test-tunnel.trycloudflare.com
