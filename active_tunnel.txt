@@ -1,1 +1,1 @@
-https://cattle-specification-baby-spears.trycloudflare.com
+https://test-tunnel.trycloudflare.com
