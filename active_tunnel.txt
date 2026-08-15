@@ -1,1 +1,1 @@
-https://rocks-cartridges-makes-remind.trycloudflare.com
+https://test-tunnel.trycloudflare.com
