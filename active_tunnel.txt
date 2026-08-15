@@ -1,1 +1,1 @@
-https://bras-speaks-require-news.trycloudflare.com
+https://test-tunnel.trycloudflare.com
