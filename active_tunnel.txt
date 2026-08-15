@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://replication-control-issn-event.trycloudflare.com
