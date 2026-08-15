@@ -1,1 +1,1 @@
-https://archive-victorian-platinum-duty.trycloudflare.com
+https://test-tunnel.trycloudflare.com
