@@ -1,1 +1,1 @@
-https://manufacture-teams-wall-round.trycloudflare.com
+https://test-tunnel.trycloudflare.com
