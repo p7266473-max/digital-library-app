@@ -1,1 +1,1 @@
-https://station-msg-arguments-polar.trycloudflare.com
+https://test-tunnel.trycloudflare.com
