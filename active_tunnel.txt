@@ -1,1 +1,1 @@
-https://seminars-world-springfield-booking.trycloudflare.com
+https://test-tunnel.trycloudflare.com
