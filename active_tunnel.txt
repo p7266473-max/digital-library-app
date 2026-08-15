@@ -1,1 +1,1 @@
-https://freelance-coaches-containers-limits.trycloudflare.com
+https://test-tunnel.trycloudflare.com
