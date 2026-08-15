@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://rays-quizzes-something-monitor.trycloudflare.com
