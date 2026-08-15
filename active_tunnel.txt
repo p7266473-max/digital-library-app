@@ -1,1 +1,1 @@
-https://gentle-samples-institutions-power.trycloudflare.com
+https://test-tunnel.trycloudflare.com
