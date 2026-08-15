@@ -1,1 +1,1 @@
-https://orleans-pets-alice-license.trycloudflare.com
+https://test-tunnel.trycloudflare.com
