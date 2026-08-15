@@ -1,1 +1,1 @@
-https://connectivity-billion-committees-enforcement.trycloudflare.com
+https://test-tunnel.trycloudflare.com
