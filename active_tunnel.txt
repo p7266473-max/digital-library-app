@@ -1,1 +1,1 @@
-https://segment-three-northern-contracting.trycloudflare.com
+https://test-tunnel.trycloudflare.com
