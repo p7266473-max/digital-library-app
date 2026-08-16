@@ -1,1 +1,1 @@
-https://material-has-opposite-scheduling.trycloudflare.com
+https://test-tunnel.trycloudflare.com
