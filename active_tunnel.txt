@@ -1,1 +1,1 @@
-https://plates-topics-checkout-omaha.trycloudflare.com
+https://test-tunnel.trycloudflare.com
