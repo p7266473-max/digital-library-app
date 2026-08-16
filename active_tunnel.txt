@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://tapes-andy-camel-friend.trycloudflare.com
