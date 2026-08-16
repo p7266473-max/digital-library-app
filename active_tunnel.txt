@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://unto-assign-setup-bedford.trycloudflare.com
