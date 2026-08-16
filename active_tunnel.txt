@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://government-combat-cgi-scores.trycloudflare.com
