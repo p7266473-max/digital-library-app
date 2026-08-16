@@ -1,1 +1,1 @@
-https://differential-plus-pin-hello.trycloudflare.com
+https://test-tunnel.trycloudflare.com
