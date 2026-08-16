@@ -1,1 +1,1 @@
-https://watson-duplicate-pattern-tide.trycloudflare.com
+https://test-tunnel.trycloudflare.com
