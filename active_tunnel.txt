@@ -1,1 +1,1 @@
-https://mining-station-thumbzilla-scale.trycloudflare.com
+https://test-tunnel.trycloudflare.com
