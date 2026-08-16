@@ -1,1 +1,1 @@
-https://bids-collins-lie-thumbzilla.trycloudflare.com
+https://test-tunnel.trycloudflare.com
