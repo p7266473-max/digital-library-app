@@ -1,1 +1,1 @@
-https://calibration-vitamins-configurations-stylus.trycloudflare.com
+https://test-tunnel.trycloudflare.com
