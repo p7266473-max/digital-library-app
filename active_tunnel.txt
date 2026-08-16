@@ -1,1 +1,1 @@
-https://impact-hospital-prediction-subaru.trycloudflare.com
+https://test-tunnel.trycloudflare.com
