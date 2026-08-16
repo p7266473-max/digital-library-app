@@ -1,1 +1,1 @@
-https://kent-signing-alberta-deutschland.trycloudflare.com
+https://test-tunnel.trycloudflare.com
