@@ -1,1 +1,1 @@
-https://jungle-ons-bulk-chrome.trycloudflare.com
+https://test-tunnel.trycloudflare.com
