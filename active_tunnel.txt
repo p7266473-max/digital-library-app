@@ -1,1 +1,1 @@
-https://shell-grew-fifth-inn.trycloudflare.com
+https://test-tunnel.trycloudflare.com
