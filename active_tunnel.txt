@@ -1,1 +1,1 @@
-https://instructor-offices-avenue-select.trycloudflare.com
+https://test-tunnel.trycloudflare.com
