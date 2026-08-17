@@ -1,1 +1,1 @@
-https://quantity-birth-ballot-payment.trycloudflare.com
+https://test-tunnel.trycloudflare.com
