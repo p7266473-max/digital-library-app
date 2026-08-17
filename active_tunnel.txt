@@ -1,1 +1,1 @@
-https://participant-phantom-redeem-convergence.trycloudflare.com
+https://test-tunnel.trycloudflare.com
