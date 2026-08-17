@@ -1,1 +1,1 @@
-https://rules-demographic-roads-budget.trycloudflare.com
+https://test-tunnel.trycloudflare.com
