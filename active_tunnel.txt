@@ -1,1 +1,1 @@
-https://locations-christ-char-prisoners.trycloudflare.com
+https://test-tunnel.trycloudflare.com
