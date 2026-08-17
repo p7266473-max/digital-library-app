@@ -1,1 +1,1 @@
-https://pike-jaguar-edmonton-plasma.trycloudflare.com
+https://test-tunnel.trycloudflare.com
