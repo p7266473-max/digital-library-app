@@ -1,1 +1,1 @@
-https://diffs-shine-logan-exhibits.trycloudflare.com
+https://test-tunnel.trycloudflare.com
