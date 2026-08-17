@@ -1,1 +1,1 @@
-https://shakespeare-reliable-depth-valuation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
