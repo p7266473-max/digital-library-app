@@ -1,1 +1,1 @@
-https://gets-laptop-billing-portfolio.trycloudflare.com
+https://test-tunnel.trycloudflare.com
