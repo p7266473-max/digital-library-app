@@ -1,1 +1,1 @@
-https://tournaments-liberal-declared-gamma.trycloudflare.com
+https://test-tunnel.trycloudflare.com
