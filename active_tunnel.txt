@@ -1,1 +1,1 @@
-https://lol-edwards-computed-column.trycloudflare.com
+https://test-tunnel.trycloudflare.com
