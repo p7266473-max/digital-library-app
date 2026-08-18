@@ -1,1 +1,1 @@
-https://vid-cathedral-unit-delayed.trycloudflare.com
+https://test-tunnel.trycloudflare.com
