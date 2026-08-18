@@ -1,1 +1,1 @@
-https://criteria-parameter-campus-division.trycloudflare.com
+https://test-tunnel.trycloudflare.com
