@@ -1,1 +1,1 @@
-https://glance-linux-nylon-natural.trycloudflare.com
+https://test-tunnel.trycloudflare.com
