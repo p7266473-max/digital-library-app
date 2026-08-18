@@ -1,1 +1,1 @@
-https://suppliers-march-january-great.trycloudflare.com
+https://test-tunnel.trycloudflare.com
