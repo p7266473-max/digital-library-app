@@ -1,1 +1,1 @@
-https://merit-discs-minolta-bufing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
