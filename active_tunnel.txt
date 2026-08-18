@@ -1,1 +1,1 @@
-https://soc-mountain-hydrogen-ongoing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
