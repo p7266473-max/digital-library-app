@@ -1,1 +1,1 @@
-https://sufficient-input-capable-transcript.trycloudflare.com
+https://test-tunnel.trycloudflare.com
