@@ -1,1 +1,1 @@
-https://worked-sand-mumbai-monitored.trycloudflare.com
+https://test-tunnel.trycloudflare.com
