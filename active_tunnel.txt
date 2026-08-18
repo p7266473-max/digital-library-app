@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://minimum-kirk-internal-gazette.trycloudflare.com
