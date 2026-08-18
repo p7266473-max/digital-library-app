@@ -1,1 +1,1 @@
-https://regional-indicators-melbourne-international.trycloudflare.com
+https://test-tunnel.trycloudflare.com
