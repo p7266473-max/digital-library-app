@@ -1,1 +1,1 @@
-https://mind-casa-worcester-integrate.trycloudflare.com
+https://test-tunnel.trycloudflare.com
