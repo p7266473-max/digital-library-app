@@ -1,1 +1,1 @@
-https://syracuse-directed-stanford-cause.trycloudflare.com
+https://test-tunnel.trycloudflare.com
