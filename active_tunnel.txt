@@ -1,1 +1,1 @@
-https://llp-personalized-beer-speaking.trycloudflare.com
+https://test-tunnel.trycloudflare.com
