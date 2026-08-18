@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://monitoring-develop-quit-factor.trycloudflare.com
