@@ -1,1 +1,1 @@
-https://competition-tan-coalition-dealtime.trycloudflare.com
+https://test-tunnel.trycloudflare.com
