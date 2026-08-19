@@ -1,1 +1,1 @@
-https://additions-rio-ham-degree.trycloudflare.com
+https://test-tunnel.trycloudflare.com
