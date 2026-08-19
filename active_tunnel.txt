@@ -1,1 +1,1 @@
-https://commander-collectors-caring-trunk.trycloudflare.com
+https://test-tunnel.trycloudflare.com
