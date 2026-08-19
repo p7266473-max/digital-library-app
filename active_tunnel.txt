@@ -1,1 +1,1 @@
-https://stable-elected-joining-place.trycloudflare.com
+https://test-tunnel.trycloudflare.com
