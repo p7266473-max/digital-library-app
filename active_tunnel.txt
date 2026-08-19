@@ -1,1 +1,1 @@
-https://remedy-elements-initial-latest.trycloudflare.com
+https://test-tunnel.trycloudflare.com
