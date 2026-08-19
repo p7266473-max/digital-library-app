@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://advisor-workshop-canvas-fig.trycloudflare.com
