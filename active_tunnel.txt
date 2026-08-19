@@ -1,1 +1,1 @@
-https://salaries-msgid-thin-cooling.trycloudflare.com
+https://test-tunnel.trycloudflare.com
