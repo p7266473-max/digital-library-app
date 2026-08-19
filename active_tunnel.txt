@@ -1,1 +1,1 @@
-https://avi-displays-glance-gras.trycloudflare.com
+https://test-tunnel.trycloudflare.com
