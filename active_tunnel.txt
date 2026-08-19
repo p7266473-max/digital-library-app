@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://lounge-database-quarterly-crossword.trycloudflare.com
