@@ -1,1 +1,1 @@
-https://cartridges-floppy-peers-merit.trycloudflare.com
+https://test-tunnel.trycloudflare.com
