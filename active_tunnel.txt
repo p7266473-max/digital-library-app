@@ -1,1 +1,1 @@
-https://notices-want-broke-regional.trycloudflare.com
+https://test-tunnel.trycloudflare.com
