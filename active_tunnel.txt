@@ -1,1 +1,1 @@
-https://antarctica-webmasters-ala-wake.trycloudflare.com
+https://test-tunnel.trycloudflare.com
