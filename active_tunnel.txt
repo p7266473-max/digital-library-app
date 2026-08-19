@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://stevens-lamps-outreach-plugins.trycloudflare.com
