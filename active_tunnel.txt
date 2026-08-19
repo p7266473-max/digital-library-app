@@ -1,1 +1,1 @@
-https://gauge-emacs-instrument-importantly.trycloudflare.com
+https://test-tunnel.trycloudflare.com
