@@ -1,1 +1,1 @@
-https://composite-concept-bridges-tcp.trycloudflare.com
+https://test-tunnel.trycloudflare.com
