@@ -1,1 +1,1 @@
-https://promise-individual-stuck-discounts.trycloudflare.com
+https://test-tunnel.trycloudflare.com
