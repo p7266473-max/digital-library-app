@@ -1,1 +1,1 @@
-https://wheat-monitored-kind-vsnet.trycloudflare.com
+https://test-tunnel.trycloudflare.com
