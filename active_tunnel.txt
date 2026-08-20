@@ -1,1 +1,1 @@
-https://circus-window-roger-metric.trycloudflare.com
+https://test-tunnel.trycloudflare.com
