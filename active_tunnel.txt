@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://tracker-savannah-sink-quoted.trycloudflare.com
