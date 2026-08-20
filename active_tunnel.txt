@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://output-collectible-call-vsnet.trycloudflare.com
