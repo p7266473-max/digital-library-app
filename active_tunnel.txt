@@ -1,1 +1,1 @@
-https://inline-curious-standings-graham.trycloudflare.com
+https://test-tunnel.trycloudflare.com
