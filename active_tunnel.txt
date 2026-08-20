@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://ref-mission-touring-common.trycloudflare.com
