@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://receiver-undo-spears-scoring.trycloudflare.com
