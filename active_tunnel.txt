@@ -1,1 +1,1 @@
-https://astrology-nirvana-ddr-secondary.trycloudflare.com
+https://test-tunnel.trycloudflare.com
