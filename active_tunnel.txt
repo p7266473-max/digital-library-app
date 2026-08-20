@@ -1,1 +1,1 @@
-https://spreading-dns-commission-provinces.trycloudflare.com
+https://test-tunnel.trycloudflare.com
