@@ -1,1 +1,1 @@
-https://lindsay-reservations-identifying-hotel.trycloudflare.com
+https://test-tunnel.trycloudflare.com
