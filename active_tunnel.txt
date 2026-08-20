@@ -1,1 +1,1 @@
-https://cards-buck-rom-assurance.trycloudflare.com
+https://test-tunnel.trycloudflare.com
