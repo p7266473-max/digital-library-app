@@ -1,1 +1,1 @@
-https://location-elevation-follows-gym.trycloudflare.com
+https://test-tunnel.trycloudflare.com
