@@ -1,1 +1,1 @@
-https://boulevard-instruments-funky-tracked.trycloudflare.com
+https://test-tunnel.trycloudflare.com
