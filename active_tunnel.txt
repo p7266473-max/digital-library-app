@@ -1,1 +1,1 @@
-https://sierra-addresses-chambers-sends.trycloudflare.com
+https://test-tunnel.trycloudflare.com
