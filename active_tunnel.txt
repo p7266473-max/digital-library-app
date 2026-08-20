@@ -1,1 +1,1 @@
-https://sierra-macintosh-upcoming-requires.trycloudflare.com
+https://test-tunnel.trycloudflare.com
