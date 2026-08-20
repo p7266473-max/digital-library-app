@@ -1,1 +1,1 @@
-https://recommendation-alan-sharing-reading.trycloudflare.com
+https://test-tunnel.trycloudflare.com
