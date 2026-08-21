@@ -1,1 +1,1 @@
-https://was-terminology-hobby-demo.trycloudflare.com
+https://test-tunnel.trycloudflare.com
