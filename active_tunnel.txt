@@ -1,1 +1,1 @@
-https://tend-temp-arlington-fabulous.trycloudflare.com
+https://test-tunnel.trycloudflare.com
