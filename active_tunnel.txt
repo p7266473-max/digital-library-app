@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://gsm-camps-suspected-vendors.trycloudflare.com
