@@ -1,1 +1,1 @@
-https://example-commercial-leg-keen.trycloudflare.com
+https://test-tunnel.trycloudflare.com
