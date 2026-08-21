@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://salon-training-parent-touch.trycloudflare.com
