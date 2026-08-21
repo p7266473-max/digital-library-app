@@ -1,1 +1,1 @@
-https://providers-encourage-address-moderate.trycloudflare.com
+https://test-tunnel.trycloudflare.com
