@@ -1,1 +1,1 @@
-https://shelf-texts-pub-liked.trycloudflare.com
+https://test-tunnel.trycloudflare.com
