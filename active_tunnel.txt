@@ -1,1 +1,1 @@
-https://fred-buying-situation-safe.trycloudflare.com
+https://test-tunnel.trycloudflare.com
