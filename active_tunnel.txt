@@ -1,1 +1,1 @@
-https://lisa-modules-directions-seek.trycloudflare.com
+https://test-tunnel.trycloudflare.com
