@@ -1,1 +1,1 @@
-https://lucy-disclosure-turning-banners.trycloudflare.com
+https://test-tunnel.trycloudflare.com
