@@ -1,1 +1,1 @@
-https://non-penny-emperor-small.trycloudflare.com
+https://test-tunnel.trycloudflare.com
