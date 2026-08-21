@@ -1,1 +1,1 @@
-https://config-periods-cricket-refers.trycloudflare.com
+https://test-tunnel.trycloudflare.com
