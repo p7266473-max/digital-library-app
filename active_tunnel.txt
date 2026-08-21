@@ -1,1 +1,1 @@
-https://geneva-demo-carroll-wireless.trycloudflare.com
+https://test-tunnel.trycloudflare.com
