@@ -1,1 +1,1 @@
-https://landscapes-rosa-calibration-wider.trycloudflare.com
+https://test-tunnel.trycloudflare.com
