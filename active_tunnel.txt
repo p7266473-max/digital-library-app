@@ -1,1 +1,1 @@
-https://refurbished-headers-refused-drinks.trycloudflare.com
+https://test-tunnel.trycloudflare.com
