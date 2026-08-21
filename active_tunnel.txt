@@ -1,1 +1,1 @@
-https://relaxation-backing-midlands-toolbox.trycloudflare.com
+https://test-tunnel.trycloudflare.com
