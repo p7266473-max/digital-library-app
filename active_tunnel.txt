@@ -1,1 +1,1 @@
-https://duo-memorabilia-vaccine-xml.trycloudflare.com
+https://test-tunnel.trycloudflare.com
