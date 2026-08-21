@@ -1,1 +1,1 @@
-https://nice-minolta-talks-webmasters.trycloudflare.com
+https://test-tunnel.trycloudflare.com
