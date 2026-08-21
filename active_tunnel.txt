@@ -1,1 +1,1 @@
-https://promises-paying-permission-consoles.trycloudflare.com
+https://test-tunnel.trycloudflare.com
