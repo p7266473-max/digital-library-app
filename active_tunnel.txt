@@ -1,1 +1,1 @@
-https://wines-vice-convenience-hence.trycloudflare.com
+https://test-tunnel.trycloudflare.com
