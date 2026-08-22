@@ -1,1 +1,1 @@
-https://receiving-ips-emotions-calculated.trycloudflare.com
+https://test-tunnel.trycloudflare.com
