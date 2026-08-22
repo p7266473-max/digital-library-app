@@ -1,1 +1,1 @@
-https://properties-faced-sep-manually.trycloudflare.com
+https://test-tunnel.trycloudflare.com
