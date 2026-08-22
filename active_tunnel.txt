@@ -1,1 +1,1 @@
-https://harbor-researcher-comedy-omaha.trycloudflare.com
+https://test-tunnel.trycloudflare.com
