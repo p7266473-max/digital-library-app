@@ -1,1 +1,1 @@
-https://justin-scripting-individuals-freely.trycloudflare.com
+https://test-tunnel.trycloudflare.com
