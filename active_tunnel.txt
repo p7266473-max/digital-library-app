@@ -1,1 +1,1 @@
-https://more-launches-assembly-sprint.trycloudflare.com
+https://test-tunnel.trycloudflare.com
