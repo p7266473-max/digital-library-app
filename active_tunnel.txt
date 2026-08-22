@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://thin-timothy-wins-entities.trycloudflare.com
