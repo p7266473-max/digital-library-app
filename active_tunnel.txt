@@ -1,1 +1,1 @@
-https://income-crimes-python-protected.trycloudflare.com
+https://test-tunnel.trycloudflare.com
