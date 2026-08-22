@@ -1,1 +1,1 @@
-https://mailed-delays-advances-expects.trycloudflare.com
+https://test-tunnel.trycloudflare.com
