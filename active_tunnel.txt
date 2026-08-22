@@ -1,1 +1,1 @@
-https://blackberry-sphere-editions-screening.trycloudflare.com
+https://test-tunnel.trycloudflare.com
