@@ -1,1 +1,1 @@
-https://traveling-promotions-apps-industrial.trycloudflare.com
+https://test-tunnel.trycloudflare.com
