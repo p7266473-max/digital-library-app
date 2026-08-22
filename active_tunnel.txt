@@ -1,1 +1,1 @@
-https://clinics-italiano-protocols-quarter.trycloudflare.com
+https://test-tunnel.trycloudflare.com
