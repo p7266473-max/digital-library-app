@@ -1,1 +1,1 @@
-https://promptly-still-eventually-distributions.trycloudflare.com
+https://test-tunnel.trycloudflare.com
