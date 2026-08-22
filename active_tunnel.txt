@@ -1,1 +1,1 @@
-https://bids-aluminium-repeated-loan.trycloudflare.com
+https://test-tunnel.trycloudflare.com
