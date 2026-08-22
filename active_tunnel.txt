@@ -1,1 +1,1 @@
-https://horizon-indoor-receive-clone.trycloudflare.com
+https://test-tunnel.trycloudflare.com
