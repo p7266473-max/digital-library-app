@@ -1,1 +1,1 @@
-https://meetings-genome-secretariat-rap.trycloudflare.com
+https://test-tunnel.trycloudflare.com
