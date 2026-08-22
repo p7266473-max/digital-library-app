@@ -1,1 +1,1 @@
-https://wars-cashiers-admitted-socket.trycloudflare.com
+https://test-tunnel.trycloudflare.com
