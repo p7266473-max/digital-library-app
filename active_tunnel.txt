@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://attacks-conflicts-sand-mile.trycloudflare.com
