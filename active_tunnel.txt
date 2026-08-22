@@ -1,1 +1,1 @@
-https://teacher-absence-although-offline.trycloudflare.com
+https://test-tunnel.trycloudflare.com
