@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://motel-drop-intervals-ports.trycloudflare.com
