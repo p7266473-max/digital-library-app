@@ -1,1 +1,1 @@
-https://startup-ireland-installations-carrier.trycloudflare.com
+https://test-tunnel.trycloudflare.com
