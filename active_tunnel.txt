@@ -1,1 +1,1 @@
-https://collection-collaboration-wav-duo.trycloudflare.com
+https://test-tunnel.trycloudflare.com
