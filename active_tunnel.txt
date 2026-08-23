@@ -1,1 +1,1 @@
-https://cool-state-farmer-clocks.trycloudflare.com
+https://test-tunnel.trycloudflare.com
