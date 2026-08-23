@@ -1,1 +1,1 @@
-https://runs-gui-seafood-labeled.trycloudflare.com
+https://test-tunnel.trycloudflare.com
