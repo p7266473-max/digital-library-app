@@ -1,1 +1,1 @@
-https://yacht-recorded-glenn-surplus.trycloudflare.com
+https://test-tunnel.trycloudflare.com
