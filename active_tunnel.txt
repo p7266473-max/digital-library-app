@@ -1,1 +1,1 @@
-https://cattle-muze-counting-passive.trycloudflare.com
+https://test-tunnel.trycloudflare.com
