@@ -1,1 +1,1 @@
-https://experiments-adam-trigger-wearing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
