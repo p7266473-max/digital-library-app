@@ -1,1 +1,1 @@
-https://locally-opponents-temperature-caps.trycloudflare.com
+https://test-tunnel.trycloudflare.com
