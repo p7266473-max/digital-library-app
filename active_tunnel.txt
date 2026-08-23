@@ -1,1 +1,1 @@
-https://its-roommates-eat-expires.trycloudflare.com
+https://test-tunnel.trycloudflare.com
