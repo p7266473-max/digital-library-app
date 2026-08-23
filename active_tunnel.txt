@@ -1,1 +1,1 @@
-https://relative-flame-send-subtle.trycloudflare.com
+https://test-tunnel.trycloudflare.com
