@@ -1,1 +1,1 @@
-https://sierra-machine-futures-icq.trycloudflare.com
+https://test-tunnel.trycloudflare.com
