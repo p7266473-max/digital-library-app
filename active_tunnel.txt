@@ -1,1 +1,1 @@
-https://chronic-aud-actively-create.trycloudflare.com
+https://test-tunnel.trycloudflare.com
