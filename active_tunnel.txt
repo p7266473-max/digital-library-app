@@ -1,1 +1,1 @@
-https://publishers-vintage-mean-own.trycloudflare.com
+https://test-tunnel.trycloudflare.com
