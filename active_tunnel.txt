@@ -1,1 +1,1 @@
-https://open-directions-dubai-motion.trycloudflare.com
+https://test-tunnel.trycloudflare.com
