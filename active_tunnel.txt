@@ -1,1 +1,1 @@
-https://sparc-miller-broken-snapshot.trycloudflare.com
+https://test-tunnel.trycloudflare.com
