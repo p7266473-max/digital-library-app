@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://changing-pts-holes-two.trycloudflare.com
