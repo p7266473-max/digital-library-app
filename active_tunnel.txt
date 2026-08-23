@@ -1,1 +1,1 @@
-https://launch-bedford-furnishings-implementing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
