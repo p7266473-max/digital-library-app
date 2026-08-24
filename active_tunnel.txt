@@ -1,1 +1,1 @@
-https://destinations-dog-dual-toward.trycloudflare.com
+https://test-tunnel.trycloudflare.com
