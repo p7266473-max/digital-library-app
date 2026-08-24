@@ -1,1 +1,1 @@
-https://mono-calendar-plumbing-net.trycloudflare.com
+https://test-tunnel.trycloudflare.com
