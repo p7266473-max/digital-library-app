@@ -1,1 +1,1 @@
-https://inquire-contacted-bits-graph.trycloudflare.com
+https://test-tunnel.trycloudflare.com
