@@ -1,1 +1,1 @@
-https://concentrations-process-purchase-leaving.trycloudflare.com
+https://test-tunnel.trycloudflare.com
