@@ -1,1 +1,1 @@
-https://quebec-duncan-briefing-bright.trycloudflare.com
+https://test-tunnel.trycloudflare.com
