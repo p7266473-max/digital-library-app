@@ -1,1 +1,1 @@
-https://shot-dot-surgeons-zero.trycloudflare.com
+https://test-tunnel.trycloudflare.com
