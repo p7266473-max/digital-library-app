@@ -1,1 +1,1 @@
-https://archived-kennedy-shipments-hit.trycloudflare.com
+https://test-tunnel.trycloudflare.com
