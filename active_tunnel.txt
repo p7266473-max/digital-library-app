@@ -1,1 +1,1 @@
-https://marie-preservation-constant-give.trycloudflare.com
+https://test-tunnel.trycloudflare.com
