@@ -1,1 +1,1 @@
-https://northeast-expenditures-alert-intro.trycloudflare.com
+https://test-tunnel.trycloudflare.com
