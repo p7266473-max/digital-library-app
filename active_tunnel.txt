@@ -1,1 +1,1 @@
-https://geneva-interface-applicants-expo.trycloudflare.com
+https://test-tunnel.trycloudflare.com
