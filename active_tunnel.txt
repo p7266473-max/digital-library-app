@@ -1,1 +1,1 @@
-https://teams-compaq-breach-challenges.trycloudflare.com
+https://test-tunnel.trycloudflare.com
