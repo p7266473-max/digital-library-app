@@ -1,1 +1,1 @@
-https://div-witness-approval-eligibility.trycloudflare.com
+https://test-tunnel.trycloudflare.com
