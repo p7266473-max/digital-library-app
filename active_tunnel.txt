@@ -1,1 +1,1 @@
-https://put-inventory-danny-heavy.trycloudflare.com
+https://test-tunnel.trycloudflare.com
