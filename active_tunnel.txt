@@ -1,1 +1,1 @@
-https://facility-entities-wheat-hormone.trycloudflare.com
+https://test-tunnel.trycloudflare.com
