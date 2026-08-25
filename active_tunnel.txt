@@ -1,1 +1,1 @@
-https://asks-liz-attitude-isolated.trycloudflare.com
+https://test-tunnel.trycloudflare.com
