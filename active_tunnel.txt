@@ -1,1 +1,1 @@
-https://journey-val-handbook-rca.trycloudflare.com
+https://test-tunnel.trycloudflare.com
