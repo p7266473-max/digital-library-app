@@ -1,1 +1,1 @@
-https://landscape-owned-turbo-restricted.trycloudflare.com
+https://test-tunnel.trycloudflare.com
