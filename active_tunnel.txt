@@ -1,1 +1,1 @@
-https://parks-milan-smell-starsmerchant.trycloudflare.com
+https://test-tunnel.trycloudflare.com
