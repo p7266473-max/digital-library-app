@@ -1,1 +1,1 @@
-https://cave-turn-build-praise.trycloudflare.com
+https://test-tunnel.trycloudflare.com
