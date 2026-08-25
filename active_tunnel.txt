@@ -1,1 +1,1 @@
-https://experiments-suppliers-ethical-unix.trycloudflare.com
+https://test-tunnel.trycloudflare.com
