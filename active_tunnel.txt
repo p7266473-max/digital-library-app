@@ -1,1 +1,1 @@
-https://cognitive-fifteen-arbor-tower.trycloudflare.com
+https://test-tunnel.trycloudflare.com
