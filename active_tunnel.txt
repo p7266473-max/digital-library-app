@@ -1,1 +1,1 @@
-https://wanting-corporation-technical-quote.trycloudflare.com
+https://test-tunnel.trycloudflare.com
