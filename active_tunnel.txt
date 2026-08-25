@@ -1,1 +1,1 @@
-https://turtle-moore-reserved-technologies.trycloudflare.com
+https://test-tunnel.trycloudflare.com
