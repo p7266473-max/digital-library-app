@@ -1,1 +1,1 @@
-https://potentially-cinema-bidding-baltimore.trycloudflare.com
+https://test-tunnel.trycloudflare.com
