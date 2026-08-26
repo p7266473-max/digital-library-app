@@ -1,1 +1,1 @@
-https://triple-shots-friendly-guys.trycloudflare.com
+https://test-tunnel.trycloudflare.com
