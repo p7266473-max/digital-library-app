@@ -1,1 +1,1 @@
-https://comm-boot-princeton-joe.trycloudflare.com
+https://test-tunnel.trycloudflare.com
