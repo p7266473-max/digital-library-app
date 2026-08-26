@@ -1,1 +1,1 @@
-https://vision-journalist-episodes-collar.trycloudflare.com
+https://test-tunnel.trycloudflare.com
