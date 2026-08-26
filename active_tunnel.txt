@@ -1,1 +1,1 @@
-https://aims-sanyo-forecasts-carroll.trycloudflare.com
+https://test-tunnel.trycloudflare.com
