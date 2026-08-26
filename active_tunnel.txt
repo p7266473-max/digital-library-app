@@ -1,1 +1,1 @@
-https://beth-cosmetics-checks-tanks.trycloudflare.com
+https://test-tunnel.trycloudflare.com
