@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://ensuring-ict-ice-logs.trycloudflare.com
