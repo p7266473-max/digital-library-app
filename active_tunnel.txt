@@ -1,1 +1,1 @@
-https://thunder-reduction-stack-fit.trycloudflare.com
+https://test-tunnel.trycloudflare.com
