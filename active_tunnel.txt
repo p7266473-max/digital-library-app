@@ -1,1 +1,1 @@
-https://approximately-engineers-inherited-gabriel.trycloudflare.com
+https://test-tunnel.trycloudflare.com
