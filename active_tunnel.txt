@@ -1,1 +1,1 @@
-https://jet-resolution-processed-eleven.trycloudflare.com
+https://test-tunnel.trycloudflare.com
