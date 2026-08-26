@@ -1,1 +1,1 @@
-https://delhi-relatives-src-gen.trycloudflare.com
+https://test-tunnel.trycloudflare.com
