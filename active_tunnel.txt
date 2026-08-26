@@ -1,1 +1,1 @@
-https://calculate-peterson-trends-barn.trycloudflare.com
+https://test-tunnel.trycloudflare.com
