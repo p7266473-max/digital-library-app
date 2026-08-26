@@ -1,1 +1,1 @@
-https://rand-download-complicated-extend.trycloudflare.com
+https://test-tunnel.trycloudflare.com
