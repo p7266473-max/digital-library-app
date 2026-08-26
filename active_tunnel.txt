@@ -1,1 +1,1 @@
-https://annotation-folks-photograph-bind.trycloudflare.com
+https://test-tunnel.trycloudflare.com
