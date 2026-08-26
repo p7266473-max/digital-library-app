@@ -1,1 +1,1 @@
-https://modes-command-attempt-requirement.trycloudflare.com
+https://test-tunnel.trycloudflare.com
