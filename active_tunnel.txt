@@ -1,1 +1,1 @@
-https://neighborhood-suburban-missing-twelve.trycloudflare.com
+https://test-tunnel.trycloudflare.com
