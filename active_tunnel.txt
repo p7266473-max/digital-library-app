@@ -1,1 +1,1 @@
-https://karma-pos-ips-confident.trycloudflare.com
+https://test-tunnel.trycloudflare.com
