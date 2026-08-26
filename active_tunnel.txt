@@ -1,1 +1,1 @@
-https://north-shortly-role-covered.trycloudflare.com
+https://test-tunnel.trycloudflare.com
