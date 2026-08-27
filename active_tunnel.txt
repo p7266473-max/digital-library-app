@@ -1,1 +1,1 @@
-https://alternatives-gale-suse-sender.trycloudflare.com
+https://test-tunnel.trycloudflare.com
