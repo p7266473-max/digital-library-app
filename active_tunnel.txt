@@ -1,1 +1,1 @@
-https://colors-retailer-michel-inns.trycloudflare.com
+https://test-tunnel.trycloudflare.com
