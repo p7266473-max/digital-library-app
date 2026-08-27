@@ -1,1 +1,1 @@
-https://tours-offices-loading-crops.trycloudflare.com
+https://test-tunnel.trycloudflare.com
