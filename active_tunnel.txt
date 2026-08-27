@@ -1,1 +1,1 @@
-https://camping-mia-front-fisher.trycloudflare.com
+https://test-tunnel.trycloudflare.com
