@@ -1,1 +1,1 @@
-https://reserve-run-alarm-dod.trycloudflare.com
+https://test-tunnel.trycloudflare.com
