@@ -1,1 +1,1 @@
-https://carpet-toll-runtime-specified.trycloudflare.com
+https://test-tunnel.trycloudflare.com
