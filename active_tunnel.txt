@@ -1,1 +1,1 @@
-https://strictly-here-clara-dairy.trycloudflare.com
+https://test-tunnel.trycloudflare.com
