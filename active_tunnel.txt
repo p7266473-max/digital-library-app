@@ -1,1 +1,1 @@
-https://soon-metric-kitty-kind.trycloudflare.com
+https://test-tunnel.trycloudflare.com
