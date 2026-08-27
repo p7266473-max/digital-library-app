@@ -1,1 +1,1 @@
-https://robust-clean-issn-favorites.trycloudflare.com
+https://test-tunnel.trycloudflare.com
