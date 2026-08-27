@@ -1,1 +1,1 @@
-https://session-since-spirits-seekers.trycloudflare.com
+https://test-tunnel.trycloudflare.com
