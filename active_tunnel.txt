@@ -1,1 +1,1 @@
-https://yale-blackberry-existing-recognition.trycloudflare.com
+https://test-tunnel.trycloudflare.com
