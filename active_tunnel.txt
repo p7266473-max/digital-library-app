@@ -1,1 +1,1 @@
-https://boots-withdrawal-approval-bids.trycloudflare.com
+https://test-tunnel.trycloudflare.com
