@@ -1,1 +1,1 @@
-https://emerald-committees-must-prefers.trycloudflare.com
+https://test-tunnel.trycloudflare.com
