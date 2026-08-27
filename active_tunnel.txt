@@ -1,1 +1,1 @@
-https://contains-mapping-trucks-asin.trycloudflare.com
+https://test-tunnel.trycloudflare.com
