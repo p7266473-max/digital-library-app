@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://boss-assumes-dans-segment.trycloudflare.com
