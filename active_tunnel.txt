@@ -1,1 +1,1 @@
-https://suddenly-link-rice-corpus.trycloudflare.com
+https://test-tunnel.trycloudflare.com
