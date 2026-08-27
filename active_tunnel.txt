@@ -1,1 +1,1 @@
-https://nam-capable-tests-suggests.trycloudflare.com
+https://test-tunnel.trycloudflare.com
