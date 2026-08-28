@@ -1,1 +1,1 @@
-https://enable-achievement-grad-salmon.trycloudflare.com
+https://test-tunnel.trycloudflare.com
