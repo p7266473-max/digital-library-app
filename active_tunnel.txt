@@ -1,1 +1,1 @@
-https://donate-diagram-medication-pam.trycloudflare.com
+https://test-tunnel.trycloudflare.com
