@@ -1,1 +1,1 @@
-https://ide-scoop-east-moss.trycloudflare.com
+https://test-tunnel.trycloudflare.com
