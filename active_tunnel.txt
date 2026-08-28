@@ -1,1 +1,1 @@
-https://consortium-chris-composer-edit.trycloudflare.com
+https://test-tunnel.trycloudflare.com
