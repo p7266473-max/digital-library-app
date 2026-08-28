@@ -1,1 +1,1 @@
-https://fossil-cherry-versions-breakfast.trycloudflare.com
+https://test-tunnel.trycloudflare.com
