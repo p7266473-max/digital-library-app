@@ -1,1 +1,1 @@
-https://controls-bridge-scientist-commissioner.trycloudflare.com
+https://test-tunnel.trycloudflare.com
