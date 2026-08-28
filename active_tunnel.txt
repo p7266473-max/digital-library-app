@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://cash-level-ctrl-friendly.trycloudflare.com
