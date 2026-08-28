@@ -1,1 +1,1 @@
-https://buyer-grades-columns-powell.trycloudflare.com
+https://test-tunnel.trycloudflare.com
