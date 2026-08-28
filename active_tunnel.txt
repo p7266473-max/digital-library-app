@@ -1,1 +1,1 @@
-https://agency-initial-connector-wash.trycloudflare.com
+https://test-tunnel.trycloudflare.com
