@@ -1,1 +1,1 @@
-https://yellow-visible-goals-sends.trycloudflare.com
+https://test-tunnel.trycloudflare.com
