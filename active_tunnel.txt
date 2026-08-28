@@ -1,1 +1,1 @@
-https://anthropology-pension-flex-monkey.trycloudflare.com
+https://test-tunnel.trycloudflare.com
