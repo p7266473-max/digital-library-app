@@ -1,1 +1,1 @@
-https://soundtrack-ink-replica-signing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
