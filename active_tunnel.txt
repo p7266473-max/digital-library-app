@@ -1,1 +1,1 @@
-https://edinburgh-appointed-garlic-adds.trycloudflare.com
+https://test-tunnel.trycloudflare.com
