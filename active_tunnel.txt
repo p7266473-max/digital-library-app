@@ -1,1 +1,1 @@
-https://sig-bug-beliefs-bra.trycloudflare.com
+https://test-tunnel.trycloudflare.com
