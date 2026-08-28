@@ -1,1 +1,1 @@
-https://machines-litigation-residents-kong.trycloudflare.com
+https://test-tunnel.trycloudflare.com
