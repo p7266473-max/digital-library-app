@@ -1,1 +1,1 @@
-https://antarctica-returns-car-div.trycloudflare.com
+https://test-tunnel.trycloudflare.com
