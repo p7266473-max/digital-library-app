@@ -1,1 +1,1 @@
-https://locate-looks-ids-chassis.trycloudflare.com
+https://test-tunnel.trycloudflare.com
