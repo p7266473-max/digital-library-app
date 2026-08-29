@@ -1,1 +1,1 @@
-https://deutsche-opens-distributed-warrant.trycloudflare.com
+https://test-tunnel.trycloudflare.com
