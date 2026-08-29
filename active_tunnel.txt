@@ -1,1 +1,1 @@
-https://wagon-customers-parameter-depends.trycloudflare.com
+https://test-tunnel.trycloudflare.com
