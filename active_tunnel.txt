@@ -1,1 +1,1 @@
-https://nova-holidays-gather-ssl.trycloudflare.com
+https://test-tunnel.trycloudflare.com
