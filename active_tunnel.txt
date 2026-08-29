@@ -1,1 +1,1 @@
-https://wires-subjects-latest-unique.trycloudflare.com
+https://test-tunnel.trycloudflare.com
