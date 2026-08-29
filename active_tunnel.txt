@@ -1,1 +1,1 @@
-https://compatibility-blah-identifier-offered.trycloudflare.com
+https://test-tunnel.trycloudflare.com
