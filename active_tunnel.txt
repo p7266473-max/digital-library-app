@@ -1,1 +1,1 @@
-https://portrait-machine-atomic-sellers.trycloudflare.com
+https://test-tunnel.trycloudflare.com
