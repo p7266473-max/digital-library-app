@@ -1,1 +1,1 @@
-https://connectors-suspected-dialogue-instructor.trycloudflare.com
+https://test-tunnel.trycloudflare.com
