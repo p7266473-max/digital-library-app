@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://compile-framing-ips-ceramic.trycloudflare.com
