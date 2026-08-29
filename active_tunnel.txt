@@ -1,1 +1,1 @@
-https://broadband-operating-suite-medicines.trycloudflare.com
+https://test-tunnel.trycloudflare.com
