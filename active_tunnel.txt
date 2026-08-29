@@ -1,1 +1,1 @@
-https://shield-sorted-written-browser.trycloudflare.com
+https://test-tunnel.trycloudflare.com
