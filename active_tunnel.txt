@@ -1,1 +1,1 @@
-https://newsletter-symposium-transformation-introduces.trycloudflare.com
+https://test-tunnel.trycloudflare.com
