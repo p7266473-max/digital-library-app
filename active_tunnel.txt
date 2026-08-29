@@ -1,1 +1,1 @@
-https://connection-awareness-raw-breakdown.trycloudflare.com
+https://test-tunnel.trycloudflare.com
