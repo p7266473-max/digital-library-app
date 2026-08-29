@@ -1,1 +1,1 @@
-https://mls-height-messages-priced.trycloudflare.com
+https://test-tunnel.trycloudflare.com
