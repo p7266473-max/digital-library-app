@@ -1,1 +1,1 @@
-https://rapidly-quarter-demonstrate-telescope.trycloudflare.com
+https://test-tunnel.trycloudflare.com
