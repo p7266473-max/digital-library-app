@@ -1,1 +1,1 @@
-https://cir-restaurants-mostly-whilst.trycloudflare.com
+https://test-tunnel.trycloudflare.com
