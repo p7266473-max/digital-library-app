@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://racks-journalist-rail-cooler.trycloudflare.com
