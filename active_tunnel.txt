@@ -1,1 +1,1 @@
-https://stats-contamination-tier-tcp.trycloudflare.com
+https://test-tunnel.trycloudflare.com
