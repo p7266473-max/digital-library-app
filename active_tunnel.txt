@@ -1,1 +1,1 @@
-https://public-perception-windsor-shop.trycloudflare.com
+https://test-tunnel.trycloudflare.com
