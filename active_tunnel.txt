@@ -1,1 +1,1 @@
-https://nelson-peninsula-borough-dollar.trycloudflare.com
+https://test-tunnel.trycloudflare.com
