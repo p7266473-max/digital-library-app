@@ -1,1 +1,1 @@
-https://oven-hosted-binding-drag.trycloudflare.com
+https://test-tunnel.trycloudflare.com
