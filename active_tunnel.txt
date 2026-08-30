@@ -1,1 +1,1 @@
-https://corps-rating-penalty-bradford.trycloudflare.com
+https://test-tunnel.trycloudflare.com
