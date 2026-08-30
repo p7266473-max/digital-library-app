@@ -1,1 +1,1 @@
-https://gazette-restricted-night-exemption.trycloudflare.com
+https://test-tunnel.trycloudflare.com
