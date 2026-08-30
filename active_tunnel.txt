@@ -1,1 +1,1 @@
-https://robust-status-reactions-gcc.trycloudflare.com
+https://test-tunnel.trycloudflare.com
