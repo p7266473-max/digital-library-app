@@ -1,1 +1,1 @@
-https://neo-incoming-manga-medicine.trycloudflare.com
+https://test-tunnel.trycloudflare.com
