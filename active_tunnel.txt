@@ -1,1 +1,1 @@
-https://protest-mambo-proprietary-due.trycloudflare.com
+https://test-tunnel.trycloudflare.com
