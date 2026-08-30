@@ -1,1 +1,1 @@
-https://devel-pentium-councils-displays.trycloudflare.com
+https://test-tunnel.trycloudflare.com
