@@ -1,1 +1,1 @@
-https://neighbors-taxi-hash-shuttle.trycloudflare.com
+https://test-tunnel.trycloudflare.com
