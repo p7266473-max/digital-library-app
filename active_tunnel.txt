@@ -1,1 +1,1 @@
-https://career-hardcover-kong-extend.trycloudflare.com
+https://test-tunnel.trycloudflare.com
