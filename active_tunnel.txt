@@ -1,1 +1,1 @@
-https://areas-session-powered-cooking.trycloudflare.com
+https://test-tunnel.trycloudflare.com
