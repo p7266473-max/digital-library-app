@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://intellectual-bureau-small-allowed.trycloudflare.com
