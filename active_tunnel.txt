@@ -1,1 +1,1 @@
-https://wear-exempt-boston-evident.trycloudflare.com
+https://test-tunnel.trycloudflare.com
