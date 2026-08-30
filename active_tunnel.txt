@@ -1,1 +1,1 @@
-https://contest-scripts-riverside-contacting.trycloudflare.com
+https://test-tunnel.trycloudflare.com
