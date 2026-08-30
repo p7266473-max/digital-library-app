@@ -1,1 +1,1 @@
-https://notebook-explained-ssl-scale.trycloudflare.com
+https://test-tunnel.trycloudflare.com
