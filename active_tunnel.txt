@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://elimination-gui-bubble-receivers.trycloudflare.com
