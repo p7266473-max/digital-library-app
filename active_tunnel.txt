@@ -1,1 +1,1 @@
-https://bookmark-wan-send-preservation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
