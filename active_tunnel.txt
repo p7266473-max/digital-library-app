@@ -1,1 +1,1 @@
-https://recipient-signatures-jan-firewall.trycloudflare.com
+https://test-tunnel.trycloudflare.com
