@@ -1,1 +1,1 @@
-https://wagon-aquarium-spears-selected.trycloudflare.com
+https://test-tunnel.trycloudflare.com
