@@ -1,1 +1,1 @@
-https://witnesses-covered-intent-soonest.trycloudflare.com
+https://test-tunnel.trycloudflare.com
