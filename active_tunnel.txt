@@ -1,1 +1,1 @@
-https://toolbox-readings-call-inquiries.trycloudflare.com
+https://test-tunnel.trycloudflare.com
