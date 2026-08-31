@@ -1,1 +1,1 @@
-https://restaurants-plane-finite-especially.trycloudflare.com
+https://test-tunnel.trycloudflare.com
