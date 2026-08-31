@@ -1,1 +1,1 @@
-https://screw-package-constraint-arnold.trycloudflare.com
+https://test-tunnel.trycloudflare.com
