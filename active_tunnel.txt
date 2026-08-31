@@ -1,1 +1,1 @@
-https://pix-artists-meter-laboratory.trycloudflare.com
+https://test-tunnel.trycloudflare.com
