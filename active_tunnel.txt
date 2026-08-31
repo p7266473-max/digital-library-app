@@ -1,1 +1,1 @@
-https://extra-neon-regions-parallel.trycloudflare.com
+https://test-tunnel.trycloudflare.com
