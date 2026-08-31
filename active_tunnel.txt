@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://game-streaming-measurements-doug.trycloudflare.com
