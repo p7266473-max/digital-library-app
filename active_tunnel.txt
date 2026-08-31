@@ -1,1 +1,1 @@
-https://colorado-advice-delivers-forwarding.trycloudflare.com
+https://test-tunnel.trycloudflare.com
