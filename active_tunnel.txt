@@ -1,1 +1,1 @@
-https://princeton-agreements-terms-tower.trycloudflare.com
+https://test-tunnel.trycloudflare.com
