@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://neural-harbour-outer-encryption.trycloudflare.com
