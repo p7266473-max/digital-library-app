@@ -1,1 +1,1 @@
-https://producer-pressure-javascript-distinct.trycloudflare.com
+https://test-tunnel.trycloudflare.com
