@@ -1,1 +1,1 @@
-https://season-libs-sanyo-stuff.trycloudflare.com
+https://test-tunnel.trycloudflare.com
