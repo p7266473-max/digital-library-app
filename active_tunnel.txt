@@ -1,1 +1,1 @@
-https://signals-athletic-rooms-bears.trycloudflare.com
+https://test-tunnel.trycloudflare.com
