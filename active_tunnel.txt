@@ -1,1 +1,1 @@
-https://mechanisms-tour-variety-distribution.trycloudflare.com
+https://test-tunnel.trycloudflare.com
