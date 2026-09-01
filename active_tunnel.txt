@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://bobby-lotus-put-button.trycloudflare.com
