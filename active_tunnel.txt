@@ -1,1 +1,1 @@
-https://uniprotkb-annex-scanning-href.trycloudflare.com
+https://test-tunnel.trycloudflare.com
