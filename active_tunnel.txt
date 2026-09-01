@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://face-combined-lucy-anonymous.trycloudflare.com
