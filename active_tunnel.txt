@@ -1,1 +1,1 @@
-https://variation-pay-screening-loud.trycloudflare.com
+https://test-tunnel.trycloudflare.com
