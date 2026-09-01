@@ -1,1 +1,1 @@
-https://might-alerts-altered-contacts.trycloudflare.com
+https://test-tunnel.trycloudflare.com
