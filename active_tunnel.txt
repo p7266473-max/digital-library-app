@@ -1,1 +1,1 @@
-https://sao-seas-auto-huge.trycloudflare.com
+https://test-tunnel.trycloudflare.com
