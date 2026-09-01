@@ -1,1 +1,1 @@
-https://funky-acknowledge-proper-pack.trycloudflare.com
+https://test-tunnel.trycloudflare.com
