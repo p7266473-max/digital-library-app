@@ -1,1 +1,1 @@
-https://info-commitment-acquire-devon.trycloudflare.com
+https://test-tunnel.trycloudflare.com
