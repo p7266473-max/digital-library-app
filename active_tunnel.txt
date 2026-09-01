@@ -1,1 +1,1 @@
-https://wizard-stable-pushing-stolen.trycloudflare.com
+https://test-tunnel.trycloudflare.com
