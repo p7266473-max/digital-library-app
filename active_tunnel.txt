@@ -1,1 +1,1 @@
-https://bold-tokyo-counters-singles.trycloudflare.com
+https://test-tunnel.trycloudflare.com
