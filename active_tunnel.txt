@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://album-bands-default-independently.trycloudflare.com
