@@ -1,1 +1,1 @@
-https://apparent-tournaments-larger-aus.trycloudflare.com
+https://test-tunnel.trycloudflare.com
