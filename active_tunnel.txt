@@ -1,1 +1,1 @@
-https://resulting-configuration-reach-generator.trycloudflare.com
+https://test-tunnel.trycloudflare.com
