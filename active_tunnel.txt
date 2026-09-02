@@ -1,1 +1,1 @@
-https://kernel-dentists-blvd-inclusive.trycloudflare.com
+https://test-tunnel.trycloudflare.com
