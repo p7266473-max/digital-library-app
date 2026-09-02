@@ -1,1 +1,1 @@
-https://income-producer-rip-cowboy.trycloudflare.com
+https://test-tunnel.trycloudflare.com
