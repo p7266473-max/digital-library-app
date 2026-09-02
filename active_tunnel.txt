@@ -1,1 +1,1 @@
-https://playing-default-payment-trek.trycloudflare.com
+https://test-tunnel.trycloudflare.com
