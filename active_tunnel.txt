@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://nat-bow-reel-pickup.trycloudflare.com
