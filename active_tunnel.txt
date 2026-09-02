@@ -1,1 +1,1 @@
-https://qld-fine-mph-bangkok.trycloudflare.com
+https://test-tunnel.trycloudflare.com
