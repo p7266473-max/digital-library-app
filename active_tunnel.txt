@@ -1,1 +1,1 @@
-https://tennis-armed-mba-private.trycloudflare.com
+https://test-tunnel.trycloudflare.com
