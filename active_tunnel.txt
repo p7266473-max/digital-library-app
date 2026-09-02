@@ -1,1 +1,1 @@
-https://wrestling-witch-booking-instance.trycloudflare.com
+https://test-tunnel.trycloudflare.com
