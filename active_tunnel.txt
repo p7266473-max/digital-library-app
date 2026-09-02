@@ -1,1 +1,1 @@
-https://quiz-monitoring-loaded-disclaimer.trycloudflare.com
+https://test-tunnel.trycloudflare.com
