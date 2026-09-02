@@ -1,1 +1,1 @@
-https://sensor-fort-services-buildings.trycloudflare.com
+https://test-tunnel.trycloudflare.com
