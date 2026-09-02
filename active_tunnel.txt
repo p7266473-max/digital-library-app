@@ -1,1 +1,1 @@
-https://scuba-roll-discrete-owen.trycloudflare.com
+https://test-tunnel.trycloudflare.com
