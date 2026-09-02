@@ -1,1 +1,1 @@
-https://outcome-forever-load-sales.trycloudflare.com
+https://test-tunnel.trycloudflare.com
