@@ -1,1 +1,1 @@
-https://newport-feof-traffic-dependent.trycloudflare.com
+https://test-tunnel.trycloudflare.com
