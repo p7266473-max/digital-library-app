@@ -1,1 +1,1 @@
-https://simplified-draft-reported-spots.trycloudflare.com
+https://test-tunnel.trycloudflare.com
