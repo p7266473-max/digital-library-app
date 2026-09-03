@@ -1,1 +1,1 @@
-https://mail-preferred-toolbox-ons.trycloudflare.com
+https://test-tunnel.trycloudflare.com
