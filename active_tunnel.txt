@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://course-game-browser-kent.trycloudflare.com
