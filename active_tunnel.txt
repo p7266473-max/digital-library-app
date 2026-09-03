@@ -1,1 +1,1 @@
-https://newport-recent-toronto-entry.trycloudflare.com
+https://test-tunnel.trycloudflare.com
