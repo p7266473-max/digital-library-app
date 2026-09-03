@@ -1,1 +1,1 @@
-https://health-nut-wine-buffer.trycloudflare.com
+https://test-tunnel.trycloudflare.com
