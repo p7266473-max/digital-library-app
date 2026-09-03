@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://acid-flux-washer-few.trycloudflare.com
