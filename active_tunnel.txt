@@ -1,1 +1,1 @@
-https://thomas-spec-affects-museum.trycloudflare.com
+https://test-tunnel.trycloudflare.com
