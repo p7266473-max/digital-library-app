@@ -1,1 +1,1 @@
-https://exam-dns-samba-returning.trycloudflare.com
+https://test-tunnel.trycloudflare.com
