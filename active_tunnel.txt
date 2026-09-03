@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://flying-guam-avoiding-trunk.trycloudflare.com
