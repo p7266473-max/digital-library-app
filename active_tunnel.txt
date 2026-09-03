@@ -1,1 +1,1 @@
-https://gst-fish-substantial-packages.trycloudflare.com
+https://test-tunnel.trycloudflare.com
