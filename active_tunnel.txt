@@ -1,1 +1,1 @@
-https://gpl-plaza-happening-soon.trycloudflare.com
+https://test-tunnel.trycloudflare.com
