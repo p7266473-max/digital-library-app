@@ -1,1 +1,1 @@
-https://aqua-spice-grace-participating.trycloudflare.com
+https://test-tunnel.trycloudflare.com
