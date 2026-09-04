@@ -1,1 +1,1 @@
-https://consecutive-strong-mounts-scoring.trycloudflare.com
+https://test-tunnel.trycloudflare.com
