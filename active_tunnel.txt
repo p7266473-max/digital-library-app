@@ -1,1 +1,1 @@
-https://faces-recipient-day-score.trycloudflare.com
+https://test-tunnel.trycloudflare.com
