@@ -1,1 +1,1 @@
-https://nose-savings-null-supported.trycloudflare.com
+https://test-tunnel.trycloudflare.com
