@@ -1,1 +1,1 @@
-https://celebrities-chess-roberts-balanced.trycloudflare.com
+https://test-tunnel.trycloudflare.com
