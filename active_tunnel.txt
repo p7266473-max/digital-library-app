@@ -1,1 +1,1 @@
-https://queens-activation-productive-drain.trycloudflare.com
+https://test-tunnel.trycloudflare.com
