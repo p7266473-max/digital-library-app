@@ -1,1 +1,1 @@
-https://monthly-allan-pens-modules.trycloudflare.com
+https://test-tunnel.trycloudflare.com
