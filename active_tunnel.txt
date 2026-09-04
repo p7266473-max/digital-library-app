@@ -1,1 +1,1 @@
-https://customers-stream-bite-phi.trycloudflare.com
+https://test-tunnel.trycloudflare.com
