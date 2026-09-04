@@ -1,1 +1,1 @@
-https://singer-streams-cheese-strikes.trycloudflare.com
+https://test-tunnel.trycloudflare.com
