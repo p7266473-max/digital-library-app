@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://terrace-vic-ted-developed.trycloudflare.com
