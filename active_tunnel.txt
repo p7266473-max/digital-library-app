@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://routes-wendy-integration-tutorials.trycloudflare.com
