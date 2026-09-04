@@ -1,1 +1,1 @@
-https://breathing-gauge-unnecessary-wrapping.trycloudflare.com
+https://test-tunnel.trycloudflare.com
