@@ -1,1 +1,1 @@
-https://marshall-bit-dose-beast.trycloudflare.com
+https://test-tunnel.trycloudflare.com
