@@ -1,1 +1,1 @@
-https://exposed-bruce-starts-doctors.trycloudflare.com
+https://test-tunnel.trycloudflare.com
