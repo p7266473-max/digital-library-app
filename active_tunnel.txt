@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://markers-alert-share-pike.trycloudflare.com
