@@ -1,1 +1,1 @@
-https://caring-nokia-integration-checked.trycloudflare.com
+https://test-tunnel.trycloudflare.com
