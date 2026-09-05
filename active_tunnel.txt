@@ -1,1 +1,1 @@
-https://click-seat-fiscal-replication.trycloudflare.com
+https://test-tunnel.trycloudflare.com
