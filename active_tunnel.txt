@@ -1,1 +1,1 @@
-https://events-creativity-reseller-isp.trycloudflare.com
+https://test-tunnel.trycloudflare.com
