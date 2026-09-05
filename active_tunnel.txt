@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://var-claimed-main-environments.trycloudflare.com
