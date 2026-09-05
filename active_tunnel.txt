@@ -1,1 +1,1 @@
-https://debate-inner-clone-patches.trycloudflare.com
+https://test-tunnel.trycloudflare.com
