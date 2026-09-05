@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://flip-consolidated-sticker-compiler.trycloudflare.com
