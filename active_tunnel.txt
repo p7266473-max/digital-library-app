@@ -1,1 +1,1 @@
-https://individually-sunday-august-production.trycloudflare.com
+https://test-tunnel.trycloudflare.com
