@@ -1,1 +1,1 @@
-https://chen-establishing-spec-mode.trycloudflare.com
+https://test-tunnel.trycloudflare.com
