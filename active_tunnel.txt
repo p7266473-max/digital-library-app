@@ -1,1 +1,1 @@
-https://mono-chapters-lessons-refrigerator.trycloudflare.com
+https://test-tunnel.trycloudflare.com
