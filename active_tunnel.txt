@@ -1,1 +1,1 @@
-https://cycles-reaching-collecting-critics.trycloudflare.com
+https://test-tunnel.trycloudflare.com
