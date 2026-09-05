@@ -1,1 +1,1 @@
-https://competitions-spreading-object-prefix.trycloudflare.com
+https://test-tunnel.trycloudflare.com
