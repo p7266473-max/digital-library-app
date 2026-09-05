@@ -1,1 +1,1 @@
-https://street-inspiration-allied-maintains.trycloudflare.com
+https://test-tunnel.trycloudflare.com
