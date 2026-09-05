@@ -1,1 +1,1 @@
-https://measured-builds-congress-monroe.trycloudflare.com
+https://test-tunnel.trycloudflare.com
