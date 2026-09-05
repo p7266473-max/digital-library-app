@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://witnesses-benefit-idle-locking.trycloudflare.com
