@@ -1,1 +1,1 @@
-https://blocking-bits-ate-heater.trycloudflare.com
+https://test-tunnel.trycloudflare.com
