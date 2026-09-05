@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://wma-kits-selection-toolbar.trycloudflare.com
