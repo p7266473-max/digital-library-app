@@ -1,1 +1,1 @@
-https://chicken-amazing-egg-sometimes.trycloudflare.com
+https://test-tunnel.trycloudflare.com
