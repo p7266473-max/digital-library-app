@@ -1,1 +1,1 @@
-https://sail-carlos-transmit-compounds.trycloudflare.com
+https://test-tunnel.trycloudflare.com
