@@ -1,1 +1,1 @@
-https://filter-includes-armor-referred.trycloudflare.com
+https://test-tunnel.trycloudflare.com
