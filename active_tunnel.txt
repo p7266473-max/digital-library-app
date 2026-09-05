@@ -1,1 +1,1 @@
-https://formatting-sink-poison-uniform.trycloudflare.com
+https://test-tunnel.trycloudflare.com
