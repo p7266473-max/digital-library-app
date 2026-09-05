@@ -1,1 +1,1 @@
-https://possible-trailers-ease-fork.trycloudflare.com
+https://test-tunnel.trycloudflare.com
