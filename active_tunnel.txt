@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://pierre-say-consumption-standard.trycloudflare.com
