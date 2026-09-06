@@ -1,1 +1,1 @@
-https://knight-detector-louisiana-volt.trycloudflare.com
+https://test-tunnel.trycloudflare.com
