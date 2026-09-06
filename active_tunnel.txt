@@ -1,1 +1,1 @@
-https://beatles-bowling-welfare-wall.trycloudflare.com
+https://test-tunnel.trycloudflare.com
