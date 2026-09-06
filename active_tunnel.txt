@@ -1,1 +1,1 @@
-https://folk-jury-rides-point.trycloudflare.com
+https://test-tunnel.trycloudflare.com
