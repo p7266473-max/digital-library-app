@@ -1,1 +1,1 @@
-https://trials-passing-needle-pci.trycloudflare.com
+https://test-tunnel.trycloudflare.com
