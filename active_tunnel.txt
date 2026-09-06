@@ -1,1 +1,1 @@
-https://alias-divisions-calendars-sprint.trycloudflare.com
+https://test-tunnel.trycloudflare.com
