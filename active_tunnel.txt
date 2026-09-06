@@ -1,1 +1,1 @@
-https://endless-galaxy-formerly-obtaining.trycloudflare.com
+https://test-tunnel.trycloudflare.com
