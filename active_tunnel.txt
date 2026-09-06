@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://mrs-prediction-join-seat.trycloudflare.com
