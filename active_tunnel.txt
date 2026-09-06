@@ -1,1 +1,1 @@
-https://streets-wake-tender-machine.trycloudflare.com
+https://test-tunnel.trycloudflare.com
