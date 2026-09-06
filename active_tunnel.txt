@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://switching-rides-acceptance-lowest.trycloudflare.com
