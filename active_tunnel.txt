@@ -1,1 +1,1 @@
-https://locale-vegetables-premium-awards.trycloudflare.com
+https://test-tunnel.trycloudflare.com
