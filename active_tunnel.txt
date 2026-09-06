@@ -1,1 +1,1 @@
-https://before-allocated-focus-pop.trycloudflare.com
+https://test-tunnel.trycloudflare.com
