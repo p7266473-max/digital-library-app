@@ -1,1 +1,1 @@
-https://worm-authorities-timely-summary.trycloudflare.com
+https://test-tunnel.trycloudflare.com
