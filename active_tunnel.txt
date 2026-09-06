@@ -1,1 +1,1 @@
-https://provinces-strictly-virtual-ken.trycloudflare.com
+https://test-tunnel.trycloudflare.com
