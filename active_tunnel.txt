@@ -1,1 +1,1 @@
-https://intensity-templates-jurisdiction-smooth.trycloudflare.com
+https://test-tunnel.trycloudflare.com
