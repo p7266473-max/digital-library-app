@@ -1,1 +1,1 @@
-https://contamination-mounted-basics-produces.trycloudflare.com
+https://test-tunnel.trycloudflare.com
