@@ -1,1 +1,1 @@
-https://pmc-potter-reviewing-discussed.trycloudflare.com
+https://test-tunnel.trycloudflare.com
