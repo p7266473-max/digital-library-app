@@ -1,1 +1,1 @@
-https://fork-glory-environment-optical.trycloudflare.com
+https://test-tunnel.trycloudflare.com
