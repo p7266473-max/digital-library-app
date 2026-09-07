@@ -1,1 +1,1 @@
-https://chassis-inf-libs-deborah.trycloudflare.com
+https://test-tunnel.trycloudflare.com
