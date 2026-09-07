@@ -1,1 +1,1 @@
-https://played-deployment-training-consistently.trycloudflare.com
+https://test-tunnel.trycloudflare.com
