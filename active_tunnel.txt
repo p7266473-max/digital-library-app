@@ -1,1 +1,1 @@
-https://known-dimension-july-picked.trycloudflare.com
+https://test-tunnel.trycloudflare.com
