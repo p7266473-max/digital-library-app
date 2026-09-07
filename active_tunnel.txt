@@ -1,1 +1,1 @@
-https://jeremy-diving-northwest-right.trycloudflare.com
+https://test-tunnel.trycloudflare.com
