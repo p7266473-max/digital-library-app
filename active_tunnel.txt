@@ -1,1 +1,1 @@
-https://www-bases-reservoir-responses.trycloudflare.com
+https://test-tunnel.trycloudflare.com
