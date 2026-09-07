@@ -1,1 +1,1 @@
-https://cloud-design-vehicle-texts.trycloudflare.com
+https://test-tunnel.trycloudflare.com
