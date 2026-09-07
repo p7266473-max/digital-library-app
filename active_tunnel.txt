@@ -1,1 +1,1 @@
-https://strand-end-sort-ensure.trycloudflare.com
+https://test-tunnel.trycloudflare.com
