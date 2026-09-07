@@ -1,1 +1,1 @@
-https://rain-cio-targets-made.trycloudflare.com
+https://test-tunnel.trycloudflare.com
