@@ -1,1 +1,1 @@
-https://engine-platform-downloads-potato.trycloudflare.com
+https://test-tunnel.trycloudflare.com
