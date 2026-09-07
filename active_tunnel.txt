@@ -1,1 +1,1 @@
-https://shepherd-dinner-hazardous-managing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
