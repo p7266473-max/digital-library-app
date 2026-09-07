@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://others-processing-tri-gate.trycloudflare.com
