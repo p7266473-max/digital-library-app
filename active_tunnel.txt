@@ -1,1 +1,1 @@
-https://mention-efforts-butterfly-vsnet.trycloudflare.com
+https://test-tunnel.trycloudflare.com
