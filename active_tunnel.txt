@@ -1,1 +1,1 @@
-https://prerequisite-rochester-oklahoma-groove.trycloudflare.com
+https://test-tunnel.trycloudflare.com
