@@ -1,1 +1,1 @@
-https://hour-residential-shift-delays.trycloudflare.com
+https://test-tunnel.trycloudflare.com
