@@ -1,1 +1,1 @@
-https://cache-gps-orders-donations.trycloudflare.com
+https://test-tunnel.trycloudflare.com
