@@ -1,1 +1,1 @@
-https://disciplines-custom-reporters-structures.trycloudflare.com
+https://test-tunnel.trycloudflare.com
