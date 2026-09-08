@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://directory-notebooks-issues-cut.trycloudflare.com
