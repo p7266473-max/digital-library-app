@@ -1,1 +1,1 @@
-https://not-started-mount-cherry.trycloudflare.com
+https://test-tunnel.trycloudflare.com
