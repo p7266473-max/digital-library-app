@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://cycle-soft-ace-rest.trycloudflare.com
