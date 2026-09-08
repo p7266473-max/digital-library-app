@@ -1,1 +1,1 @@
-https://oliver-mails-restrict-rfc.trycloudflare.com
+https://test-tunnel.trycloudflare.com
