@@ -1,1 +1,1 @@
-https://trip-tournaments-radio-named.trycloudflare.com
+https://test-tunnel.trycloudflare.com
