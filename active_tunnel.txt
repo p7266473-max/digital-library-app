@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://seat-render-duck-ladder.trycloudflare.com
