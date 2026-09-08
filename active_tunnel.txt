@@ -1,1 +1,1 @@
-https://infrared-records-happened-exp.trycloudflare.com
+https://test-tunnel.trycloudflare.com
