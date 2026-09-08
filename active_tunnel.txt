@@ -1,1 +1,1 @@
-https://add-packages-gen-further.trycloudflare.com
+https://test-tunnel.trycloudflare.com
