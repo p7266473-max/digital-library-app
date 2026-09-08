@@ -1,1 +1,1 @@
-https://fitness-lyric-vendor-len.trycloudflare.com
+https://test-tunnel.trycloudflare.com
