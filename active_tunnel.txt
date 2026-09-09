@@ -1,1 +1,1 @@
-https://comparison-budapest-values-builders.trycloudflare.com
+https://test-tunnel.trycloudflare.com
