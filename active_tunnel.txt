@@ -1,1 +1,1 @@
-https://final-bike-hamilton-current.trycloudflare.com
+https://test-tunnel.trycloudflare.com
