@@ -1,1 +1,1 @@
-https://geology-contamination-extends-buck.trycloudflare.com
+https://test-tunnel.trycloudflare.com
