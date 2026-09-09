@@ -1,1 +1,1 @@
-https://passenger-chef-ntsc-plants.trycloudflare.com
+https://test-tunnel.trycloudflare.com
