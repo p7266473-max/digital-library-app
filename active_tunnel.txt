@@ -1,1 +1,1 @@
-https://yarn-allowing-habits-bay.trycloudflare.com
+https://test-tunnel.trycloudflare.com
