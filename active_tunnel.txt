@@ -1,1 +1,1 @@
-https://raise-settings-wild-asp.trycloudflare.com
+https://test-tunnel.trycloudflare.com
