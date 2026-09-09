@@ -1,1 +1,1 @@
-https://rewards-retrieve-promising-old.trycloudflare.com
+https://test-tunnel.trycloudflare.com
