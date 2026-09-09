@@ -1,1 +1,1 @@
-https://ticket-provided-specs-devel.trycloudflare.com
+https://test-tunnel.trycloudflare.com
