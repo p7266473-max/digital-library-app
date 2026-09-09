@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://enabled-alerts-buffalo-edges.trycloudflare.com
