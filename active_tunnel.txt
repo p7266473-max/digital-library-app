@@ -1,1 +1,1 @@
-https://prohibited-counter-tiles-neutral.trycloudflare.com
+https://test-tunnel.trycloudflare.com
