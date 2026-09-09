@@ -1,1 +1,1 @@
-https://qualities-bin-write-merchants.trycloudflare.com
+https://test-tunnel.trycloudflare.com
