@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://spice-mandatory-ice-inside.trycloudflare.com
