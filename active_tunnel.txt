@@ -1,1 +1,1 @@
-https://ruby-purse-adopt-genetic.trycloudflare.com
+https://test-tunnel.trycloudflare.com
