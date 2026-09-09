@@ -1,1 +1,1 @@
-https://labs-introduce-rhythm-nissan.trycloudflare.com
+https://test-tunnel.trycloudflare.com
