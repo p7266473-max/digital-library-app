@@ -1,1 +1,1 @@
-https://vaccine-levels-yearly-package.trycloudflare.com
+https://test-tunnel.trycloudflare.com
