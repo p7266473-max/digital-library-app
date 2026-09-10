@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://olympics-respiratory-gui-star.trycloudflare.com
