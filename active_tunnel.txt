@@ -1,1 +1,1 @@
-https://floyd-endless-pharmaceuticals-evolution.trycloudflare.com
+https://test-tunnel.trycloudflare.com
