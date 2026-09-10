@@ -1,1 +1,1 @@
-https://authority-albany-first-monica.trycloudflare.com
+https://test-tunnel.trycloudflare.com
