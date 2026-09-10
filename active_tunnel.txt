@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://sims-coat-same-usr.trycloudflare.com
