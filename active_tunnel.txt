@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://nearby-flights-ice-assign.trycloudflare.com
