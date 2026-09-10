@@ -1,1 +1,1 @@
-https://monthly-genesis-privilege-others.trycloudflare.com
+https://test-tunnel.trycloudflare.com
