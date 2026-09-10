@@ -1,1 +1,1 @@
-https://series-richmond-initial-suspended.trycloudflare.com
+https://test-tunnel.trycloudflare.com
