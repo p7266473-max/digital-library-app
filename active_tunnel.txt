@@ -1,1 +1,1 @@
-https://rand-trance-replica-experiment.trycloudflare.com
+https://test-tunnel.trycloudflare.com
