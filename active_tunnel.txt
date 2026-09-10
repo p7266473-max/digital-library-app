@@ -1,1 +1,1 @@
-https://select-dried-bernard-ports.trycloudflare.com
+https://test-tunnel.trycloudflare.com
