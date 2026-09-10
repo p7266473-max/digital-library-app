@@ -1,1 +1,1 @@
-https://mesh-counted-weights-contributing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
