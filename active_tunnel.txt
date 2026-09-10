@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://scientific-casual-daily-lab.trycloudflare.com
