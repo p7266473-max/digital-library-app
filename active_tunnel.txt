@@ -1,1 +1,1 @@
-https://vernon-permission-van-sampling.trycloudflare.com
+https://test-tunnel.trycloudflare.com
