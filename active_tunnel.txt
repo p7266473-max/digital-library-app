@@ -1,1 +1,1 @@
-https://patch-offices-servers-processes.trycloudflare.com
+https://test-tunnel.trycloudflare.com
