@@ -1,1 +1,1 @@
-https://representation-benchmark-completing-del.trycloudflare.com
+https://test-tunnel.trycloudflare.com
