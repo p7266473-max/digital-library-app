@@ -1,1 +1,1 @@
-https://reload-units-hampton-amplifier.trycloudflare.com
+https://test-tunnel.trycloudflare.com
