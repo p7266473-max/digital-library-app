@@ -1,1 +1,1 @@
-https://franklin-besides-trusted-carbon.trycloudflare.com
+https://test-tunnel.trycloudflare.com
