@@ -1,1 +1,1 @@
-https://luck-section-pubs-coordinated.trycloudflare.com
+https://test-tunnel.trycloudflare.com
