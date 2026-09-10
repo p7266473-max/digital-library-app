@@ -1,1 +1,1 @@
-https://non-pet-garcia-router.trycloudflare.com
+https://test-tunnel.trycloudflare.com
