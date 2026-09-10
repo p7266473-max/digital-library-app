@@ -1,1 +1,1 @@
-https://reveal-perception-stick-runner.trycloudflare.com
+https://test-tunnel.trycloudflare.com
