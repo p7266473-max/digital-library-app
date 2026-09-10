@@ -1,1 +1,1 @@
-https://bids-owned-yrs-zope.trycloudflare.com
+https://test-tunnel.trycloudflare.com
