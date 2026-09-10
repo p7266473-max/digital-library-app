@@ -1,1 +1,1 @@
-https://path-sharp-bug-photography.trycloudflare.com
+https://test-tunnel.trycloudflare.com
