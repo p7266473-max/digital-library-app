@@ -1,1 +1,1 @@
-https://excel-edges-dried-server.trycloudflare.com
+https://test-tunnel.trycloudflare.com
