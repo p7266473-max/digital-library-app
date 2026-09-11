@@ -1,1 +1,1 @@
-https://calendar-tone-salmon-stamp.trycloudflare.com
+https://test-tunnel.trycloudflare.com
