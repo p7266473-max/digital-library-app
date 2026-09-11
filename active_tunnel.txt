@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://census-evident-egg-delete.trycloudflare.com
