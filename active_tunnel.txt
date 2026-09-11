@@ -1,1 +1,1 @@
-https://taught-odds-implementing-listprice.trycloudflare.com
+https://test-tunnel.trycloudflare.com
