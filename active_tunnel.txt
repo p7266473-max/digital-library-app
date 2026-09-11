@@ -1,1 +1,1 @@
-https://waiting-exact-pulled-associations.trycloudflare.com
+https://test-tunnel.trycloudflare.com
