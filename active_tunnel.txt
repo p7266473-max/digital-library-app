@@ -1,1 +1,1 @@
-https://bar-suppose-continuous-lean.trycloudflare.com
+https://test-tunnel.trycloudflare.com
