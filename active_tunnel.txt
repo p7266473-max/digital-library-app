@@ -1,1 +1,1 @@
-https://borough-calvin-virgin-citizen.trycloudflare.com
+https://test-tunnel.trycloudflare.com
