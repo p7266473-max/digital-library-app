@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://msg-pump-builds-scientist.trycloudflare.com
