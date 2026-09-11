@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://purchases-usr-minority-versions.trycloudflare.com
