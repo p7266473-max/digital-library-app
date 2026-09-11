@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://builds-galaxy-ppc-allowing.trycloudflare.com
