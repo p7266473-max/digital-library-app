@@ -1,1 +1,1 @@
-https://tomato-der-midwest-signing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
