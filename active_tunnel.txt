@@ -1,1 +1,1 @@
-https://corp-newspapers-excluding-topic.trycloudflare.com
+https://test-tunnel.trycloudflare.com
