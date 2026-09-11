@@ -1,1 +1,1 @@
-https://indicating-migration-syndication-explicitly.trycloudflare.com
+https://test-tunnel.trycloudflare.com
