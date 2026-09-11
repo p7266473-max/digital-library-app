@@ -1,1 +1,1 @@
-https://syntax-approx-expansion-adapter.trycloudflare.com
+https://test-tunnel.trycloudflare.com
