@@ -1,1 +1,1 @@
-https://tue-bomb-jeffrey-practical.trycloudflare.com
+https://test-tunnel.trycloudflare.com
