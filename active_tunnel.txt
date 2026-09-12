@@ -1,1 +1,1 @@
-https://crystal-ext-pam-public.trycloudflare.com
+https://test-tunnel.trycloudflare.com
