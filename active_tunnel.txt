@@ -1,1 +1,1 @@
-https://applicant-nested-hats-hiring.trycloudflare.com
+https://test-tunnel.trycloudflare.com
