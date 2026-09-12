@@ -1,1 +1,1 @@
-https://added-alberta-limitations-lopez.trycloudflare.com
+https://test-tunnel.trycloudflare.com
