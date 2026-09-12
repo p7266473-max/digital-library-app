@@ -1,1 +1,1 @@
-https://flight-utc-theorem-describing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
