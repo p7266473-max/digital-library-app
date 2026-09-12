@@ -1,1 +1,1 @@
-https://findings-reporting-therapy-banner.trycloudflare.com
+https://test-tunnel.trycloudflare.com
