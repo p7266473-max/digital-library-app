@@ -1,1 +1,1 @@
-https://spots-pants-author-integer.trycloudflare.com
+https://test-tunnel.trycloudflare.com
