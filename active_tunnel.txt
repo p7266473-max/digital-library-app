@@ -1,1 +1,1 @@
-https://weeks-cancellation-ban-idle.trycloudflare.com
+https://test-tunnel.trycloudflare.com
