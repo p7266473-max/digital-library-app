@@ -1,1 +1,1 @@
-https://graham-beer-walnut-classics.trycloudflare.com
+https://test-tunnel.trycloudflare.com
