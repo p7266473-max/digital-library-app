@@ -1,1 +1,1 @@
-https://matthew-favour-qui-bizrate.trycloudflare.com
+https://test-tunnel.trycloudflare.com
