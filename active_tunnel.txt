@@ -1,1 +1,1 @@
-https://ctrl-components-purchasing-headed.trycloudflare.com
+https://test-tunnel.trycloudflare.com
