@@ -1,1 +1,1 @@
-https://pets-contributing-closure-forbes.trycloudflare.com
+https://test-tunnel.trycloudflare.com
