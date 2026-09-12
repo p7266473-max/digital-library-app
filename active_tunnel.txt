@@ -1,1 +1,1 @@
-https://tags-virtual-cancelled-dow.trycloudflare.com
+https://test-tunnel.trycloudflare.com
