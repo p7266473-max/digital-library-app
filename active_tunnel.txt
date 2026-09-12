@@ -1,1 +1,1 @@
-https://multimedia-doctrine-both-old.trycloudflare.com
+https://test-tunnel.trycloudflare.com
