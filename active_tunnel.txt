@@ -1,1 +1,1 @@
-https://dish-wilson-bit-devon.trycloudflare.com
+https://test-tunnel.trycloudflare.com
