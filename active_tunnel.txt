@@ -1,1 +1,1 @@
-https://cold-your-deck-sleep.trycloudflare.com
+https://test-tunnel.trycloudflare.com
