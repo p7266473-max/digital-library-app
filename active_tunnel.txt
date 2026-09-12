@@ -1,1 +1,1 @@
-https://drug-printer-everything-temperatures.trycloudflare.com
+https://test-tunnel.trycloudflare.com
