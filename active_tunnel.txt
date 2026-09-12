@@ -1,1 +1,1 @@
-https://capabilities-instance-yamaha-jelsoft.trycloudflare.com
+https://test-tunnel.trycloudflare.com
