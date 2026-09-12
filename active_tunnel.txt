@@ -1,1 +1,1 @@
-https://cbs-wanna-server-silly.trycloudflare.com
+https://test-tunnel.trycloudflare.com
