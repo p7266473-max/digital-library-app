@@ -1,1 +1,1 @@
-https://alarm-bean-peer-experiencing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
