@@ -1,1 +1,1 @@
-https://understood-possibility-contests-fog.trycloudflare.com
+https://test-tunnel.trycloudflare.com
