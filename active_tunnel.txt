@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://flush-toddler-invalid-config.trycloudflare.com
