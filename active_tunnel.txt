@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://vote-bind-temporal-danny.trycloudflare.com
