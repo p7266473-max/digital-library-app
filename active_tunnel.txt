@@ -1,1 +1,1 @@
-https://latitude-paths-should-combat.trycloudflare.com
+https://test-tunnel.trycloudflare.com
