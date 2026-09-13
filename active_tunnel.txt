@@ -1,1 +1,1 @@
-https://uri-whom-native-destinations.trycloudflare.com
+https://test-tunnel.trycloudflare.com
