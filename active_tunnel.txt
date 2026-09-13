@@ -1,1 +1,1 @@
-https://removed-searches-inside-aka.trycloudflare.com
+https://test-tunnel.trycloudflare.com
