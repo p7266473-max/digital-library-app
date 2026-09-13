@@ -1,1 +1,1 @@
-https://peripherals-abilities-cir-transaction.trycloudflare.com
+https://test-tunnel.trycloudflare.com
