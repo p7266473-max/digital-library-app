@@ -1,1 +1,1 @@
-https://airfare-serial-self-file.trycloudflare.com
+https://test-tunnel.trycloudflare.com
