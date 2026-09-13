@@ -1,1 +1,1 @@
-https://routes-velocity-imaging-holland.trycloudflare.com
+https://test-tunnel.trycloudflare.com
