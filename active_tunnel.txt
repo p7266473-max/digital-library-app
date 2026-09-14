@@ -1,1 +1,1 @@
-https://laptops-lamb-yorkshire-our.trycloudflare.com
+https://test-tunnel.trycloudflare.com
