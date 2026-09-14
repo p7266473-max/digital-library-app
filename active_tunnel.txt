@@ -1,1 +1,1 @@
-https://hall-scsi-ware-empirical.trycloudflare.com
+https://test-tunnel.trycloudflare.com
