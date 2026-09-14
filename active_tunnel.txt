@@ -1,1 +1,1 @@
-https://counting-ensure-apps-millions.trycloudflare.com
+https://test-tunnel.trycloudflare.com
