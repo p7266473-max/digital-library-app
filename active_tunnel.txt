@@ -1,1 +1,1 @@
-https://janet-appliances-february-madrid.trycloudflare.com
+https://test-tunnel.trycloudflare.com
