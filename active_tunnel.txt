@@ -1,1 +1,1 @@
-https://upgrades-citizenship-eden-snapshot.trycloudflare.com
+https://test-tunnel.trycloudflare.com
