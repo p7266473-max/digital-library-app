@@ -1,1 +1,1 @@
-https://depends-artificial-graphs-resumes.trycloudflare.com
+https://test-tunnel.trycloudflare.com
