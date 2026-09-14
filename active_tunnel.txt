@@ -1,1 +1,1 @@
-https://neil-developer-honor-reservation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
