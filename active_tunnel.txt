@@ -1,1 +1,1 @@
-https://electoral-requiring-tests-blvd.trycloudflare.com
+https://test-tunnel.trycloudflare.com
