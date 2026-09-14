@@ -1,1 +1,1 @@
-https://trials-hottest-lights-grande.trycloudflare.com
+https://test-tunnel.trycloudflare.com
