@@ -1,1 +1,1 @@
-https://float-inspections-val-convertible.trycloudflare.com
+https://test-tunnel.trycloudflare.com
