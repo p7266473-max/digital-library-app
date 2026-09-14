@@ -1,1 +1,1 @@
-https://remote-prediction-footage-pattern.trycloudflare.com
+https://test-tunnel.trycloudflare.com
