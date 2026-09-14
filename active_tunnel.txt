@@ -1,1 +1,1 @@
-https://versions-patrol-bacteria-neural.trycloudflare.com
+https://test-tunnel.trycloudflare.com
