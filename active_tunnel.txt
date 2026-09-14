@@ -1,1 +1,1 @@
-https://precise-farmer-bears-annex.trycloudflare.com
+https://test-tunnel.trycloudflare.com
