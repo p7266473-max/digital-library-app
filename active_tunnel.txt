@@ -1,1 +1,1 @@
-https://scuba-televisions-controllers-march.trycloudflare.com
+https://test-tunnel.trycloudflare.com
