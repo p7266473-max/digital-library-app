@@ -1,1 +1,1 @@
-https://plays-sydney-toxic-die.trycloudflare.com
+https://test-tunnel.trycloudflare.com
