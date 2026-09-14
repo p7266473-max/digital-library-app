@@ -1,1 +1,1 @@
-https://chess-cameras-amount-rick.trycloudflare.com
+https://test-tunnel.trycloudflare.com
