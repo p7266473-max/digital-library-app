@@ -1,1 +1,1 @@
-https://publishers-bedford-south-charged.trycloudflare.com
+https://test-tunnel.trycloudflare.com
