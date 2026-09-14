@@ -1,1 +1,1 @@
-https://chuck-explorer-pam-fields.trycloudflare.com
+https://test-tunnel.trycloudflare.com
