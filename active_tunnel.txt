@@ -1,1 +1,1 @@
-https://ferry-boutique-this-lunch.trycloudflare.com
+https://test-tunnel.trycloudflare.com
