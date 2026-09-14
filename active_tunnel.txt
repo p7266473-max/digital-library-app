@@ -1,1 +1,1 @@
-https://appears-stored-mills-salt.trycloudflare.com
+https://test-tunnel.trycloudflare.com
