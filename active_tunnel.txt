@@ -1,1 +1,1 @@
-https://spectrum-antibodies-coordinator-catalog.trycloudflare.com
+https://test-tunnel.trycloudflare.com
