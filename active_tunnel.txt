@@ -1,1 +1,1 @@
-https://olympics-lows-alpha-altered.trycloudflare.com
+https://test-tunnel.trycloudflare.com
