@@ -1,1 +1,1 @@
-https://olympic-justice-trigger-job.trycloudflare.com
+https://test-tunnel.trycloudflare.com
