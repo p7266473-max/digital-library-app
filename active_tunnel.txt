@@ -1,1 +1,1 @@
-https://notify-hindu-develop-bring.trycloudflare.com
+https://test-tunnel.trycloudflare.com
