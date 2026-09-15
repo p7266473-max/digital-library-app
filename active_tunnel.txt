@@ -1,1 +1,1 @@
-https://adapter-tricks-battle-consultant.trycloudflare.com
+https://test-tunnel.trycloudflare.com
