@@ -1,1 +1,1 @@
-https://fur-article-upgrade-folder.trycloudflare.com
+https://test-tunnel.trycloudflare.com
