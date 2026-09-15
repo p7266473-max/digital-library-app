@@ -1,1 +1,1 @@
-https://gilbert-sample-mesh-successful.trycloudflare.com
+https://test-tunnel.trycloudflare.com
