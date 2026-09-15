@@ -1,1 +1,1 @@
-https://front-promotions-ppc-bronze.trycloudflare.com
+https://test-tunnel.trycloudflare.com
