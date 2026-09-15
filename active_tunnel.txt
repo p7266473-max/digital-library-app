@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://switches-logan-neighborhood-instrumentation.trycloudflare.com
