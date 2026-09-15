@@ -1,1 +1,1 @@
-https://award-frankfurt-oakland-delegation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
