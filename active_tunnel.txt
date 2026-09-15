@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://secondary-bind-sega-decided.trycloudflare.com
