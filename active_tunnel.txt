@@ -1,1 +1,1 @@
-https://cdt-hook-procedure-attractions.trycloudflare.com
+https://test-tunnel.trycloudflare.com
