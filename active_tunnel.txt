@@ -1,1 +1,1 @@
-https://architectural-roll-owners-delaware.trycloudflare.com
+https://test-tunnel.trycloudflare.com
