@@ -1,1 +1,1 @@
-https://compare-gentle-pixels-pine.trycloudflare.com
+https://test-tunnel.trycloudflare.com
