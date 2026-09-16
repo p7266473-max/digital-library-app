@@ -1,1 +1,1 @@
-https://clause-sleep-resorts-actions.trycloudflare.com
+https://test-tunnel.trycloudflare.com
