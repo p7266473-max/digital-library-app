@@ -1,1 +1,1 @@
-https://tunnel-ready-trunk-officially.trycloudflare.com
+https://test-tunnel.trycloudflare.com
