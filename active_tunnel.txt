@@ -1,1 +1,1 @@
-https://protocols-delaware-ipaq-folks.trycloudflare.com
+https://test-tunnel.trycloudflare.com
