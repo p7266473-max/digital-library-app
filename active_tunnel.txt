@@ -1,1 +1,1 @@
-https://human-mobility-texts-evaluation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
