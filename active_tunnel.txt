@@ -1,1 +1,1 @@
-https://webcast-knife-major-precise.trycloudflare.com
+https://test-tunnel.trycloudflare.com
