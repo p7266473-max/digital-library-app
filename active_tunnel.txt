@@ -1,1 +1,1 @@
-https://cooper-chain-coleman-feeds.trycloudflare.com
+https://test-tunnel.trycloudflare.com
