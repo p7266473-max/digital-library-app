@@ -1,1 +1,1 @@
-https://mercury-wanted-stores-exist.trycloudflare.com
+https://test-tunnel.trycloudflare.com
