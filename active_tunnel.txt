@@ -1,1 +1,1 @@
-https://carroll-finds-collins-paris.trycloudflare.com
+https://test-tunnel.trycloudflare.com
