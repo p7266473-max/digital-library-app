@@ -1,1 +1,1 @@
-https://genes-approve-marvel-egg.trycloudflare.com
+https://test-tunnel.trycloudflare.com
