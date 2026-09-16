@@ -1,1 +1,1 @@
-https://markets-prepaid-bicycle-memo.trycloudflare.com
+https://test-tunnel.trycloudflare.com
