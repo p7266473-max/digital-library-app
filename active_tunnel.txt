@@ -1,1 +1,1 @@
-https://shaped-slow-commodities-neo.trycloudflare.com
+https://test-tunnel.trycloudflare.com
