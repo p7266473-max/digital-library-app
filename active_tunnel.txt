@@ -1,1 +1,1 @@
-https://cashiers-alumni-workflow-burke.trycloudflare.com
+https://test-tunnel.trycloudflare.com
