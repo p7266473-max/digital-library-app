@@ -1,1 +1,1 @@
-https://scanner-robot-airfare-filing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
