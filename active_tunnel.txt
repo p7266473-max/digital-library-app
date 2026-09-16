@@ -1,1 +1,1 @@
-https://transaction-stranger-creek-cards.trycloudflare.com
+https://test-tunnel.trycloudflare.com
