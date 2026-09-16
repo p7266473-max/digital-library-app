@@ -1,1 +1,1 @@
-https://compatibility-craig-flood-duo.trycloudflare.com
+https://test-tunnel.trycloudflare.com
