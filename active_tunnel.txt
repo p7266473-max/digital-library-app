@@ -1,1 +1,1 @@
-https://charming-glad-runtime-marvel.trycloudflare.com
+https://test-tunnel.trycloudflare.com
