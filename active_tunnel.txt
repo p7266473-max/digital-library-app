@@ -1,1 +1,1 @@
-https://fix-smaller-peterson-yield.trycloudflare.com
+https://test-tunnel.trycloudflare.com
