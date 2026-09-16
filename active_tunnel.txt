@@ -1,1 +1,1 @@
-https://review-minor-networks-containing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
