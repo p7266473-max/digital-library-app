@@ -1,1 +1,1 @@
-https://charts-accountability-publication-explicit.trycloudflare.com
+https://test-tunnel.trycloudflare.com
