@@ -1,1 +1,1 @@
-https://rfc-caution-drawn-host.trycloudflare.com
+https://test-tunnel.trycloudflare.com
