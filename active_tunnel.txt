@@ -1,1 +1,1 @@
-https://stanford-lessons-alloy-tend.trycloudflare.com
+https://test-tunnel.trycloudflare.com
