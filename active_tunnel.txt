@@ -1,1 +1,1 @@
-https://deviation-marilyn-bless-instrumentation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
