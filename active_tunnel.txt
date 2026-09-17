@@ -1,1 +1,1 @@
-https://snow-place-numbers-dom.trycloudflare.com
+https://test-tunnel.trycloudflare.com
