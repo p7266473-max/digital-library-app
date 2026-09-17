@@ -1,1 +1,1 @@
-https://counted-trade-col-vat.trycloudflare.com
+https://test-tunnel.trycloudflare.com
