@@ -1,1 +1,1 @@
-https://bubble-rapid-happy-glow.trycloudflare.com
+https://test-tunnel.trycloudflare.com
