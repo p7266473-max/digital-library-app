@@ -1,1 +1,1 @@
-https://indication-maiden-identity-warehouse.trycloudflare.com
+https://test-tunnel.trycloudflare.com
