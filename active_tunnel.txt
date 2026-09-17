@@ -1,1 +1,1 @@
-https://thirty-vanilla-could-based.trycloudflare.com
+https://test-tunnel.trycloudflare.com
