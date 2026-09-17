@@ -1,1 +1,1 @@
-https://sympathy-shakespeare-entry-confidential.trycloudflare.com
+https://test-tunnel.trycloudflare.com
