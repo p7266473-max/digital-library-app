@@ -1,1 +1,1 @@
-https://alert-thus-compaq-montreal.trycloudflare.com
+https://test-tunnel.trycloudflare.com
