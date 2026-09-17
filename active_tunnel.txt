@@ -1,1 +1,1 @@
-https://routes-speed-together-vertical.trycloudflare.com
+https://test-tunnel.trycloudflare.com
