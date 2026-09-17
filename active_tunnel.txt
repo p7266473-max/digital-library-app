@@ -1,1 +1,1 @@
-https://sell-recorder-making-query.trycloudflare.com
+https://test-tunnel.trycloudflare.com
