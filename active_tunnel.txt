@@ -1,1 +1,1 @@
-https://shoot-merge-drain-tutorials.trycloudflare.com
+https://test-tunnel.trycloudflare.com
