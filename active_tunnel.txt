@@ -1,1 +1,1 @@
-https://investors-pit-goat-duncan.trycloudflare.com
+https://test-tunnel.trycloudflare.com
