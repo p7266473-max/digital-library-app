@@ -1,1 +1,1 @@
-https://binding-manager-property-greene.trycloudflare.com
+https://test-tunnel.trycloudflare.com
