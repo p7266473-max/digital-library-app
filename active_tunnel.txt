@@ -1,1 +1,1 @@
-https://spa-keyword-paper-retrieval.trycloudflare.com
+https://test-tunnel.trycloudflare.com
