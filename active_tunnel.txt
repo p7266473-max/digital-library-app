@@ -1,1 +1,1 @@
-https://test-formatting-supposed-fabrics.trycloudflare.com
+https://test-tunnel.trycloudflare.com
