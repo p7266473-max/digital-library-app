@@ -1,1 +1,1 @@
-https://budget-fantasy-cinema-maintenance.trycloudflare.com
+https://test-tunnel.trycloudflare.com
