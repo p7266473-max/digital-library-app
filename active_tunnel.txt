@@ -1,1 +1,1 @@
-https://recovery-electoral-apollo-dozen.trycloudflare.com
+https://test-tunnel.trycloudflare.com
