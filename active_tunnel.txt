@@ -1,1 +1,1 @@
-https://fibre-related-parent-association.trycloudflare.com
+https://test-tunnel.trycloudflare.com
