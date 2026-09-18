@@ -1,1 +1,1 @@
-https://ranges-networking-punch-courtesy.trycloudflare.com
+https://test-tunnel.trycloudflare.com
