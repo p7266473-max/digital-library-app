@@ -1,1 +1,1 @@
-https://dark-chambers-phones-reserve.trycloudflare.com
+https://test-tunnel.trycloudflare.com
