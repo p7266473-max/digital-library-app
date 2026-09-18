@@ -1,1 +1,1 @@
-https://buyers-platforms-insights-springfield.trycloudflare.com
+https://test-tunnel.trycloudflare.com
