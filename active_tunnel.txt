@@ -1,1 +1,1 @@
-https://logs-oven-lawsuit-complete.trycloudflare.com
+https://test-tunnel.trycloudflare.com
