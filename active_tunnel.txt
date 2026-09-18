@@ -1,1 +1,1 @@
-https://metallica-dir-appliance-recorded.trycloudflare.com
+https://test-tunnel.trycloudflare.com
