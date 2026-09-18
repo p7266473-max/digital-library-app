@@ -1,1 +1,1 @@
-https://yard-jul-critics-boxes.trycloudflare.com
+https://test-tunnel.trycloudflare.com
