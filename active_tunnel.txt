@@ -1,1 +1,1 @@
-https://adventures-approx-adding-boost.trycloudflare.com
+https://test-tunnel.trycloudflare.com
