@@ -1,1 +1,1 @@
-https://cds-accessible-vat-adventures.trycloudflare.com
+https://test-tunnel.trycloudflare.com
