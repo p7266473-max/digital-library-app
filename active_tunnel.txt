@@ -1,1 +1,1 @@
-https://domain-pendant-raid-deposits.trycloudflare.com
+https://test-tunnel.trycloudflare.com
