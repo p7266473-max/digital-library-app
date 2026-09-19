@@ -1,1 +1,1 @@
-https://bags-compiled-classical-hotels.trycloudflare.com
+https://test-tunnel.trycloudflare.com
