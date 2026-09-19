@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://farmer-assure-term-cabinet.trycloudflare.com
