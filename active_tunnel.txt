@@ -1,1 +1,1 @@
-https://bulletin-baskets-instance-metallic.trycloudflare.com
+https://test-tunnel.trycloudflare.com
