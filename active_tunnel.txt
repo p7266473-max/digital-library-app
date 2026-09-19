@@ -1,1 +1,1 @@
-https://states-minute-fig-highways.trycloudflare.com
+https://test-tunnel.trycloudflare.com
