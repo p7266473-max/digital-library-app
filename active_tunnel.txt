@@ -1,1 +1,1 @@
-https://prague-til-humanities-throw.trycloudflare.com
+https://test-tunnel.trycloudflare.com
