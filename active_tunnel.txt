@@ -1,1 +1,1 @@
-https://hybrid-gave-cells-observation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
