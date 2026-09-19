@@ -1,1 +1,1 @@
-https://pac-robin-boxes-constantly.trycloudflare.com
+https://test-tunnel.trycloudflare.com
