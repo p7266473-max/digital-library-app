@@ -1,1 +1,1 @@
-https://quantum-identifier-wayne-future.trycloudflare.com
+https://test-tunnel.trycloudflare.com
