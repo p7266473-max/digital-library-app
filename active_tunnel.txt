@@ -1,1 +1,1 @@
-https://ohio-instances-amber-performed.trycloudflare.com
+https://test-tunnel.trycloudflare.com
