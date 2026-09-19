@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://vip-coordinate-console-diabetes.trycloudflare.com
