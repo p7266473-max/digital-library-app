@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://spectrum-wagner-writes-spring.trycloudflare.com
