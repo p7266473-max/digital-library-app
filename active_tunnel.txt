@@ -1,1 +1,1 @@
-https://whatever-wood-rack-introducing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
