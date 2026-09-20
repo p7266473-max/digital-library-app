@@ -1,1 +1,1 @@
-https://spice-tee-basement-next.trycloudflare.com
+https://test-tunnel.trycloudflare.com
