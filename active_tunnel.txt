@@ -1,1 +1,1 @@
-https://stamp-wiki-walked-data.trycloudflare.com
+https://test-tunnel.trycloudflare.com
