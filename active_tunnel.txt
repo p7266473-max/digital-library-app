@@ -1,1 +1,1 @@
-https://thinks-gig-conducted-reproduction.trycloudflare.com
+https://test-tunnel.trycloudflare.com
