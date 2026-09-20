@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://vhs-reporting-messenger-inside.trycloudflare.com
