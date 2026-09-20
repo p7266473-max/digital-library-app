@@ -1,1 +1,1 @@
-https://live-miracle-drill-does.trycloudflare.com
+https://test-tunnel.trycloudflare.com
