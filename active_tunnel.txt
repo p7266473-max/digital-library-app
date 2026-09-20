@@ -1,1 +1,1 @@
-https://sterling-amount-direct-evaluating.trycloudflare.com
+https://test-tunnel.trycloudflare.com
