@@ -1,1 +1,1 @@
-https://sig-thirty-limitation-shopping.trycloudflare.com
+https://test-tunnel.trycloudflare.com
