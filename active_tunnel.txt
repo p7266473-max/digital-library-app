@@ -1,1 +1,1 @@
-https://bit-ccd-richards-bend.trycloudflare.com
+https://test-tunnel.trycloudflare.com
