@@ -1,1 +1,1 @@
-https://syracuse-symantec-compromise-treated.trycloudflare.com
+https://test-tunnel.trycloudflare.com
