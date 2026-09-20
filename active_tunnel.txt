@@ -1,1 +1,1 @@
-https://locator-anywhere-thompson-banana.trycloudflare.com
+https://test-tunnel.trycloudflare.com
