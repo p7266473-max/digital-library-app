@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://winston-inbox-min-met.trycloudflare.com
