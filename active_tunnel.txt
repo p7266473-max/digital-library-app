@@ -1,1 +1,1 @@
-https://adams-mag-texts-territories.trycloudflare.com
+https://test-tunnel.trycloudflare.com
