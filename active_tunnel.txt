@@ -1,1 +1,1 @@
-https://dow-concord-adopt-euros.trycloudflare.com
+https://test-tunnel.trycloudflare.com
