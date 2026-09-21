@@ -1,1 +1,1 @@
-https://vhs-match-excess-urgent.trycloudflare.com
+https://test-tunnel.trycloudflare.com
