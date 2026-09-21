@@ -1,1 +1,1 @@
-https://rational-dirt-certificates-nine.trycloudflare.com
+https://test-tunnel.trycloudflare.com
