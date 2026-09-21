@@ -1,1 +1,1 @@
-https://solution-extras-favorite-run.trycloudflare.com
+https://test-tunnel.trycloudflare.com
