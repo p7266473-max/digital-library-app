@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://basics-packet-angel-grade.trycloudflare.com
