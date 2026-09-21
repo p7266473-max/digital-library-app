@@ -1,1 +1,1 @@
-https://coding-demand-cheers-dispatch.trycloudflare.com
+https://test-tunnel.trycloudflare.com
