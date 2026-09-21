@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://php-ethical-hunting-math.trycloudflare.com
