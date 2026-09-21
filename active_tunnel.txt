@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://framing-pgp-assessment-producer.trycloudflare.com
