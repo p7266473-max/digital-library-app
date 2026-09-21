@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://betty-encryption-chicago-adjusted.trycloudflare.com
