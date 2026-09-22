@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://nodes-heat-describing-sealed.trycloudflare.com
