@@ -1,1 +1,1 @@
-https://release-apparatus-refresh-grew.trycloudflare.com
+https://test-tunnel.trycloudflare.com
