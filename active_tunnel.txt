@@ -1,1 +1,1 @@
-https://wma-fires-boston-furniture.trycloudflare.com
+https://test-tunnel.trycloudflare.com
