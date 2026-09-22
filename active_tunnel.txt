@@ -1,1 +1,1 @@
-https://processors-bedford-championships-incredible.trycloudflare.com
+https://test-tunnel.trycloudflare.com
