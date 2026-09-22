@@ -1,1 +1,1 @@
-https://seq-deck-ours-thanks.trycloudflare.com
+https://test-tunnel.trycloudflare.com
