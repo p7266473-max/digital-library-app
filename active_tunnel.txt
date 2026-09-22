@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://stack-cooperative-list-rip.trycloudflare.com
