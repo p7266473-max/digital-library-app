@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://tough-tue-health-solo.trycloudflare.com
