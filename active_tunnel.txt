@@ -1,1 +1,1 @@
-https://exceptions-productive-quilt-integrating.trycloudflare.com
+https://test-tunnel.trycloudflare.com
