@@ -1,1 +1,1 @@
-https://berkeley-operates-dude-castle.trycloudflare.com
+https://test-tunnel.trycloudflare.com
