@@ -1,1 +1,1 @@
-https://basename-dollars-development-eternal.trycloudflare.com
+https://test-tunnel.trycloudflare.com
