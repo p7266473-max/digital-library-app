@@ -1,1 +1,1 @@
-https://evans-lightweight-beta-difference.trycloudflare.com
+https://test-tunnel.trycloudflare.com
