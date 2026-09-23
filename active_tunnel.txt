@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://meat-preliminary-little-frankfurt.trycloudflare.com
