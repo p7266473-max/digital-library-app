@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://sugar-instances-obviously-behavioral.trycloudflare.com
