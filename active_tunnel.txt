@@ -1,1 +1,1 @@
-https://legacy-myrtle-elected-electronics.trycloudflare.com
+https://test-tunnel.trycloudflare.com
