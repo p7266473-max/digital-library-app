@@ -1,1 +1,1 @@
-https://reporters-analyze-enclosed-cheese.trycloudflare.com
+https://test-tunnel.trycloudflare.com
