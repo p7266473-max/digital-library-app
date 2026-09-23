@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://pierre-stronger-silicon-custom.trycloudflare.com
