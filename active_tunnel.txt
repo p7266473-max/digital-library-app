@@ -1,1 +1,1 @@
-https://protest-sends-toll-participant.trycloudflare.com
+https://test-tunnel.trycloudflare.com
