@@ -1,1 +1,1 @@
-https://abs-labs-microphone-tongue.trycloudflare.com
+https://test-tunnel.trycloudflare.com
