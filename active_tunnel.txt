@@ -1,1 +1,1 @@
-https://dot-dim-sticky-widescreen.trycloudflare.com
+https://test-tunnel.trycloudflare.com
