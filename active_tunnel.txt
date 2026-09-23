@@ -1,1 +1,1 @@
-https://exchange-nuke-roommate-learn.trycloudflare.com
+https://test-tunnel.trycloudflare.com
