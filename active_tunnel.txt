@@ -1,1 +1,1 @@
-https://laser-inputs-tracking-avoiding.trycloudflare.com
+https://test-tunnel.trycloudflare.com
