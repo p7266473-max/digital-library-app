@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://background-acc-within-partners.trycloudflare.com
