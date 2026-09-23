@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://warming-fog-civic-inspector.trycloudflare.com
