@@ -1,1 +1,1 @@
-https://launches-both-assumed-prostate.trycloudflare.com
+https://test-tunnel.trycloudflare.com
