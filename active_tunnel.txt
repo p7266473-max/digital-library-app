@@ -1,1 +1,1 @@
-https://hill-nevada-pam-sofa.trycloudflare.com
+https://test-tunnel.trycloudflare.com
