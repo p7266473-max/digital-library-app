@@ -1,1 +1,1 @@
-https://from-platinum-travis-reunion.trycloudflare.com
+https://test-tunnel.trycloudflare.com
