@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://refine-platform-images-playing.trycloudflare.com
