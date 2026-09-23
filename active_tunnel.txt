@@ -1,1 +1,1 @@
-https://technological-feature-southeast-intranet.trycloudflare.com
+https://test-tunnel.trycloudflare.com
