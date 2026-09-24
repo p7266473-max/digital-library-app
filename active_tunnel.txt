@@ -1,1 +1,1 @@
-https://linux-household-arizona-toilet.trycloudflare.com
+https://test-tunnel.trycloudflare.com
