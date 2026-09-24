@@ -1,1 +1,1 @@
-https://concrete-stranger-light-activity.trycloudflare.com
+https://test-tunnel.trycloudflare.com
