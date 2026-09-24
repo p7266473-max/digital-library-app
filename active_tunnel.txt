@@ -1,1 +1,1 @@
-https://cgi-shine-persistent-producing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
