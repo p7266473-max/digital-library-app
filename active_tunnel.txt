@@ -1,1 +1,1 @@
-https://spring-saw-excuse-defensive.trycloudflare.com
+https://test-tunnel.trycloudflare.com
