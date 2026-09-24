@@ -1,1 +1,1 @@
-https://hardware-diving-notified-scuba.trycloudflare.com
+https://test-tunnel.trycloudflare.com
