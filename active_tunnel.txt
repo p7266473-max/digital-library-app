@@ -1,1 +1,1 @@
-https://lucas-numeric-suppliers-states.trycloudflare.com
+https://test-tunnel.trycloudflare.com
