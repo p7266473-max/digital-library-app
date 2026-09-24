@@ -1,1 +1,1 @@
-https://brisbane-speeches-bay-ddr.trycloudflare.com
+https://test-tunnel.trycloudflare.com
