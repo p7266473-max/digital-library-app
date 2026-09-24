@@ -1,1 +1,1 @@
-https://humidity-aurora-tell-conscious.trycloudflare.com
+https://test-tunnel.trycloudflare.com
