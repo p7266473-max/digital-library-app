@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://reliable-hugo-eds-survive.trycloudflare.com
