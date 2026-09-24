@@ -1,1 +1,1 @@
-https://bin-perception-mai-publishing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
