@@ -1,1 +1,1 @@
-https://turn-satisfactory-edt-beads.trycloudflare.com
+https://test-tunnel.trycloudflare.com
