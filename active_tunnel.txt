@@ -1,1 +1,1 @@
-https://mpegs-commerce-bits-sparc.trycloudflare.com
+https://test-tunnel.trycloudflare.com
