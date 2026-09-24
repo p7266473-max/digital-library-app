@@ -1,1 +1,1 @@
-https://meter-assessing-imperial-cedar.trycloudflare.com
+https://test-tunnel.trycloudflare.com
