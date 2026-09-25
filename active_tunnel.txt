@@ -1,1 +1,1 @@
-https://hospital-day-edges-preserve.trycloudflare.com
+https://test-tunnel.trycloudflare.com
