@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://experiments-sensor-permissions-photographs.trycloudflare.com
