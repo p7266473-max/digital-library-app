@@ -1,1 +1,1 @@
-https://suggested-federation-stat-affected.trycloudflare.com
+https://test-tunnel.trycloudflare.com
