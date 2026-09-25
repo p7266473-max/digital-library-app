@@ -1,1 +1,1 @@
-https://camcorder-horizon-transit-said.trycloudflare.com
+https://test-tunnel.trycloudflare.com
