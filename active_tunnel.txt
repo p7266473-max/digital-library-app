@@ -1,1 +1,1 @@
-https://emma-submission-msg-index.trycloudflare.com
+https://test-tunnel.trycloudflare.com
