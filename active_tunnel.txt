@@ -1,1 +1,1 @@
-https://ranger-blogging-module-replaced.trycloudflare.com
+https://test-tunnel.trycloudflare.com
