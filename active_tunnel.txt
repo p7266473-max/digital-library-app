@@ -1,1 +1,1 @@
-https://marking-ambassador-triangle-exchanges.trycloudflare.com
+https://test-tunnel.trycloudflare.com
