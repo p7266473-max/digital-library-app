@@ -1,1 +1,1 @@
-https://administrators-current-advised-limitations.trycloudflare.com
+https://test-tunnel.trycloudflare.com
