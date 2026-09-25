@@ -1,1 +1,1 @@
-https://springfield-oem-certified-special.trycloudflare.com
+https://test-tunnel.trycloudflare.com
