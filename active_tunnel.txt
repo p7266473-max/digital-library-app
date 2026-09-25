@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://partition-super-stamp-concept.trycloudflare.com
