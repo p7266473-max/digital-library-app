@@ -1,1 +1,1 @@
-https://drum-rack-prepaid-transition.trycloudflare.com
+https://test-tunnel.trycloudflare.com
