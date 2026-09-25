@@ -1,1 +1,1 @@
-https://required-shuttle-experts-reservoir.trycloudflare.com
+https://test-tunnel.trycloudflare.com
