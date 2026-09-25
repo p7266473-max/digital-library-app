@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://individual-cached-teams-outcomes.trycloudflare.com
