@@ -1,1 +1,1 @@
-https://switches-illustration-script-outer.trycloudflare.com
+https://test-tunnel.trycloudflare.com
