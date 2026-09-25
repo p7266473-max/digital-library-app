@@ -1,1 +1,1 @@
-https://somewhat-cheers-stable-validation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
