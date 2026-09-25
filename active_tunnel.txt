@@ -1,1 +1,1 @@
-https://proxy-debate-bundle-hewlett.trycloudflare.com
+https://test-tunnel.trycloudflare.com
