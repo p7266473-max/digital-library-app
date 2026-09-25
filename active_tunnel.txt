@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://val-lights-arena-cottage.trycloudflare.com
