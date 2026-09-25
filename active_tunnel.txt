@@ -1,1 +1,1 @@
-https://argue-variable-export-epa.trycloudflare.com
+https://test-tunnel.trycloudflare.com
