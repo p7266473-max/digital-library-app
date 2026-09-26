@@ -1,1 +1,1 @@
-https://restore-ccd-southeast-liverpool.trycloudflare.com
+https://test-tunnel.trycloudflare.com
