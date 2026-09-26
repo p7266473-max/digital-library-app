@@ -1,1 +1,1 @@
-https://erik-belly-measurement-wells.trycloudflare.com
+https://test-tunnel.trycloudflare.com
