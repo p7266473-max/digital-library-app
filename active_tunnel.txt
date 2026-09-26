@@ -1,1 +1,1 @@
-https://automotive-sixth-belfast-enforcement.trycloudflare.com
+https://test-tunnel.trycloudflare.com
