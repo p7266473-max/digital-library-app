@@ -1,1 +1,1 @@
-https://branches-ericsson-technology-tablet.trycloudflare.com
+https://test-tunnel.trycloudflare.com
