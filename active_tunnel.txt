@@ -1,1 +1,1 @@
-https://choices-manhattan-assistant-royal.trycloudflare.com
+https://test-tunnel.trycloudflare.com
