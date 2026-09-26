@@ -1,1 +1,1 @@
-https://hits-bedford-expenditure-crimes.trycloudflare.com
+https://test-tunnel.trycloudflare.com
