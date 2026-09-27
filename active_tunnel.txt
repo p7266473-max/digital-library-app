@@ -1,1 +1,1 @@
-https://circus-looks-brain-sending.trycloudflare.com
+https://test-tunnel.trycloudflare.com
