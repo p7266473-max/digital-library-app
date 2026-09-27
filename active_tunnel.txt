@@ -1,1 +1,1 @@
-https://pets-lotus-lines-attempts.trycloudflare.com
+https://test-tunnel.trycloudflare.com
