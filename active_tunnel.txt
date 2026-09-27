@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://climate-urls-notification-packard.trycloudflare.com
