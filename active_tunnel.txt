@@ -1,1 +1,1 @@
-https://repeated-city-rapid-application.trycloudflare.com
+https://test-tunnel.trycloudflare.com
