@@ -1,1 +1,1 @@
-https://vpn-demonstrates-vault-posing.trycloudflare.com
+https://test-tunnel.trycloudflare.com
