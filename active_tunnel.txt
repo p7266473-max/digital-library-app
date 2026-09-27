@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://module-browse-secondary-cole.trycloudflare.com
