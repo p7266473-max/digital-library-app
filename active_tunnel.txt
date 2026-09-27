@@ -1,1 +1,1 @@
-https://layers-certain-legitimate-victor.trycloudflare.com
+https://test-tunnel.trycloudflare.com
