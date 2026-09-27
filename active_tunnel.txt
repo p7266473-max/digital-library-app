@@ -1,1 +1,1 @@
-https://testing-times-abstract-clock.trycloudflare.com
+https://test-tunnel.trycloudflare.com
