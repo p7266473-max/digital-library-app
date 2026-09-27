@@ -1,1 +1,1 @@
-https://jun-compound-remote-bye.trycloudflare.com
+https://test-tunnel.trycloudflare.com
