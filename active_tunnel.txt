@@ -1,1 +1,1 @@
-https://cornell-latina-grateful-editor.trycloudflare.com
+https://test-tunnel.trycloudflare.com
