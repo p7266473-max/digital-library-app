@@ -1,1 +1,1 @@
-https://census-offered-services-bias.trycloudflare.com
+https://test-tunnel.trycloudflare.com
