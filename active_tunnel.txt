@@ -1,1 +1,1 @@
-https://removing-suites-desktops-bug.trycloudflare.com
+https://test-tunnel.trycloudflare.com
