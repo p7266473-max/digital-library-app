@@ -1,1 +1,1 @@
-https://reuters-hits-ripe-selected.trycloudflare.com
+https://test-tunnel.trycloudflare.com
