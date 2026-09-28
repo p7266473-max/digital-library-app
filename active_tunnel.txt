@@ -1,1 +1,1 @@
-https://wallet-point-watt-paths.trycloudflare.com
+https://test-tunnel.trycloudflare.com
