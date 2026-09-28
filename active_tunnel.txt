@@ -1,1 +1,1 @@
-https://bow-porter-geek-differ.trycloudflare.com
+https://test-tunnel.trycloudflare.com
