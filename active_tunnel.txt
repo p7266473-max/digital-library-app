@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://select-proxy-yourself-seq.trycloudflare.com
