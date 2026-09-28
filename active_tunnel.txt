@@ -1,1 +1,1 @@
-https://allen-gauge-cas-appropriate.trycloudflare.com
+https://test-tunnel.trycloudflare.com
