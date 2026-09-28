@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://before-eternal-exceptions-tcp.trycloudflare.com
