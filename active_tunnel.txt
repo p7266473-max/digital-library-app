@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://fork-paperback-locale-administrators.trycloudflare.com
