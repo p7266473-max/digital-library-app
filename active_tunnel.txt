@@ -1,1 +1,1 @@
-https://irc-lobby-event-bathrooms.trycloudflare.com
+https://test-tunnel.trycloudflare.com
