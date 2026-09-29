@@ -1,1 +1,1 @@
-https://eddie-premiere-rover-servers.trycloudflare.com
+https://test-tunnel.trycloudflare.com
