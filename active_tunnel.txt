@@ -1,1 +1,1 @@
-https://javascript-simplified-respondent-wall.trycloudflare.com
+https://test-tunnel.trycloudflare.com
