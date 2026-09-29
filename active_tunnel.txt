@@ -1,1 +1,1 @@
-https://finances-euros-wyoming-compressed.trycloudflare.com
+https://test-tunnel.trycloudflare.com
