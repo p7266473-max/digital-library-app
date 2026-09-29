@@ -1,1 +1,1 @@
-https://build-zen-facial-sites.trycloudflare.com
+https://test-tunnel.trycloudflare.com
