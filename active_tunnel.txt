@@ -1,1 +1,1 @@
-https://marathon-bernard-vitamins-hint.trycloudflare.com
+https://test-tunnel.trycloudflare.com
