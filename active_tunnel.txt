@@ -1,1 +1,1 @@
-https://bikes-livecam-forming-been.trycloudflare.com
+https://test-tunnel.trycloudflare.com
