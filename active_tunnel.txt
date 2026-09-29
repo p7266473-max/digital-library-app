@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://clips-php-peninsula-rejected.trycloudflare.com
