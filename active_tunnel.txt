@@ -1,1 +1,1 @@
-https://isle-directors-ping-always.trycloudflare.com
+https://test-tunnel.trycloudflare.com
