@@ -1,1 +1,1 @@
-https://fits-poker-hwy-shannon.trycloudflare.com
+https://test-tunnel.trycloudflare.com
