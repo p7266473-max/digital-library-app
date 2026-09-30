@@ -1,1 +1,1 @@
-https://juan-warcraft-itunes-oakland.trycloudflare.com
+https://test-tunnel.trycloudflare.com
