@@ -1,1 +1,1 @@
-https://isa-alaska-alt-chocolate.trycloudflare.com
+https://test-tunnel.trycloudflare.com
