@@ -1,1 +1,1 @@
-https://filename-conf-replica-labeled.trycloudflare.com
+https://test-tunnel.trycloudflare.com
