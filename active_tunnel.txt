@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://tourism-gateway-realm-mild.trycloudflare.com
