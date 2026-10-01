@@ -1,1 +1,1 @@
-https://test-tunnel.trycloudflare.com
+https://nested-zinc-lover-prompt.trycloudflare.com
