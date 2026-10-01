@@ -1,1 +1,1 @@
-https://retailers-searches-empire-shops.trycloudflare.com
+https://test-tunnel.trycloudflare.com
