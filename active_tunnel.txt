@@ -1,1 +1,1 @@
-https://revenue-sea-elder-using.trycloudflare.com
+https://test-tunnel.trycloudflare.com
