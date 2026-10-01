@@ -1,1 +1,1 @@
-https://poster-minimal-watt-reproduce.trycloudflare.com
+https://test-tunnel.trycloudflare.com
