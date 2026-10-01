@@ -1,1 +1,1 @@
-https://scsi-rome-halo-rev.trycloudflare.com
+https://test-tunnel.trycloudflare.com
