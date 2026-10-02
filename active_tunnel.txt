@@ -1,1 +1,1 @@
-https://occurrence-montreal-nirvana-regime.trycloudflare.com
+https://test-tunnel.trycloudflare.com
