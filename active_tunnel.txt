@@ -1,1 +1,1 @@
-https://extensive-amd-clara-pot.trycloudflare.com
+https://test-tunnel.trycloudflare.com
