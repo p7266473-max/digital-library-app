@@ -1,1 +1,1 @@
-https://visibility-eye-large-reservation.trycloudflare.com
+https://test-tunnel.trycloudflare.com
