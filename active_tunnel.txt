@@ -1,1 +1,1 @@
-https://multiple-seek-cloud-nearby.trycloudflare.com
+https://test-tunnel.trycloudflare.com
