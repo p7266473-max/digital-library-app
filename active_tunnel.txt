@@ -1,1 +1,1 @@
-https://metal-dist-brokers-chemical.trycloudflare.com
+https://test-tunnel.trycloudflare.com
