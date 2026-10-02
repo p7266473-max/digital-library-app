@@ -1,1 +1,1 @@
-https://isaac-broke-topics-west.trycloudflare.com
+https://test-tunnel.trycloudflare.com
