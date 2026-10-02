@@ -1,1 +1,1 @@
-https://cds-wav-enable-def.trycloudflare.com
+https://test-tunnel.trycloudflare.com
