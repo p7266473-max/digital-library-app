@@ -1,1 +1,1 @@
-https://volume-bible-intended-loaded.trycloudflare.com
+https://test-tunnel.trycloudflare.com
