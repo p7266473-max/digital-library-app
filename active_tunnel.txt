@@ -1,1 +1,1 @@
-https://quarters-upgrading-tear-unix.trycloudflare.com
+https://test-tunnel.trycloudflare.com
