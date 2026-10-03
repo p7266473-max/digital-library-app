@@ -1,1 +1,1 @@
-https://forums-perspectives-selection-maintain.trycloudflare.com
+https://test-tunnel.trycloudflare.com
